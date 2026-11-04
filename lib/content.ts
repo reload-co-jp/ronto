@@ -8,6 +8,7 @@ import {
   ArticleType,
   ArticleTypeId,
   Category,
+  DiscussionMessage,
   Persona,
   Topic,
   TopicCardData,
@@ -139,6 +140,17 @@ export const toCardData = (t: Topic): TopicCardData => ({
   readingTime: readingTimeOf(t),
   thumbnail: resolveImage(t.thumbnail),
   status: t.status,
+  participants: t.participants.map(({ id, name, icon, persona }) => ({
+    id,
+    name,
+    icon,
+    persona,
+  })),
+  messageCount: t.discussion.filter((d) => "speaker" in d).length,
+  firstMessage: (() => {
+    const m = t.discussion.find((d): d is DiscussionMessage => "speaker" in d)
+    return m ? { speaker: m.speaker, text: m.text } : null
+  })(),
 })
 
 export const topicPath = (id: string) => `/topics/${id}/`

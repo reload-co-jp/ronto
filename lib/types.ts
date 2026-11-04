@@ -88,8 +88,25 @@ export interface Section {
   blocks: Block[]
 }
 
-export type DiscussionItem =
-  { speaker: string; text: string; sourceIds?: string[] } | { divider: string }
+/** 発言の種類。チャット上に小さなラベルとして表示される */
+export const MESSAGE_KINDS = {
+  question: "質問",
+  rebuttal: "反論",
+  agree: "共感",
+  fact: "事実確認",
+  idea: "提案",
+  summary: "まとめ",
+} as const
+export type MessageKind = keyof typeof MESSAGE_KINDS
+
+export interface DiscussionMessage {
+  speaker: string
+  text: string
+  kind?: MessageKind
+  sourceIds?: string[]
+}
+
+export type DiscussionItem = DiscussionMessage | { divider: string }
 
 export interface Fact {
   text: string
@@ -168,4 +185,10 @@ export interface TopicCardData {
   /** 存在が確認できた画像パス。なければ null（フォールバック表示） */
   thumbnail: string | null
   status: TopicStatus
+  /** 議論の参加者（カードのアバター表示用） */
+  participants: Pick<Participant, "id" | "name" | "icon" | "persona">[]
+  /** 議論の発言数 */
+  messageCount: number
+  /** 議論の冒頭の発言（プレビュー用） */
+  firstMessage: { speaker: string; text: string } | null
 }

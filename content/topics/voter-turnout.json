@@ -1,10 +1,10 @@
 {
   "id": "voter-turnout",
   "title": "選挙に行かないと何が起こる？",
-  "description": "",
+  "description": "「自分ひとりが投票しても変わらない」と感じたことはありませんか。投票に行かないと何が起きるのか、投票率の世代差、投票しやすくする仕組みを、選挙の前に整理します。",
   "category": "politics",
   "type": "election",
-  "status": "draft",
+  "status": "published",
   "featured": false,
   "tags": ["選挙", "投票率", "若者"],
   "thumbnail": "/images/topics/voter-turnout.webp",
@@ -15,7 +15,8 @@
     },
     {
       "id": "consumer",
-      "persona": "consumer"
+      "persona": "consumer",
+      "stance": "「投票に行ってもあまり変わらない」と感じている20代の感覚で考える。"
     },
     {
       "id": "administration",
@@ -30,29 +31,186 @@
     {
       "id": "background",
       "heading": "基本情報・背景",
-      "blocks": []
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "国政選挙の投票率は、長期的に見ると低下傾向にあり、とくに若い世代の投票率は高齢の世代に比べて低い傾向が続いています。",
+          "sourceIds": ["soumu-ritu"]
+        },
+        {
+          "type": "paragraph",
+          "text": "2016年からは選挙権年齢が18歳以上に引き下げられました。また、投票日に予定がある人のための期日前投票や、住んでいる場所以外での不在者投票など、投票しやすくする仕組みも整えられています。",
+          "sourceIds": ["soumu-naruhodo"]
+        },
+        {
+          "type": "callout",
+          "title": "用語メモ：期日前投票",
+          "text": "投票日より前に、市区町村が設ける期日前投票所で投票できる仕組み。仕事や旅行などで投票日に行けない場合に利用できます。"
+        }
+      ]
     },
     {
       "id": "problem",
       "heading": "そもそも何が問題なのか",
-      "blocks": []
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "選挙は、税金の使い道や社会のルールを決める人を選ぶ機会です。投票する人が特定の世代や団体に偏ると、政治家はその人たちの声をより重視しやすくなる、という指摘があります。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一方で「どの候補者も同じに見える」「投票しても変わらない」という感覚が、投票から人を遠ざけているとも言われます。"
+        }
+      ]
     }
   ],
-  "discussion": [],
+  "discussion": [
+    {
+      "divider": "投票しても変わらない？"
+    },
+    {
+      "speaker": "moderator",
+      "text": "今日は「選挙に行かないと何が起こる？」です。率直に、投票に行かない理由ってなんでしょう？",
+      "kind": "question"
+    },
+    {
+      "speaker": "consumer",
+      "text": "正直に言うと、「自分ひとりの一票で何も変わらない」と思ってしまうんです。誰に入れたらいいかも分からないし、忙しいとつい後回しに……。"
+    },
+    {
+      "speaker": "administration",
+      "text": "その感覚はよく分かります。実際、一票で結果が決まることはまれです。ただ、選挙の結果は「誰が勝ったか」だけでなく、「どの層がどれだけ投票したか」という形でも政治家に伝わります。",
+      "kind": "rebuttal"
+    },
+    {
+      "speaker": "consumer",
+      "text": "どういうことですか？",
+      "kind": "question"
+    },
+    {
+      "speaker": "administration",
+      "text": "政治家は次の選挙で当選したいので、よく投票に来る人たちの関心に応えようとしやすい。若い世代の投票率が低いと、若い世代の課題は後回しにされやすくなる、という指摘があります。",
+      "kind": "fact",
+      "sourceIds": ["soumu-ritu"]
+    },
+    {
+      "divider": "誰の声が届く？"
+    },
+    {
+      "speaker": "regional",
+      "text": "地方の選挙だと、もっと身近です。投票率が低いと、地域の団体や組織の支持を受けた候補が有利になりやすい。結果として、いつも同じ顔ぶれが選ばれる、ということも起こります。"
+    },
+    {
+      "speaker": "consumer",
+      "text": "投票しないことも一つの意思表示だと思っていました。でも、それは「何でもいい」と受け取られてしまうかもしれないんですね。",
+      "kind": "agree"
+    },
+    {
+      "speaker": "moderator",
+      "text": "選びたい候補がいないときはどうすればいいんでしょう？",
+      "kind": "question"
+    },
+    {
+      "speaker": "administration",
+      "text": "「この人なら少しはまし」という選び方でもいいんです。争点を一つに絞って、自分にとって一番大事なテーマで比べるのも一つの方法です。どうしても選べなければ、白票を投じることもできます。",
+      "kind": "idea"
+    },
+    {
+      "divider": "投票しやすくするには"
+    },
+    {
+      "speaker": "regional",
+      "text": "投票所が遠い、移動手段がない、という人もいます。期日前投票所を商業施設や大学に置く自治体もありますが、まだ地域差がありますね。",
+      "kind": "idea",
+      "sourceIds": ["soumu-naruhodo"]
+    },
+    {
+      "speaker": "consumer",
+      "text": "期日前投票なら行けそうです。次は「自分の生活に一番関わるテーマ」を一つ決めて、候補者を比べてみようと思います。",
+      "kind": "summary"
+    }
+  ],
   "summary": {
-    "points": [],
-    "argumentsFor": [],
-    "argumentsAgainst": [],
-    "affectedParties": [],
-    "knownFacts": [],
-    "openQuestions": []
+    "points": [
+      "若い世代の投票率は高齢の世代に比べて低い傾向がある",
+      "投票率の偏りは、政治家がどの層の声を重視するかに影響しうる",
+      "選びたい候補がいない場合も、争点を絞って比べるなどの選び方がある",
+      "期日前投票など、投票しやすくする仕組みが用意されている"
+    ],
+    "argumentsFor": [
+      "（投票に行くことの意義）自分の世代や立場の課題を政治に伝えられる",
+      "投票率が上がると、より多様な声が政治に反映されやすくなる",
+      "選挙をきっかけに、社会の課題や政策について考える機会になる"
+    ],
+    "argumentsAgainst": [
+      "（投票に行かない理由として挙げられる点）一票で結果が変わることはまれで、効果を実感しにくい",
+      "候補者や政策の違いが分かりにくく、判断材料を集める手間がかかる",
+      "投票所が遠いなど、物理的に投票しにくい人がいる"
+    ],
+    "affectedParties": [
+      {
+        "who": "若い世代",
+        "impact": "投票率が低いままだと、政策で後回しにされやすいという指摘がある。"
+      },
+      {
+        "who": "高齢の世代",
+        "impact": "投票率が高く、政策に声が届きやすい傾向がある。"
+      },
+      {
+        "who": "候補者・政党",
+        "impact": "投票する層に合わせて政策や訴え方を考える。"
+      },
+      {
+        "who": "選挙管理委員会・自治体",
+        "impact": "投票しやすい環境づくりが求められる。"
+      }
+    ],
+    "knownFacts": [
+      {
+        "text": "選挙権年齢は2016年から18歳以上に引き下げられた",
+        "sourceIds": ["soumu-naruhodo"]
+      },
+      {
+        "text": "国政選挙では若い世代ほど投票率が低い傾向が続いている",
+        "sourceIds": ["soumu-ritu"]
+      }
+    ],
+    "openQuestions": [
+      "若い世代の投票率を上げるために、どんな方法が効果的か",
+      "インターネット投票など、新しい投票方法を導入すべきか",
+      "投票率の低さが、実際の政策にどの程度影響しているか"
+    ]
   },
-  "takeaways": [],
-  "furtherQuestions": [],
-  "sources": [],
-  "related": [],
+  "takeaways": [
+    "投票しないことは「何も変わらない」のではなく、ほかの人の声の比重を大きくすることにつながる",
+    "一つの争点に絞って比べるなど、候補者の選び方はいろいろある"
+  ],
+  "furtherQuestions": [
+    "次の選挙で、あなたが一番重視したいテーマは何ですか？",
+    "投票率を上げるために、どんな仕組みがあれば投票しやすいと思いますか？"
+  ],
+  "sources": [
+    {
+      "id": "soumu-ritu",
+      "title": "国政選挙における投票率の推移",
+      "url": "https://www.soumu.go.jp/senkyo/senkyo_s/news/sonota/ritu/index.html",
+      "publisher": "総務省",
+      "accessedAt": "2026-11-04"
+    },
+    {
+      "id": "soumu-naruhodo",
+      "title": "なるほど！選挙",
+      "url": "https://www.soumu.go.jp/senkyo/senkyo_s/naruhodo/",
+      "publisher": "総務省",
+      "accessedAt": "2026-11-04"
+    }
+  ],
+  "related": ["campaign-promises", "number-of-diet-members"],
   "editorial": {
     "aiGenerated": true,
-    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
-  }
+    "factCheckedAt": "2026-11-04"
+  },
+  "lead": "選挙のたびに「投票率が低い」というニュースが流れます。特に若い世代の投票率は低い傾向にあります。選挙に行かないと、私たちの暮らしにどんな影響があるのでしょうか。",
+  "publishedAt": "2026-11-04",
+  "updatedAt": "2026-11-04"
 }

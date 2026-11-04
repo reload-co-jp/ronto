@@ -3,6 +3,7 @@ import { css, mq, Style } from "@/components/ui/Style"
 import { formatDate } from "@/lib/format"
 import { TopicCardData } from "@/lib/types"
 import { CategoryBadge, StatusBadge, TypeBadge } from "./Badges"
+import { Avatar, colorsFor } from "./Participants"
 import { Thumbnail } from "./Thumbnail"
 
 const styles = css`
@@ -73,6 +74,43 @@ const styles = css`
   .TopicCard--large .TopicCard_title {
     font-size: 1.3rem;
   }
+  .TopicCard_chat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    color: var(--c-navy);
+    font-weight: 700;
+  }
+  .TopicCard_avatars {
+    display: flex;
+  }
+  .TopicCard_avatars > * {
+    margin-left: -6px;
+    box-shadow: 0 0 0 2px var(--c-surface);
+  }
+  .TopicCard_avatars > *:first-child {
+    margin-left: 0;
+  }
+  .TopicCard_preview {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    align-items: start;
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .TopicCard_bubble {
+    background: var(--c-surface-alt);
+    border-radius: 4px 14px 14px 14px;
+    padding: 8px 12px;
+  }
+  .TopicCard_bubbleText {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   ${mq.tablet} {
     .TopicCard--large {
       padding: 16px 16px 24px;
@@ -115,6 +153,14 @@ export const TopicCard = ({
   headingLevel?: 2 | 3
 }) => {
   const H = `h${headingLevel}` as const
+  const colors = colorsFor(topic.participants)
+  const first = topic.firstMessage
+  const firstSpeaker =
+    first && topic.participants.find((p) => p.id === first.speaker)
+  const preview =
+    first && firstSpeaker
+      ? { participant: firstSpeaker, text: first.text }
+      : null
   return (
     <article className={`TopicCard TopicCard--${size}`}>
       <TopicCardStyles />
@@ -136,6 +182,36 @@ export const TopicCard = ({
           </Link>
         </H>
         <p className="TopicCard_desc">{topic.description}</p>
+        {size === "large" && preview && (
+          <div className="TopicCard_preview" aria-hidden="true">
+            <Avatar
+              participant={preview.participant}
+              color={colors.get(preview.participant.id)!}
+              size={28}
+            />
+            <p className="TopicCard_bubble">
+              <span className="TopicCard_bubbleText">{preview.text}</span>
+            </p>
+          </div>
+        )}
+        {topic.messageCount > 0 && (
+          <p className="TopicCard_chat">
+            <span className="TopicCard_avatars" aria-hidden="true">
+              {topic.participants.map((p) => (
+                <Avatar
+                  key={p.id}
+                  participant={p}
+                  color={colors.get(p.id)!}
+                  size={24}
+                />
+              ))}
+            </span>
+            <span>
+              {topic.participants.length}人のAIが議論・{topic.messageCount}
+              発言
+            </span>
+          </p>
+        )}
         <p className="TopicCard_meta">
           {topic.publishedAt && (
             <time dateTime={topic.publishedAt}>

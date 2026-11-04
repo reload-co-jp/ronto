@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Avatar, colorsFor } from "@/components/topic/Participants"
 import { TopicCard, TopicGrid } from "@/components/topic/TopicCard"
 import { Container, Section, SectionHeading } from "@/components/ui/primitives"
 import { css, mq, Style } from "@/components/ui/Style"
@@ -9,7 +10,9 @@ import {
   getTopicsByCategory,
   getVisibleTopics,
   toCardData,
+  topicPath,
 } from "@/lib/content"
+import { DiscussionMessage, Topic } from "@/lib/types"
 import { site } from "@/lib/site"
 
 const styles = css`
@@ -35,7 +38,7 @@ const styles = css`
     letter-spacing: 0.06em;
   }
   .Hero_title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 1.45;
     margin-top: 16px;
     letter-spacing: 0.04em;
@@ -89,6 +92,90 @@ const styles = css`
     width: 360px;
     opacity: 0.35;
     z-index: 0;
+  }
+  .Hero_grid {
+    display: grid;
+    gap: 36px;
+    align-items: center;
+  }
+  .HeroChat {
+    position: relative;
+    z-index: 1;
+    background: var(--c-surface);
+    border-radius: 20px;
+    box-shadow:
+      0 2px 4px rgba(29, 36, 51, 0.05),
+      0 18px 40px rgba(29, 36, 51, 0.12);
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+  }
+  .HeroChat_head {
+    background: var(--c-navy);
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .HeroChat_head small {
+    display: block;
+    color: var(--c-accent);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
+  .HeroChat_body {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    background: #f6f2ea;
+  }
+  .HeroChat_msg {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .HeroChat_msg--right {
+    flex-direction: row-reverse;
+  }
+  .HeroChat_bubble {
+    background: var(--bubble-bg);
+    border-radius: 4px 14px 14px 14px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    max-width: 80%;
+  }
+  .HeroChat_text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .Hero_line {
+    display: inline-block;
+  }
+  .HeroChat_msg--right .HeroChat_bubble {
+    border-radius: 14px 4px 14px 14px;
+  }
+  .HeroChat_more {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    padding: 10px;
+    background: #f6f2ea;
+    border-top: 1px solid var(--c-border);
+  }
+  .HeroChat:hover .HeroChat_more {
+    text-decoration: underline;
+  }
+  ${mq.desktop} {
+    .Hero_grid {
+      grid-template-columns: 1.1fr 1fr;
+      gap: 56px;
+    }
   }
   ${mq.tablet} {
     .Hero {
@@ -278,6 +365,50 @@ const HeroArt = () => (
   </svg>
 )
 
+/** ヒーローに表示する注目トピックのチャットプレビュー */
+const HeroChat = ({ topic }: { topic: Topic }) => {
+  const colors = colorsFor(topic.participants)
+  const byId = new Map(topic.participants.map((p) => [p.id, p]))
+  let side = 0
+  const sides = new Map(
+    topic.participants.map((p) => [
+      p.id,
+      p.persona === "moderator" ? "left" : side++ % 2 ? "right" : "left",
+    ])
+  )
+  const messages = topic.discussion
+    .filter((d): d is DiscussionMessage => "speaker" in d)
+    .slice(0, 4)
+  return (
+    <Link className="HeroChat" href={`${topicPath(topic.id)}#discussion`}>
+      <p className="HeroChat_head">
+        <small>NOW DISCUSSING</small>
+        {topic.title}
+      </p>
+      <ul className="HeroChat_body">
+        {messages.map((m, i) => {
+          const p = byId.get(m.speaker)!
+          const color = colors.get(p.id)!
+          return (
+            <li
+              key={i}
+              className={`HeroChat_msg HeroChat_msg--${sides.get(p.id)}`}
+              style={{ "--bubble-bg": color.bg } as React.CSSProperties}
+            >
+              <Avatar participant={p} color={color} size={30} />
+              <span className="HeroChat_bubble">
+                <span className="sr-only">{p.name}：</span>
+                <span className="HeroChat_text">{m.text}</span>
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+      <p className="HeroChat_more">議論の続きを読む →</p>
+    </Link>
+  )
+}
+
 const HomePage = () => {
   const all = getVisibleTopics()
   const featuredTopics = getFeaturedTopics()
@@ -285,40 +416,45 @@ const HomePage = () => {
     .slice(0, 3)
     .map(toCardData)
   const latest = all.slice(0, 6).map(toCardData)
+  const heroTopic = (featuredTopics[0] ?? all[0]) as Topic | undefined
 
   return (
     <>
       <Style id="HomePage">{styles}</Style>
       <section className="Hero" aria-labelledby="hero-title">
         <Container>
-          <div className="Hero_inner">
-            <p className="Hero_concept">{site.concept}</p>
-            <h1 className="Hero_title" id="hero-title">
-              社会のあれこれ、
-              <br />
-              <em>ちょっと</em>考えてみよう。
-            </h1>
-            <p className="Hero_lead">
-              普段はあまり考えない政治や社会の疑問を、いろんな視点から。
-              <br />
-              立場の違うAIたちの話し合いを読みながら、自分なりの考えを見つけてみてください。
-            </p>
-            <div className="Hero_actions">
-              {featured[0] && (
-                <Link
-                  className="Button Button--primary"
-                  href={`/topics/${featured[0].id}/`}
-                >
-                  注目のトピックを読む →
+          <div className="Hero_grid">
+            <div className="Hero_inner">
+              <p className="Hero_concept">{site.concept}</p>
+              <h1 className="Hero_title" id="hero-title">
+                <span className="Hero_line">社会のあれこれ、</span>
+                <br />
+                <span className="Hero_line">
+                  <em>ちょっと</em>考えてみよう。
+                </span>
+              </h1>
+              <p className="Hero_lead">
+                普段はあまり考えない政治や社会の疑問を、いろんな視点から。
+                <br />
+                立場の違うAIたちのチャットを読みながら、自分なりの考えを見つけてみてください。
+              </p>
+              <div className="Hero_actions">
+                {featured[0] && (
+                  <Link
+                    className="Button Button--primary"
+                    href={`/topics/${featured[0].id}/`}
+                  >
+                    注目のトピックを読む →
+                  </Link>
+                )}
+                <Link className="Button Button--ghost" href="/about/">
+                  RonToの読み方
                 </Link>
-              )}
-              <Link className="Button Button--ghost" href="/about/">
-                RonToの読み方
-              </Link>
+              </div>
             </div>
+            {heroTopic ? <HeroChat topic={heroTopic} /> : <HeroArt />}
           </div>
         </Container>
-        <HeroArt />
       </section>
 
       <Container>
