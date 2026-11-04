@@ -18,7 +18,7 @@
   --c-pink: #ff8fb1;
   --c-focus: #ff6a3d;
   --font-sans:
-    var(--font-maru), "Hiragino Maru Gothic ProN", "Hiragino Sans",
+    "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans",
     "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
   --font-serif: var(--font-sans);
   --radius: 22px;
