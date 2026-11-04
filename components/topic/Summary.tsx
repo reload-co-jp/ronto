@@ -19,16 +19,17 @@ const styles = css`
     background: var(--c-surface);
     border-radius: var(--radius-sm);
     padding: 12px 14px;
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
   }
   .Points li::before {
     content: counter(point);
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: var(--c-navy);
-    color: #fff;
-    font-weight: 700;
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    border: 2px solid var(--c-ink);
+    font-weight: 900;
     font-size: 0.85rem;
     display: grid;
     place-items: center;
@@ -47,10 +48,12 @@ const styles = css`
     padding: 16px 18px;
   }
   .ProsCons_col--for {
-    background: #eaf3ee;
+    background: #e3f6ee;
+    border: 2px solid var(--c-ink);
   }
   .ProsCons_col--against {
-    background: #f8ebe6;
+    background: #ffe8de;
+    border: 2px solid var(--c-ink);
   }
   .ProsCons_title {
     font-weight: 700;
@@ -99,7 +102,7 @@ const styles = css`
     background: var(--c-surface);
     border-radius: var(--radius-sm);
     padding: 18px;
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
   }
   .Learned_title {
     font-weight: 700;

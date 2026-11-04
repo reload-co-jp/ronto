@@ -48,6 +48,11 @@ export interface ArticleType {
 /** 標準的な議論の役割（content/personas.json） */
 export interface Persona {
   id: string
+  /** 会話中に表示する呼び名（例：ユイ） */
+  nickname?: string
+  /** ひとことプロフィール（例：32歳・メーカー勤務） */
+  profile?: string
+  /** 役割名（例：生活者の視点） */
   name: string
   description: string
   stance: string
@@ -59,6 +64,8 @@ export interface Persona {
 export interface Participant {
   id: string
   persona?: string
+  nickname?: string
+  profile?: string
   name: string
   description: string
   stance: string
@@ -106,7 +113,24 @@ export interface DiscussionMessage {
   sourceIds?: string[]
 }
 
-export type DiscussionItem = DiscussionMessage | { divider: string }
+export type DiscussionItem =
+  | DiscussionMessage
+  /** 話題の区切り */
+  | { divider: string }
+  /** ト書き（場の様子の描写。例：「店員さんがビールを運んでくる」） */
+  | { narration: string }
+
+/** 議論の場面設定 */
+export interface Scene {
+  /** 場所（例：駅前の焼き鳥屋） */
+  place: string
+  /** 時間（例：金曜の夜8時） */
+  time: string
+  /** 場面の説明 */
+  description: string
+  /** 場面を表す絵文字（任意） */
+  emoji?: string
+}
 
 export interface Fact {
   text: string
@@ -162,6 +186,7 @@ export interface Topic {
   thumbnail?: string
   tags: string[]
   participants: Participant[]
+  scene?: Scene
   sections: Section[]
   discussion: DiscussionItem[]
   summary: Summary

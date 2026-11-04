@@ -1,23 +1,31 @@
 /* グローバルなリセットとデザイントークンのみを置く。コンポーネントのスタイルは各コンポーネント内 (CSS-in-JS) で管理する。 */
 :root {
-  --c-bg: #faf8f4;
+  --c-bg: #fff7ea;
   --c-surface: #ffffff;
-  --c-surface-alt: #f2eee6;
-  --c-text: #1d2433;
-  --c-text-sub: #5a6273;
-  --c-border: #e3ddd2;
-  --c-navy: #1f2d4d;
-  --c-navy-soft: #e8ecf4;
-  --c-accent: #e2672e;
-  --c-accent-soft: #fdeee5;
-  --c-focus: #e2672e;
+  --c-surface-alt: #ffefd6;
+  --c-text: #2b2a33;
+  --c-text-sub: #6b6570;
+  --c-border: #eadcc4;
+  --c-ink: #2b2a33;
+  --c-navy: #2f3b63;
+  --c-navy-soft: #e6eafb;
+  --c-accent: #ff6a3d;
+  --c-accent-soft: #ffe8de;
+  --c-yellow: #ffc94a;
+  --c-yellow-soft: #fff1c7;
+  --c-mint: #4cc3a0;
+  --c-sky: #6ab8f2;
+  --c-pink: #ff8fb1;
+  --c-focus: #ff6a3d;
   --font-sans:
-    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic",
-    "Meiryo", system-ui, sans-serif;
-  --font-serif: "Hiragino Mincho ProN", "Noto Serif JP", "Yu Mincho", serif;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --shadow: 0 1px 2px rgba(29, 36, 51, 0.04), 0 6px 20px rgba(29, 36, 51, 0.06);
+    var(--font-maru), "Hiragino Maru Gothic ProN", "Hiragino Sans",
+    "Noto Sans JP", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+  --font-serif: var(--font-sans);
+  --radius: 22px;
+  --radius-sm: 14px;
+  --shadow: 4px 4px 0 var(--c-ink);
+  --shadow-soft:
+    0 2px 0 rgba(43, 42, 51, 0.06), 0 10px 24px rgba(43, 42, 51, 0.08);
   --container: 1120px;
   --container-narrow: 720px;
   --gutter: 16px;
@@ -45,8 +53,14 @@ body {
   color: var(--c-text);
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.8;
-  letter-spacing: 0.02em;
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  background-image: radial-gradient(
+    rgba(43, 42, 51, 0.045) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
   -webkit-font-smoothing: antialiased;
   min-height: 100dvh;
   display: flex;

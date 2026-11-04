@@ -34,7 +34,7 @@ const styles = css`
     scrollbar-width: thin;
   }
   .Explorer_chip {
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
     background: var(--c-surface);
     color: var(--c-text);
     border-radius: 999px;
@@ -47,9 +47,9 @@ const styles = css`
     border-color: var(--c-navy);
   }
   .Explorer_chip[aria-pressed="true"] {
-    background: var(--c-navy);
-    color: #fff;
-    border-color: var(--c-navy);
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    font-weight: 900;
   }
   .Explorer_count {
     font-size: 0.85rem;
@@ -67,8 +67,9 @@ const styles = css`
     display: block;
     margin: 32px auto 0;
     background: var(--c-surface);
-    border: 1px solid var(--c-navy);
-    color: var(--c-navy);
+    border: 2px solid var(--c-ink);
+    color: var(--c-ink);
+    box-shadow: 3px 3px 0 var(--c-ink);
     border-radius: 999px;
     padding: 10px 32px;
     font-weight: 700;

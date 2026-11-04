@@ -47,7 +47,7 @@ const styles = css`
     background: var(--c-surface);
     border-radius: var(--radius);
     padding: 20px;
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
   }
   .Issue + .Issue {
     margin-top: 16px;

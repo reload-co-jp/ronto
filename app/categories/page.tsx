@@ -35,6 +35,9 @@ const styles = css`
     padding: 22px;
     border-left: 6px solid var(--cat-color);
     box-shadow: var(--shadow);
+    border-top: 2px solid var(--c-ink);
+    border-right: 2px solid var(--c-ink);
+    border-bottom: 2px solid var(--c-ink);
     height: 100%;
   }
   .CatList_name {

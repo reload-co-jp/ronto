@@ -164,6 +164,8 @@ export const validateTopic = (
       stance: merged.stance as string,
       concerns: isStrArr(merged.concerns) ? merged.concerns : [],
       icon: merged.icon as Participant["icon"],
+      ...(isStr(merged.nickname) ? { nickname: merged.nickname } : {}),
+      ...(isStr(merged.profile) ? { profile: merged.profile } : {}),
     }
   }).filter(Boolean)
   const speakerIds = new Set(participants.map((x) => x.id))
@@ -216,6 +218,7 @@ export const validateTopic = (
 
   const discussion: DiscussionItem[] = arr("discussion", (d, i) => {
     if (isObj(d) && isStr(d.divider)) return { divider: d.divider }
+    if (isObj(d) && isStr(d.narration)) return { narration: d.narration }
     if (!isObj(d) || !isStr(d.speaker) || !isStr(d.text)) {
       p.push(`discussion[${i}] は speaker と text が必須`)
       return { divider: "" }
@@ -229,6 +232,19 @@ export const validateTopic = (
     checkRefs(`discussion[${i}]`, d.sourceIds)
     return d as unknown as DiscussionItem
   })
+
+  let scene: Topic["scene"]
+  if (raw.scene !== undefined) {
+    const sc = raw.scene
+    if (
+      !isObj(sc) ||
+      !isStr(sc.place) ||
+      !isStr(sc.time) ||
+      !isStr(sc.description)
+    )
+      p.push("scene は place・time・description が必須")
+    else scene = sc as unknown as Topic["scene"]
+  }
 
   const rs = isObj(raw.summary) ? raw.summary : {}
   const strList = (key: string) => {
@@ -299,6 +315,7 @@ export const validateTopic = (
     thumbnail,
     tags: isStrArr(raw.tags) ? raw.tags : [],
     participants,
+    scene,
     sections,
     discussion,
     summary,

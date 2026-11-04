@@ -11,34 +11,35 @@ const styles = css`
   .Badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     font-size: 0.72rem;
     font-weight: 700;
     line-height: 1;
-    padding: 6px 9px;
+    padding: 5px 10px;
     border-radius: 999px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     white-space: nowrap;
+    border: 1.5px solid var(--c-ink);
   }
   .Badge--category {
-    color: var(--badge-color);
-    background: color-mix(in srgb, var(--badge-color) 11%, #fff);
+    color: var(--c-ink);
+    background: color-mix(in srgb, var(--badge-color) 22%, #fff);
   }
   .Badge--category::before {
     content: "";
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: var(--badge-color);
   }
   .Badge--type {
-    color: var(--c-navy);
-    background: var(--c-navy-soft);
+    color: var(--c-ink);
+    background: var(--c-yellow-soft);
   }
   .Badge--draft {
     color: #8a4b00;
     background: #fff1c2;
-    border: 1px dashed #d9a400;
+    border-style: dashed;
   }
 `
 

@@ -5,7 +5,9 @@
     "description": "家計や日々の暮らし、消費者の負担を重視する。",
     "stance": "「結局、自分の財布や生活はどう変わるの？」を出発点に考える。",
     "concerns": ["家計", "物価", "暮らしやすさ"],
-    "icon": "shopping-cart"
+    "icon": "shopping-cart",
+    "nickname": "ユイ",
+    "profile": "32歳・メーカー勤務。家計簿アプリが趣味で、値上げに敏感"
   },
   {
     "id": "economist",
@@ -13,7 +15,9 @@
     "description": "経済成長、財政、企業活動への影響を重視する。",
     "stance": "お金の流れ全体と、長い目で見た経済への影響を考える。",
     "concerns": ["経済成長", "財政", "企業活動"],
-    "icon": "calculator"
+    "icon": "calculator",
+    "nickname": "ケンジ",
+    "profile": "35歳・銀行員。つい数字で語りがちなのがクセ"
   },
   {
     "id": "welfare",
@@ -21,7 +25,9 @@
     "description": "医療、年金、福祉など支え合いの仕組みを重視する。",
     "stance": "困ったときに支えが届くか、弱い立場の人が取り残されないかを考える。",
     "concerns": ["医療", "年金", "福祉"],
-    "icon": "heart"
+    "icon": "heart",
+    "nickname": "ナツミ",
+    "profile": "34歳・看護師。困っている人の話になると黙っていられない"
   },
   {
     "id": "administration",
@@ -29,7 +35,9 @@
     "description": "制度設計、行政の効率、実現できるかどうかを重視する。",
     "stance": "アイデアを実際の制度として動かせるか、手間やコストはどうかを考える。",
     "concerns": ["制度設計", "行政効率", "実現可能性"],
-    "icon": "building"
+    "icon": "building",
+    "nickname": "タクヤ",
+    "profile": "33歳・市役所職員。制度の話になると早口になる"
   },
   {
     "id": "regional",
@@ -37,7 +45,9 @@
     "description": "地域経済、地方自治、地域ごとの格差を重視する。",
     "stance": "東京から見た話になっていないか、地域ごとの違いを考える。",
     "concerns": ["地域経済", "地方自治", "地域格差"],
-    "icon": "map"
+    "icon": "map",
+    "nickname": "ゴロウ",
+    "profile": "36歳・地元にUターンして家業の酒蔵を継いだ"
   },
   {
     "id": "moderator",
@@ -45,6 +55,8 @@
     "description": "議論を進め、論点を整理し、疑問を投げかける。",
     "stance": "特定の立場はとらず、読者が気になりそうな疑問を代わりに聞く。",
     "concerns": ["論点整理", "素朴な疑問"],
-    "icon": "compass"
+    "icon": "compass",
+    "nickname": "ハル",
+    "profile": "29歳・Webデザイナー。ニュースは見出ししか読まない聞き役"
   }
 ]

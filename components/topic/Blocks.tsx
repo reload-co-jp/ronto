@@ -23,7 +23,7 @@ const styles = css`
     background: var(--c-accent-soft);
     border-radius: var(--radius-sm);
     padding: 16px 18px;
-    border-left: 4px solid var(--c-accent);
+    border: 2px dashed var(--c-accent);
   }
   .Blocks_calloutTitle {
     font-weight: 700;
@@ -42,7 +42,7 @@ const styles = css`
   }
   .Blocks_figure {
     background: var(--c-surface);
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
     border-radius: var(--radius-sm);
     padding: 14px 16px;
     display: grid;
@@ -55,7 +55,7 @@ const styles = css`
   .Blocks_figureValue {
     font-size: 1.45rem;
     font-weight: 800;
-    color: var(--c-navy);
+    color: var(--c-accent);
     line-height: 1.4;
     letter-spacing: 0.01em;
   }
