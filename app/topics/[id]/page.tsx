@@ -163,6 +163,90 @@ const styles = css`
       border-radius: var(--radius);
     }
   }
+  .Primer {
+    margin-top: 24px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+  }
+  .Primer_summary,
+  .Cast_summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-weight: 700;
+  }
+  .Primer_summary::-webkit-details-marker,
+  .Cast_summary::-webkit-details-marker {
+    display: none;
+  }
+  .Primer_summary::after,
+  .Cast_summary::after {
+    content: "＋";
+    color: var(--c-accent);
+    font-weight: 800;
+  }
+  .Primer[open] .Primer_summary::after,
+  .Cast[open] .Cast_summary::after {
+    content: "−";
+  }
+  .Primer_summary {
+    padding: 16px 20px;
+  }
+  .Primer_hint {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--c-text-sub);
+  }
+  .Primer_body {
+    padding: 0 20px 24px;
+    display: grid;
+    gap: 28px;
+  }
+  .Primer_h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    border-left: 4px solid var(--c-accent);
+    line-height: 1.5;
+  }
+  .Cast {
+    margin-bottom: 16px;
+  }
+  .Cast_summary {
+    padding: 10px 4px;
+    font-size: 0.9rem;
+    color: var(--c-navy);
+  }
+  .Cast_body {
+    padding: 4px 0 12px;
+  }
+  .Article_cta {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 8px;
+    background: var(--c-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+  }
+  .Article_cta:hover {
+    background: #c95520;
+  }
+  .Toc {
+    cursor: default;
+  }
+  .Toc summary {
+    cursor: pointer;
+  }
   .Article_note {
     font-size: 0.8rem;
     color: var(--c-text-sub);
@@ -183,26 +267,29 @@ const buildParts = (topic: Topic): Part[] => {
   const s = topic.summary
   const related = getRelatedTopics(topic).map(toCardData)
   const parts: (Part | false)[] = [
-    ...topic.sections.map((sec) => ({
-      id: sec.id,
-      heading: sec.heading,
-      node: <Blocks blocks={sec.blocks} sources={topic.sources} />,
-    })),
-    topic.participants.length > 0 && {
-      id: "participants",
-      heading: "今回の登場人物",
-      node: <Participants participants={topic.participants} />,
-    },
     topic.discussion.length > 0 && {
       id: "discussion",
       heading: "みんなで話してみた",
       className: "Article_section--discussion",
       node: (
-        <Discussion
-          items={topic.discussion}
-          participants={topic.participants}
-          sources={topic.sources}
-        />
+        <>
+          {topic.participants.length > 0 && (
+            <details className="Cast">
+              <summary className="Cast_summary">
+                今回の登場人物（{topic.participants.length}人）
+              </summary>
+              <div className="Cast_body">
+                <Participants participants={topic.participants} />
+              </div>
+            </details>
+          )}
+          <Discussion
+            items={topic.discussion}
+            participants={topic.participants}
+            sources={topic.sources}
+            title={topic.title}
+          />
+        </>
       ),
     },
     s.points.length > 0 && {
@@ -315,21 +402,53 @@ const TopicPage = async ({ params }: Props) => {
             )}
             <span>読了目安 {readingTimeOf(topic)}分</span>
           </p>
+          {topic.discussion.length > 0 && (
+            <a className="Article_cta" href="#discussion">
+              💬 AIたちの議論を読む ↓
+            </a>
+          )}
         </header>
-        <div className="Article_thumb">
-          <Thumbnail
-            src={thumbnail}
-            alt=""
-            category={category}
-            type={type}
-            priority
-          />
-        </div>
+        {thumbnail && (
+          <div className="Article_thumb">
+            <Thumbnail
+              src={thumbnail}
+              alt=""
+              category={category}
+              type={type}
+              priority
+            />
+          </div>
+        )}
 
-        <nav className="Toc" aria-labelledby="toc-title">
-          <p className="Toc_title" id="toc-title">
-            この記事の内容
-          </p>
+        {topic.sections.length > 0 && (
+          <details className="Primer">
+            <summary className="Primer_summary">
+              <span>
+                議論の前に：3分で予備知識
+                <span className="Primer_hint">
+                  {topic.sections.map((sec) => sec.heading).join("／")}
+                </span>
+              </span>
+            </summary>
+            <div className="Primer_body">
+              {topic.sections.map((sec) => (
+                <section
+                  key={sec.id}
+                  id={sec.id}
+                  aria-labelledby={`${sec.id}-heading`}
+                >
+                  <h2 className="Primer_h3" id={`${sec.id}-heading`}>
+                    {sec.heading}
+                  </h2>
+                  <Blocks blocks={sec.blocks} sources={topic.sources} />
+                </section>
+              ))}
+            </div>
+          </details>
+        )}
+
+        <details className="Toc">
+          <summary className="Toc_title">この記事の内容</summary>
           <ol className="Toc_list">
             {parts.map((p) => (
               <li key={p.id}>
@@ -337,7 +456,7 @@ const TopicPage = async ({ params }: Props) => {
               </li>
             ))}
           </ol>
-        </nav>
+        </details>
 
         {parts.map((p, i) => (
           <section

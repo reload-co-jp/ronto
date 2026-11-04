@@ -3,6 +3,7 @@ import {
   Block,
   DiscussionItem,
   ICON_NAMES,
+  MESSAGE_KINDS,
   Participant,
   Persona,
   Section,
@@ -221,6 +222,10 @@ export const validateTopic = (
     }
     if (!speakerIds.has(d.speaker))
       p.push(`discussion[${i}].speaker (${d.speaker}) が participants にない`)
+    if (d.kind !== undefined && !(String(d.kind) in MESSAGE_KINDS))
+      p.push(
+        `discussion[${i}].kind は ${Object.keys(MESSAGE_KINDS).join("/")} のいずれか`
+      )
     checkRefs(`discussion[${i}]`, d.sourceIds)
     return d as unknown as DiscussionItem
   })
@@ -270,7 +275,9 @@ export const validateTopic = (
     if (!publishedAt) p.push("公開記事には publishedAt が必須")
     if (sources.length === 0) p.push("公開記事には出典 (sources) が1件以上必要")
     if (sections.length === 0) p.push("公開記事には sections が必要")
-    if (discussion.length === 0) p.push("公開記事には discussion が必要")
+    const messages = discussion.filter((d) => "speaker" in d).length
+    if (messages < 6)
+      p.push("公開記事の discussion（メインコンテンツ）は発言6件以上が必要")
     if (summary.points.length === 0)
       p.push("公開記事には summary.points が必要")
   }

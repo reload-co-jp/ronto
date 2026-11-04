@@ -12,10 +12,22 @@
   "thumbnail": "/images/topics/consumption-tax.webp",
   "tags": ["消費税", "税金", "家計", "軽減税率"],
   "participants": [
-    { "id": "moderator", "persona": "moderator" },
-    { "id": "consumer", "persona": "consumer" },
-    { "id": "economist", "persona": "economist" },
-    { "id": "welfare", "persona": "welfare" }
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
+    {
+      "id": "economist",
+      "persona": "economist"
+    },
+    {
+      "id": "welfare",
+      "persona": "welfare"
+    }
   ],
   "sections": [
     {
@@ -74,6 +86,9 @@
   ],
   "discussion": [
     {
+      "divider": "下がると何が変わる？"
+    },
+    {
       "speaker": "moderator",
       "text": "今日は消費税の引き下げです。食料品の税率を下げる方針が出ていますが、まずは率直な感想からどうぞ。"
     },
@@ -83,20 +98,40 @@
     },
     {
       "speaker": "economist",
-      "text": "家計にとっては分かりやすい効果です。ただ、税率を下げても、その分がそのまま値札に反映されるとは限りません。仕入れ値や人件費の上昇と重なれば、値下がりを実感しにくいこともあります。"
+      "text": "家計にとっては分かりやすい効果です。ただ、税率を下げても、その分がそのまま値札に反映されるとは限りません。仕入れ値や人件費の上昇と重なれば、値下がりを実感しにくいこともあります。",
+      "kind": "rebuttal"
     },
     {
       "speaker": "welfare",
       "text": "私が気になるのは財源です。消費税は社会保障の大事な財源なので、減った分をどこで補うのかがはっきりしないと、医療や介護、年金への影響が心配になります。",
-      "sourceIds": ["mof-shohi"]
+      "sourceIds": ["mof-shohi"],
+      "kind": "rebuttal"
+    },
+    {
+      "divider": "誰が得をする？"
     },
     {
       "speaker": "moderator",
-      "text": "誰が得をするか、という点ではどうでしょう？"
+      "text": "誰が得をするか、という点ではどうでしょう？",
+      "kind": "question"
     },
     {
       "speaker": "economist",
-      "text": "金額で見ると、たくさん食料品を買う世帯ほど減税額は大きくなります。一方、収入に対する負担の軽さで見ると、収入の少ない世帯ほど効果を感じやすい。どちらの物差しで見るかで「得」の評価が変わります。"
+      "text": "金額で見ると、たくさん食料品を買う世帯ほど減税額は大きくなります。一方、収入に対する負担の軽さで見ると、収入の少ない世帯ほど効果を感じやすい。どちらの物差しで見るかで「得」の評価が変わります。",
+      "kind": "fact"
+    },
+    {
+      "speaker": "welfare",
+      "text": "収入の少ない世帯を支えるのが目的なら、給付金のように対象を絞った支援のほうが効率的だ、という意見もあります。",
+      "kind": "idea"
+    },
+    {
+      "speaker": "consumer",
+      "text": "給付金は申請が面倒だったり、届くまで時間がかかったりしますよね。買い物のたびに自動で安くなるほうが、私は実感しやすいです。",
+      "kind": "rebuttal"
+    },
+    {
+      "divider": "始め方と終わり方"
     },
     {
       "speaker": "consumer",
@@ -104,7 +139,13 @@
     },
     {
       "speaker": "welfare",
-      "text": "期間限定という点も大事です。2年後に税率を元に戻すとき、実質的な増税として受け止められるかもしれません。始める前に、終わり方まで考えておく必要があると思います。"
+      "text": "期間限定という点も大事です。2年後に税率を元に戻すとき、実質的な増税として受け止められるかもしれません。始める前に、終わり方まで考えておく必要があると思います。",
+      "kind": "idea"
+    },
+    {
+      "speaker": "moderator",
+      "text": "「誰が得をするか」は物差しによって変わり、財源と終わり方まで含めて考える必要がある、ということですね。",
+      "kind": "summary"
     }
   ],
   "summary": {

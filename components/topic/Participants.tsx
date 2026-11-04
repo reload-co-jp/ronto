@@ -3,7 +3,9 @@ import { Participant } from "@/lib/types"
 import { participantPalette, PersonaIcon } from "./PersonaIcon"
 
 /** 登場人物の配色。進行役はグレー、それ以外は登場順にパレットから割り当てる */
-export const colorsFor = (participants: Participant[]) => {
+export const colorsFor = (
+  participants: Pick<Participant, "id" | "persona">[]
+) => {
   const map = new Map<string, { fg: string; bg: string }>()
   let i = 0
   for (const p of participants) {
@@ -93,7 +95,7 @@ export const Avatar = ({
   color,
   size = 44,
 }: {
-  participant: Participant
+  participant: Pick<Participant, "icon">
   color: { fg: string; bg: string }
   size?: number
 }) => (
