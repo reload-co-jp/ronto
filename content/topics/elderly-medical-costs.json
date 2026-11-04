@@ -1,0 +1,58 @@
+{
+  "id": "elderly-medical-costs",
+  "title": "高齢者の医療費負担は増やすべき？",
+  "description": "",
+  "category": "welfare",
+  "type": "discussion",
+  "status": "draft",
+  "featured": false,
+  "tags": ["医療費", "高齢者", "社会保障"],
+  "thumbnail": "/images/topics/elderly-medical-costs.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "welfare",
+      "persona": "welfare"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
+    {
+      "id": "economist",
+      "persona": "economist"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}
