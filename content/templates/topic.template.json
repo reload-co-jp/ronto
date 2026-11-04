@@ -1,0 +1,109 @@
+{
+  "id": "topic-id",
+  "title": "〇〇は△△すべき？（検索されやすい疑問形）",
+  "description": "検索結果やカードに表示される概要（80〜120字程度）。",
+  "lead": "記事冒頭のリード文。読者の素朴な疑問から始める。",
+  "category": "economy",
+  "type": "discussion",
+  "publishedAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "status": "draft",
+  "featured": false,
+  "thumbnail": "/images/topics/topic-id.webp",
+  "tags": ["タグ1", "タグ2"],
+  "participants": [
+    { "id": "moderator", "persona": "moderator" },
+    { "id": "consumer", "persona": "consumer" },
+    {
+      "id": "custom",
+      "name": "独自の役割名",
+      "description": "テーマに応じて自由に定義できる",
+      "stance": "この役割が議論で重視すること",
+      "concerns": ["関心事項1", "関心事項2"],
+      "icon": "user"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "本文。出典番号を付ける場合は sourceIds を指定する。",
+          "sourceIds": ["s1"]
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "label": "指標名",
+              "value": "数値",
+              "note": "対象期間など",
+              "asOf": "2026-07-31",
+              "sourceIds": ["s1"]
+            }
+          ]
+        },
+        { "type": "list", "items": ["箇条書き1", "箇条書き2"] },
+        {
+          "type": "callout",
+          "title": "用語メモ",
+          "text": "専門用語のかんたんな説明。"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": [{ "type": "paragraph", "text": "論点の出発点。" }]
+    }
+  ],
+  "discussion": [
+    { "divider": "話題の区切り（任意）" },
+    {
+      "speaker": "moderator",
+      "text": "1回の発言は2〜4文程度。\n\n空行で段落を分けられる。"
+    },
+    {
+      "speaker": "consumer",
+      "text": "相手の意見を踏まえた質問や反論も入れる。",
+      "sourceIds": ["s1"]
+    }
+  ],
+  "summary": {
+    "points": ["主な論点"],
+    "argumentsFor": ["賛成・推進側の主な根拠"],
+    "argumentsAgainst": ["慎重・反対側の主な根拠"],
+    "affectedParties": [
+      { "who": "影響を受ける人・組織", "impact": "どのような影響か" }
+    ],
+    "knownFacts": [
+      {
+        "text": "現時点で分かっている事実",
+        "asOf": "2026-11-01",
+        "sourceIds": ["s1"]
+      }
+    ],
+    "openQuestions": ["まだ結論が出ていない点"]
+  },
+  "takeaways": ["今回の議論で分かったこと"],
+  "furtherQuestions": ["読者がさらに考えたい問い"],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "参考資料名",
+      "url": "https://example.com/",
+      "publisher": "発行元",
+      "publishedAt": "2026-01-01",
+      "accessedAt": "2026-11-01"
+    }
+  ],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "models": [],
+    "factCheckedAt": "2026-11-01",
+    "notes": "編集メモ（表示されない）"
+  }
+}

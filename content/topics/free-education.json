@@ -1,0 +1,58 @@
+{
+  "id": "free-education",
+  "title": "高校や大学を無償化すべき？",
+  "description": "",
+  "category": "education",
+  "type": "discussion",
+  "status": "draft",
+  "featured": false,
+  "tags": ["教育無償化", "学費", "奨学金"],
+  "thumbnail": "/images/topics/free-education.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
+    {
+      "id": "economist",
+      "persona": "economist"
+    },
+    {
+      "id": "welfare",
+      "persona": "welfare"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}

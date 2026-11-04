@@ -1,0 +1,32 @@
+[
+  {
+    "id": "why",
+    "code": "WHY",
+    "label": "なぜ？",
+    "description": "制度や仕組みの「そもそも」を解きほぐす。"
+  },
+  {
+    "id": "discussion",
+    "code": "DISCUSSION",
+    "label": "どう思う？",
+    "description": "複数の立場から、賛否の分かれるテーマを話し合う。"
+  },
+  {
+    "id": "benefit",
+    "code": "BENEFIT",
+    "label": "誰が得する？",
+    "description": "得をする人と負担する人を整理する。"
+  },
+  {
+    "id": "comparison",
+    "code": "COMPARISON",
+    "label": "比べてみる",
+    "description": "制度や政策を、他の国や過去と比べる。"
+  },
+  {
+    "id": "election",
+    "code": "ELECTION",
+    "label": "選挙の前に",
+    "description": "投票の前に知っておきたい争点を整理する。"
+  }
+]

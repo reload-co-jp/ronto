@@ -1,0 +1,54 @@
+{
+  "id": "political-funding",
+  "title": "政党はどうやってお金を集めている？",
+  "description": "",
+  "category": "politics",
+  "type": "why",
+  "status": "draft",
+  "featured": false,
+  "tags": ["政治資金", "政党交付金", "献金"],
+  "thumbnail": "/images/topics/political-funding.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "administration",
+      "persona": "administration"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}

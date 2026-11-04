@@ -1,0 +1,58 @@
+{
+  "id": "birthrate-policy",
+  "title": "少子化対策に効果はある？",
+  "description": "",
+  "category": "education",
+  "type": "discussion",
+  "status": "draft",
+  "featured": false,
+  "tags": ["少子化", "子育て支援", "人口"],
+  "thumbnail": "/images/topics/birthrate-policy.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
+    {
+      "id": "welfare",
+      "persona": "welfare"
+    },
+    {
+      "id": "regional",
+      "persona": "regional"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}

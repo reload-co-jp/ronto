@@ -1,24 +1,51 @@
-import { Footer, Header, Main, Title } from "@/components/elements/layout"
-import "./reset.css"
+import type { Metadata, Viewport } from "next"
+import { SiteFooter } from "@/components/layout/SiteFooter"
+import { SiteHeader } from "@/components/layout/SiteHeader"
+import { JsonLd } from "@/components/ui/primitives"
+import { pageMetadata } from "@/lib/seo"
+import { site } from "@/lib/site"
+import "./global.css"
 
-export const metadata = {
-  title: "Page title",
-  description: "Page description",
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  ...pageMetadata({ description: site.description, path: "/" }),
+  title: {
+    default: `${site.name}（ロント）｜${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
+  applicationName: site.name,
+  publisher: site.publisher.name,
+  icons: { icon: "/favicon.svg" },
 }
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <html lang="ja">
-      <body>
-        <Header>
-          <Title>Page title</Title>
-        </Header>
-        <Main>{children}</Main>
-        <Footer>
-          <p>&copy; My organization</p>
-        </Footer>
-      </body>
-    </html>
-  )
+export const viewport: Viewport = {
+  themeColor: "#faf8f4",
+  width: "device-width",
+  initialScale: 1,
 }
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+  <html lang="ja">
+    <body>
+      <SiteHeader />
+      <main id="main">{children}</main>
+      <SiteFooter />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: site.name,
+          url: site.url,
+          description: site.description,
+          inLanguage: "ja",
+          publisher: {
+            "@type": "Organization",
+            name: site.publisher.name,
+            url: site.publisher.url,
+          },
+        }}
+      />
+    </body>
+  </html>
+)
 export default RootLayout

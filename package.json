@@ -1,8 +1,7 @@
 {
-  "name": "page",
+  "name": "ronto",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "RonTo - 政治・社会・経済の読み物メディア (https://rnt.reload.co.jp)",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -12,7 +11,9 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "format:check": "prettier --check .",
+    "preview": "RONTO_PREVIEW=1 next build"
   },
   "keywords": [],
   "author": "",
@@ -41,5 +42,6 @@
     "prettier": "^3.9.10",
     "typescript-eslint": "^8.72.0",
     "vitest": "^5.0.5"
-  }
+  },
+  "private": true
 }

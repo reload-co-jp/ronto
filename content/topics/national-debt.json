@@ -1,0 +1,58 @@
+{
+  "id": "national-debt",
+  "title": "日本の借金は本当に問題？",
+  "description": "",
+  "category": "economy",
+  "type": "why",
+  "status": "draft",
+  "featured": false,
+  "tags": ["国債", "財政", "借金"],
+  "thumbnail": "/images/topics/national-debt.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "economist",
+      "persona": "economist"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
+    {
+      "id": "welfare",
+      "persona": "welfare"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}

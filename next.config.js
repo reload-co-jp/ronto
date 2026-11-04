@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 
+// 独自ドメイン (rnt.reload.co.jp) で公開するため basePath は使用しない
 const nextConfig = {
   output: "export",
-  basePath: process.env.NODE_ENV === "production" ? "/page" : "",
   trailingSlash: true,
   images: {
     unoptimized: true,

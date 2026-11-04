@@ -1,0 +1,58 @@
+{
+  "id": "nuclear-restart",
+  "title": "原発は再稼働すべき？",
+  "description": "",
+  "category": "diplomacy",
+  "type": "discussion",
+  "status": "draft",
+  "featured": false,
+  "tags": ["原発", "エネルギー", "電気料金"],
+  "thumbnail": "/images/topics/nuclear-restart.webp",
+  "participants": [
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "economist",
+      "persona": "economist"
+    },
+    {
+      "id": "regional",
+      "persona": "regional"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    }
+  ],
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": []
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": []
+    }
+  ],
+  "discussion": [],
+  "summary": {
+    "points": [],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [],
+    "knownFacts": [],
+    "openQuestions": []
+  },
+  "takeaways": [],
+  "furtherQuestions": [],
+  "sources": [],
+  "related": [],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "雛形。本文・議論・出典を作成し、編集部の確認後に status を published にする。"
+  }
+}
