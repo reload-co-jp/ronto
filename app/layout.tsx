@@ -1,19 +1,10 @@
 import type { Metadata, Viewport } from "next"
-import { Zen_Maru_Gothic } from "next/font/google"
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { JsonLd } from "@/components/ui/primitives"
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 import "./global.css"
-
-const maru = Zen_Maru_Gothic({
-  weight: ["500", "700", "900"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-maru",
-  preload: false,
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -34,7 +25,20 @@ export const viewport: Viewport = {
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="ja" className={maru.variable}>
+  <html lang="ja">
+    <head>
+      {/* フォントは Google Fonts から配信（日本語フォントの分割ファイルを成果物に含めない） */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+      />
+    </head>
     <body>
       <SiteHeader />
       <main id="main">{children}</main>
