@@ -77,7 +77,7 @@ const styles = css`
     font-size: 1.7rem;
     line-height: 1.45;
     letter-spacing: 0.03em;
-    font-weight: 800;
+    font-weight: 900;
   }
   ${mq.tablet} {
     .Article_title {
@@ -87,7 +87,7 @@ const styles = css`
   .Article_lead {
     font-size: 1.02rem;
     line-height: 1.95;
-    color: #374055;
+    color: #4a4650;
   }
   .Article_meta {
     display: flex;
@@ -106,7 +106,7 @@ const styles = css`
   .Toc {
     margin: 28px 0 8px;
     background: var(--c-surface);
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
     border-radius: var(--radius);
     padding: 16px 20px;
   }
@@ -151,22 +151,13 @@ const styles = css`
     font-family: ui-monospace, monospace;
   }
   .Article_section--discussion {
-    background: var(--c-surface-alt);
-    margin: 44px calc(var(--gutter) * -1) 0;
-    padding: 28px var(--gutter) 32px;
-    border-radius: 0;
+    padding-top: 44px;
   }
-  ${mq.tablet} {
-    .Article_section--discussion {
-      margin: 44px -32px 0;
-      padding: 36px 32px;
-      border-radius: var(--radius);
-    }
-  }
+
   .Primer {
     margin-top: 24px;
     background: var(--c-surface);
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
     border-radius: var(--radius);
   }
   .Primer_summary,
@@ -232,14 +223,17 @@ const styles = css`
     gap: 8px;
     background: var(--c-accent);
     color: #fff;
-    font-weight: 700;
-    font-size: 0.9rem;
+    font-weight: 900;
+    font-size: 0.95rem;
     text-decoration: none;
     border-radius: 999px;
-    padding: 10px 20px;
+    padding: 10px 22px;
+    border: 2px solid var(--c-ink);
+    box-shadow: 3px 3px 0 var(--c-ink);
   }
   .Article_cta:hover {
-    background: #c95520;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--c-ink);
   }
   .Toc {
     cursor: default;
@@ -269,7 +263,7 @@ const buildParts = (topic: Topic): Part[] => {
   const parts: (Part | false)[] = [
     topic.discussion.length > 0 && {
       id: "discussion",
-      heading: "みんなで話してみた",
+      heading: "今日の雑談",
       className: "Article_section--discussion",
       node: (
         <>
@@ -287,6 +281,7 @@ const buildParts = (topic: Topic): Part[] => {
             items={topic.discussion}
             participants={topic.participants}
             sources={topic.sources}
+            scene={topic.scene}
             title={topic.title}
           />
         </>
@@ -404,7 +399,7 @@ const TopicPage = async ({ params }: Props) => {
           </p>
           {topic.discussion.length > 0 && (
             <a className="Article_cta" href="#discussion">
-              💬 AIたちの議論を読む ↓
+              💬 雑談を読む ↓
             </a>
           )}
         </header>
@@ -424,7 +419,7 @@ const TopicPage = async ({ params }: Props) => {
           <details className="Primer">
             <summary className="Primer_summary">
               <span>
-                議論の前に：3分で予備知識
+                話の前に：3分で予備知識
                 <span className="Primer_hint">
                   {topic.sections.map((sec) => sec.heading).join("／")}
                 </span>

@@ -88,10 +88,10 @@ export const PersonaIcon = ({
 
 /** 登場人物ごとの配色（並び順で割り当て） */
 export const participantPalette = [
-  { fg: "#1f2d4d", bg: "#e8ecf4" },
-  { fg: "#b4501f", bg: "#fdeee5" },
-  { fg: "#2f6b4f", bg: "#e4f1ea" },
-  { fg: "#8a2f45", bg: "#f7e6ea" },
-  { fg: "#6a5313", bg: "#f6efd9" },
-  { fg: "#285f6d", bg: "#e2eff2" },
+  { fg: "#2b2a33", bg: "#ffd9c7", bubble: "#ffe8de" },
+  { fg: "#2b2a33", bg: "#c9ecdf", bubble: "#e3f6ee" },
+  { fg: "#2b2a33", bg: "#d5dcff", bubble: "#e9ecff" },
+  { fg: "#2b2a33", bg: "#ffd3e1", bubble: "#ffe7ef" },
+  { fg: "#2b2a33", bg: "#cfe8fb", bubble: "#e6f3fd" },
+  { fg: "#2b2a33", bg: "#ffe8a6", bubble: "#fff3cf" },
 ]

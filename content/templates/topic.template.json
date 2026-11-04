@@ -12,17 +12,31 @@
   "thumbnail": "/images/topics/topic-id.webp",
   "tags": ["タグ1", "タグ2"],
   "participants": [
-    { "id": "moderator", "persona": "moderator" },
-    { "id": "consumer", "persona": "consumer" },
+    {
+      "id": "moderator",
+      "persona": "moderator"
+    },
+    {
+      "id": "consumer",
+      "persona": "consumer"
+    },
     {
       "id": "custom",
       "name": "独自の役割名",
       "description": "テーマに応じて自由に定義できる",
       "stance": "この役割が議論で重視すること",
       "concerns": ["関心事項1", "関心事項2"],
-      "icon": "user"
+      "icon": "user",
+      "nickname": "シュウ",
+      "profile": "37歳・大学で国際関係を研究している"
     }
   ],
+  "scene": {
+    "emoji": "🏮",
+    "place": "駅前の焼き鳥屋",
+    "time": "金曜の夜8時",
+    "description": "場面の説明。誰が、どこで、何をきっかけにこの話題になったかを2〜3文で。"
+  },
   "sections": [
     {
       "id": "background",
@@ -45,7 +59,10 @@
             }
           ]
         },
-        { "type": "list", "items": ["箇条書き1", "箇条書き2"] },
+        {
+          "type": "list",
+          "items": ["箇条書き1", "箇条書き2"]
+        },
         {
           "type": "callout",
           "title": "用語メモ",
@@ -56,18 +73,30 @@
     {
       "id": "problem",
       "heading": "そもそも何が問題なのか",
-      "blocks": [{ "type": "paragraph", "text": "論点の出発点。" }]
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "論点の出発点。"
+        }
+      ]
     }
   ],
   "discussion": [
-    { "divider": "話題の区切り（任意）" },
+    {
+      "narration": "ト書き（場の様子）。例：店員さんがビールを運んでくる。"
+    },
+    {
+      "divider": "話題の区切り（任意）"
+    },
     {
       "speaker": "moderator",
-      "text": "1回の発言は2〜4文程度。\n\n空行で段落を分けられる。"
+      "text": "友だちどうしの口調で。1回の発言は2〜4文程度。\n\n空行で段落を分けられる。",
+      "kind": "question"
     },
     {
       "speaker": "consumer",
-      "text": "相手の意見を踏まえた質問や反論も入れる。",
+      "text": "相手の意見を踏まえた質問や反論も入れる。事実を述べる発言には出典を付ける。",
+      "kind": "fact",
       "sourceIds": ["s1"]
     }
   ],
@@ -76,7 +105,10 @@
     "argumentsFor": ["賛成・推進側の主な根拠"],
     "argumentsAgainst": ["慎重・反対側の主な根拠"],
     "affectedParties": [
-      { "who": "影響を受ける人・組織", "impact": "どのような影響か" }
+      {
+        "who": "影響を受ける人・組織",
+        "impact": "どのような影響か"
+      }
     ],
     "knownFacts": [
       {

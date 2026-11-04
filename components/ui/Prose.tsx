@@ -35,7 +35,7 @@ const styles = css`
   }
   .Prose .Prose_box {
     background: var(--c-surface);
-    border: 1px solid var(--c-border);
+    border: 2px solid var(--c-ink);
     border-radius: var(--radius-sm);
     padding: 18px 20px;
   }

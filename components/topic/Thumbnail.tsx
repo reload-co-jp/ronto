@@ -8,6 +8,8 @@ const styles = css`
     overflow: hidden;
     border-radius: var(--radius-sm);
     background: var(--c-surface-alt);
+    border: 2px solid var(--c-ink);
+    container-type: inline-size;
   }
   .Thumbnail_img {
     width: 100%;
@@ -17,7 +19,7 @@ const styles = css`
   .Thumbnail_fallback {
     position: absolute;
     inset: 0;
-    background: color-mix(in srgb, var(--thumb-color) 14%, #fbf9f5);
+    background: color-mix(in srgb, var(--thumb-color) 26%, #fff7ea);
   }
   .Thumbnail_fallback svg {
     position: absolute;
@@ -27,23 +29,24 @@ const styles = css`
   }
   .Thumbnail_label {
     position: absolute;
-    left: 7%;
-    bottom: 12%;
-    font-weight: 800;
-    color: var(--thumb-color);
-    font-size: clamp(1.1rem, 5cqw, 2.4rem);
+    left: 6%;
+    bottom: 11%;
+    font-weight: 900;
+    color: var(--c-ink);
+    font-size: clamp(1.1rem, 6cqw, 2.6rem);
     line-height: 1.1;
     letter-spacing: 0.04em;
   }
   .Thumbnail_code {
     display: block;
-    font-size: 0.45em;
-    letter-spacing: 0.24em;
-    opacity: 0.7;
-    margin-bottom: 0.3em;
-  }
-  .Thumbnail {
-    container-type: inline-size;
+    width: fit-content;
+    font-size: 0.4em;
+    letter-spacing: 0.2em;
+    background: var(--c-surface);
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    padding: 0.15em 0.7em;
+    margin-bottom: 0.4em;
   }
 `
 
@@ -81,58 +84,46 @@ export const Thumbnail = ({
     ) : (
       <div className="Thumbnail_fallback" aria-hidden="true">
         <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice">
+          <circle cx="262" cy="40" r="58" fill="#fff" opacity="0.55" />
+          <circle cx="40" cy="30" r="6" fill={category.color} />
           <circle
-            cx="250"
-            cy="56"
-            r="64"
-            fill={category.color}
-            opacity="0.16"
+            cx="300"
+            cy="160"
+            r="9"
+            fill="#ffc94a"
+            stroke="#2b2a33"
+            strokeWidth="2"
           />
-          <circle
-            cx="292"
-            cy="150"
-            r="38"
-            fill={category.color}
-            opacity="0.24"
-          />
-          <rect
-            x="176"
-            y="96"
-            width="70"
-            height="46"
-            rx="12"
-            fill="#fff"
-            opacity="0.9"
-          />
-          <rect
-            x="216"
-            y="70"
-            width="80"
-            height="44"
-            rx="12"
-            fill={category.color}
-            opacity="0.85"
-          />
-          <circle cx="236" cy="92" r="4" fill="#fff" />
-          <circle cx="256" cy="92" r="4" fill="#fff" />
-          <circle cx="276" cy="92" r="4" fill="#fff" />
-          <rect
-            x="190"
-            y="112"
-            width="40"
-            height="5"
-            rx="2.5"
-            fill={category.color}
-            opacity="0.5"
-          />
-          <rect
-            x="190"
-            y="124"
-            width="26"
-            height="5"
-            rx="2.5"
-            fill={category.color}
-            opacity="0.35"
+          <g stroke="#2b2a33" strokeWidth="2.5">
+            <rect x="166" y="54" width="96" height="50" rx="22" fill="#fff" />
+            <path
+              d="M184 103 l-6 16 l20 -16z"
+              fill="#fff"
+              strokeLinejoin="round"
+            />
+            <rect
+              x="214"
+              y="96"
+              width="88"
+              height="46"
+              rx="22"
+              fill={category.color}
+            />
+            <path
+              d="M282 141 l8 15 l-22 -15z"
+              fill={category.color}
+              strokeLinejoin="round"
+            />
+          </g>
+          <circle cx="196" cy="79" r="5" fill="#2b2a33" />
+          <circle cx="214" cy="79" r="5" fill="#2b2a33" />
+          <circle cx="232" cy="79" r="5" fill="#2b2a33" />
+          <path
+            d="M240 120 q18 12 36 0"
+            stroke="#fff"
+            strokeWidth="4"
+            fill="none"
+            strokeLinecap="round"
           />
         </svg>
         <span className="Thumbnail_label">

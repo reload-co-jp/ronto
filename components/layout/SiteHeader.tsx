@@ -11,9 +11,9 @@ export const mainNav = [
 
 const styles = css`
   .SiteHeader {
-    background: rgba(250, 248, 244, 0.94);
+    background: rgba(255, 247, 234, 0.95);
     backdrop-filter: saturate(1.4) blur(8px);
-    border-bottom: 1px solid var(--c-border);
+    border-bottom: 2px solid var(--c-ink);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -29,20 +29,20 @@ const styles = css`
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 0 6px;
+    padding: 14px 0 8px;
     text-decoration: none;
   }
   .SiteHeader_tagline {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     color: var(--c-text-sub);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     display: none;
   }
   .SiteHeader_nav {
     overflow-x: auto;
     scrollbar-width: none;
     margin: 0 calc(var(--gutter) * -1);
-    padding: 0 var(--gutter);
+    padding: 0 var(--gutter) 10px;
   }
   .SiteHeader_nav::-webkit-scrollbar {
     display: none;
@@ -50,28 +50,29 @@ const styles = css`
   .SiteHeader_list {
     list-style: none;
     display: flex;
-    gap: 4px;
+    gap: 6px;
     white-space: nowrap;
   }
   .SiteHeader_link {
     display: block;
-    padding: 8px 10px 10px;
-    font-size: 0.875rem;
-    font-weight: 600;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
     text-decoration: none;
-    color: var(--c-text);
-    border-bottom: 2px solid transparent;
+    color: var(--c-ink);
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    background: var(--c-surface);
   }
   .SiteHeader_link:hover {
-    color: var(--c-accent);
-    border-bottom-color: var(--c-accent);
+    background: var(--c-yellow);
   }
   .SiteHeader_skip {
     position: absolute;
     left: 8px;
     top: 8px;
     transform: translateY(-200%);
-    background: var(--c-navy);
+    background: var(--c-ink);
     color: #fff;
     padding: 8px 12px;
     border-radius: var(--radius-sm);
@@ -85,7 +86,7 @@ const styles = css`
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
+      height: 70px;
     }
     .SiteHeader_brand {
       padding: 0;
@@ -96,9 +97,6 @@ const styles = css`
     .SiteHeader_nav {
       margin: 0;
       padding: 0;
-    }
-    .SiteHeader_link {
-      padding: 22px 12px;
     }
   }
 `
@@ -117,7 +115,7 @@ export const SiteHeader = () => (
       >
         <Logo />
         <span className="SiteHeader_tagline">
-          政治・社会を、いろんな視点から。
+          政治や社会のこと、ゆるっと話そう。
         </span>
       </Link>
       <nav className="SiteHeader_nav" aria-label="メインメニュー">

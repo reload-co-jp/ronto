@@ -13,19 +13,26 @@ const styles = css`
     max-width: calc(var(--container-narrow) + var(--gutter) * 2);
   }
   .PageHeader {
-    padding: 40px 0 24px;
+    padding: 36px 0 24px;
   }
   .PageHeader_eyebrow {
-    color: var(--c-accent);
-    font-size: 0.8rem;
-    font-weight: 700;
+    display: inline-block;
+    color: var(--c-ink);
+    background: var(--c-yellow);
+    font-size: 0.75rem;
+    font-weight: 900;
     letter-spacing: 0.12em;
+    padding: 2px 12px;
+    border-radius: 999px;
+    border: 2px solid var(--c-ink);
+    transform: rotate(-2deg);
   }
   .PageHeader_title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     line-height: 1.4;
-    margin-top: 4px;
+    margin-top: 12px;
     letter-spacing: 0.04em;
+    font-weight: 900;
   }
   .PageHeader_lead {
     color: var(--c-text-sub);
@@ -37,48 +44,52 @@ const styles = css`
       padding: 56px 0 32px;
     }
     .PageHeader_title {
-      font-size: 2.25rem;
+      font-size: 2.4rem;
     }
   }
   .SectionHeading {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .SectionHeading_title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     line-height: 1.4;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .SectionHeading_title::before {
-    content: "";
-    width: 6px;
-    height: 1.1em;
-    border-radius: 3px;
-    background: var(--c-accent);
-    flex: none;
+    font-weight: 900;
+    display: inline;
+    background: linear-gradient(
+      transparent 62%,
+      var(--c-yellow) 62%,
+      var(--c-yellow) 92%,
+      transparent 92%
+    );
+    padding: 0 4px;
   }
   .SectionHeading_en {
     display: block;
     font-size: 0.7rem;
     letter-spacing: 0.16em;
-    color: var(--c-text-sub);
-    font-weight: 600;
-    margin-left: 16px;
+    color: var(--c-accent);
+    font-weight: 900;
+    margin-bottom: 2px;
   }
   .SectionHeading_more {
-    font-size: 0.875rem;
-    color: var(--c-navy);
-    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--c-ink);
+    font-weight: 700;
     white-space: nowrap;
     text-decoration: none;
+    border: 2px solid var(--c-ink);
+    border-radius: 999px;
+    padding: 4px 14px;
+    background: var(--c-surface);
+    box-shadow: 2px 2px 0 var(--c-ink);
   }
   .SectionHeading_more:hover {
-    text-decoration: underline;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 var(--c-ink);
   }
   .Section {
     padding: 40px 0;
@@ -139,14 +150,14 @@ export const SectionHeading = ({
   <div className="SectionHeading">
     <BaseStyles />
     <div>
-      <h2 className="SectionHeading_title" id={id}>
-        {title}
-      </h2>
       {en && (
         <span className="SectionHeading_en" aria-hidden="true">
           {en}
         </span>
       )}
+      <h2 className="SectionHeading_title" id={id}>
+        {title}
+      </h2>
     </div>
     {more && (
       <Link className="SectionHeading_more" href={more.href}>

@@ -7,10 +7,12 @@ import { Logo } from "./Logo"
 const styles = css`
   .SiteFooter {
     margin-top: auto;
-    background: var(--c-navy);
-    color: #dfe4ee;
+    background: var(--c-ink);
+    color: #e9e4dc;
     padding: 48px 0 32px;
     font-size: 0.875rem;
+    border-top: 2px solid var(--c-ink);
+    border-radius: 32px 32px 0 0;
   }
   .SiteFooter_inner {
     max-width: var(--container);
@@ -24,13 +26,13 @@ const styles = css`
   }
   .SiteFooter_concept {
     margin-top: 12px;
-    color: #b9c2d4;
+    color: #c9c2b8;
     font-size: 0.8rem;
   }
   .SiteFooter_heading {
     font-size: 0.75rem;
     letter-spacing: 0.12em;
-    color: #8f9bb3;
+    color: var(--c-yellow);
     margin-bottom: 8px;
   }
   .SiteFooter_list {
@@ -47,9 +49,9 @@ const styles = css`
   }
   .SiteFooter_note {
     grid-column: 1 / -1;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px dashed rgba(255, 255, 255, 0.25);
     padding-top: 20px;
-    color: #8f9bb3;
+    color: #a9a29a;
     font-size: 0.75rem;
     display: grid;
     gap: 6px;

@@ -1,10 +1,19 @@
 import type { Metadata, Viewport } from "next"
+import { Zen_Maru_Gothic } from "next/font/google"
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { JsonLd } from "@/components/ui/primitives"
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 import "./global.css"
+
+const maru = Zen_Maru_Gothic({
+  weight: ["500", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-maru",
+  preload: false,
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -19,13 +28,13 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#faf8f4",
+  themeColor: "#fff7ea",
   width: "device-width",
   initialScale: 1,
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="ja">
+  <html lang="ja" className={maru.variable}>
     <body>
       <SiteHeader />
       <main id="main">{children}</main>

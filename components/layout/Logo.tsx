@@ -3,24 +3,35 @@ import { css, Style } from "@/components/ui/Style"
 const styles = css`
   .Logo {
     font-family: var(--font-sans);
-    font-weight: 800;
-    font-size: 1.5rem;
+    font-weight: 900;
+    font-size: 1.55rem;
     letter-spacing: 0.01em;
     line-height: 1;
-    color: var(--c-navy);
+    color: var(--c-ink);
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
   }
   .Logo_to {
     color: var(--c-accent);
   }
-  .Logo_dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--c-accent);
-    margin-left: 3px;
+  .Logo_bubble {
+    position: relative;
     display: inline-block;
+    width: 22px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--c-yellow);
+    border: 2px solid var(--c-ink);
+    margin-left: 4px;
+    transform: translateY(-6px) rotate(6deg);
+  }
+  .Logo_bubble::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    bottom: -6px;
+    border: 4px solid transparent;
+    border-top-color: var(--c-ink);
   }
 `
 
@@ -29,6 +40,6 @@ export const Logo = () => (
   <span className="Logo">
     <Style id="Logo">{styles}</Style>
     Ron<span className="Logo_to">To</span>
-    <span className="Logo_dot" aria-hidden="true" />
+    <span className="Logo_bubble" aria-hidden="true" />
   </span>
 )

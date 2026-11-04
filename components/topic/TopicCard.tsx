@@ -15,21 +15,20 @@ const styles = css`
     background: var(--c-surface);
     border-radius: var(--radius);
     padding: 12px 12px 18px;
+    border: 2px solid var(--c-ink);
     box-shadow: var(--shadow);
     transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
     height: 100%;
   }
   .TopicCard:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 2px 4px rgba(29, 36, 51, 0.05),
-      0 12px 28px rgba(29, 36, 51, 0.1);
+    transform: translate(-2px, -2px) rotate(-0.3deg);
+    box-shadow: 6px 6px 0 var(--c-ink);
   }
   .TopicCard:focus-within {
     outline: 3px solid var(--c-focus);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
   .TopicCard_body {
     display: flex;
@@ -39,9 +38,9 @@ const styles = css`
     flex: 1;
   }
   .TopicCard_title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.55;
-    font-weight: 700;
+    font-weight: 900;
   }
   .TopicCard_link {
     text-decoration: none;
@@ -58,7 +57,7 @@ const styles = css`
   .TopicCard_desc {
     font-size: 0.85rem;
     color: var(--c-text-sub);
-    line-height: 1.7;
+    line-height: 1.75;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -72,14 +71,14 @@ const styles = css`
     color: var(--c-text-sub);
   }
   .TopicCard--large .TopicCard_title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
   .TopicCard_chat {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 0.75rem;
-    color: var(--c-navy);
+    color: var(--c-ink);
     font-weight: 700;
   }
   .TopicCard_avatars {
@@ -87,7 +86,6 @@ const styles = css`
   }
   .TopicCard_avatars > * {
     margin-left: -6px;
-    box-shadow: 0 0 0 2px var(--c-surface);
   }
   .TopicCard_avatars > *:first-child {
     margin-left: 0;
@@ -101,8 +99,9 @@ const styles = css`
     line-height: 1.7;
   }
   .TopicCard_bubble {
-    background: var(--c-surface-alt);
-    border-radius: 4px 14px 14px 14px;
+    background: var(--c-yellow-soft);
+    border: 1.5px solid var(--c-ink);
+    border-radius: 4px 16px 16px 16px;
     padding: 8px 12px;
   }
   .TopicCard_bubbleText {
@@ -116,7 +115,7 @@ const styles = css`
       padding: 16px 16px 24px;
     }
     .TopicCard--large .TopicCard_title {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
     .TopicCard--large .TopicCard_desc {
       font-size: 0.95rem;
@@ -125,13 +124,13 @@ const styles = css`
   .TopicGrid {
     list-style: none;
     display: grid;
-    gap: 20px;
+    gap: 24px;
     grid-template-columns: 1fr;
   }
   ${mq.tablet} {
     .TopicGrid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
   }
   ${mq.desktop} {

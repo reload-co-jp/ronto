@@ -3,36 +3,36 @@
     "id": "economy",
     "name": "経済・税金",
     "description": "税金、物価、給料、財政など、お金にまつわる社会のしくみ。",
-    "color": "#D9682B"
+    "color": "#F2792E"
   },
   {
     "id": "politics",
     "name": "政治・行政",
     "description": "選挙、国会、政党、行政のしくみなど、政治が動くルール。",
-    "color": "#24365C"
+    "color": "#5866E0"
   },
   {
     "id": "regional",
     "name": "地方・まちづくり",
     "description": "地域経済、地方自治、人口の偏りなど、暮らす場所の課題。",
-    "color": "#3C7A5A"
+    "color": "#2FAE7C"
   },
   {
     "id": "education",
     "name": "教育・子育て",
     "description": "学校、学費、少子化、子育て支援など、次の世代にかかわること。",
-    "color": "#B8871F"
+    "color": "#E2A40C"
   },
   {
     "id": "welfare",
     "name": "社会保障・福祉",
     "description": "医療、年金、介護、福祉など、いざというときの支え合い。",
-    "color": "#B04A5A"
+    "color": "#E95B83"
   },
   {
     "id": "diplomacy",
     "name": "外交・安全保障",
     "description": "外国との関係、防衛、エネルギーなど、国の外とのつながり。",
-    "color": "#2F6F80"
+    "color": "#2A9CBB"
   }
 ]
