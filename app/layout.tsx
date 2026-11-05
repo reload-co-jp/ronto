@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics"
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { JsonLd } from "@/components/ui/primitives"
@@ -43,6 +44,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <SiteHeader />
       <main id="main">{children}</main>
       <SiteFooter />
+      <GoogleAnalytics />
       <JsonLd
         data={{
           "@context": "https://schema.org",
