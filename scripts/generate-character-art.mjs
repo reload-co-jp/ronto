@@ -4,7 +4,7 @@
  *
  *   node scripts/generate-character-art.mjs
  *
- * 4匹のキャラクターを同じ線幅・同じ頭身・同じ表情パーツで描き、
+ * 4匹のキャラクターを同じ線幅・同じ頭身・同じ表情パーツ（萌え調の瞳）で描き、
  * public/images/characters/ 配下に書き出す。生成物はリポジトリにコミットする。
  * 絵柄を変えるときはこのスクリプトを編集して再実行する。
  */
@@ -16,7 +16,6 @@ const INK = "#5a4545" // やわらかい焦げ茶の線
 const EYE = "#3b2c2c"
 const SW = 3.5 // 共通の線幅
 const MOUTH = "#f06a80"
-const BLUSH = "#ffaabb"
 
 export const EXPRESSIONS = [
   "normal",
@@ -29,29 +28,73 @@ export const EXPRESSIONS = [
 
 /* ---------- 表情パーツ（全キャラ共通・大きめのキラキラ目） ---------- */
 
-const shine = (x, y, s = 1) =>
-  `<circle cx="${x + 2.6 * s}" cy="${y - 3.6 * s}" r="${3.2 * s}" fill="#fff"/><circle cx="${x - 2.4 * s}" cy="${y + 3.4 * s}" r="${1.4 * s}" fill="#fff"/>`
-
-const eye = (x, y, e, side) => {
-  const line = (d, w = 4.5) =>
+/**
+ * 萌え調の瞳。キャラクターごとの瞳色グラデーション、太めの上まつ毛と目尻のハネ、
+ * 複数のハイライト、下側の照り返しで描く。ctx = { id, iris: { dark, mid, light } }
+ */
+const eye = (x, y, e, side, ctx) => {
+  const out = side === "l" ? -1 : 1
+  const stroke = (d, w = 4) =>
     `<path d="${d}" fill="none" stroke="${EYE}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`
+  const lash = (dy = 0) =>
+    stroke(
+      `M${x - 13} ${y - 6 + dy} Q${x} ${y - 19 + dy} ${x + 13} ${y - 6 + dy}`,
+      4.5
+    ) + stroke(`M${x + 13 * out} ${y - 6 + dy} l${4 * out} -4`, 3)
+  const iris = (rx = 11, ry = 14, px = 0, py = 1, prx = 5.5, pry = 8) =>
+    `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="url(#${ctx.id}-iris)" stroke="${EYE}" stroke-width="1.5"/>` +
+    `<ellipse cx="${x + px}" cy="${y + py}" rx="${prx}" ry="${pry}" fill="${ctx.iris.dark}"/>` +
+    `<ellipse cx="${x}" cy="${y + ry - 6}" rx="${rx - 4}" ry="4" fill="${ctx.iris.light}" opacity="0.85"/>`
+  const lights = (dx = 0, dy = 0, k = 1) =>
+    `<ellipse cx="${x + 4 + dx}" cy="${y - 5 + dy}" rx="${4.5 * k}" ry="${5.5 * k}" fill="#fff"/>` +
+    `<circle cx="${x - 4 + dx}" cy="${y + 6 + dy}" r="${2 * k}" fill="#fff"/>` +
+    `<path d="M${x - 5 + dx} ${y - 8 + dy} l1 2.2 2.2 1 -2.2 1 -1 2.2 -1 -2.2 -2.2 -1 2.2 -1z" fill="#fff"/>`
   switch (e) {
     case "happy":
-      return line(`M${x - 9} ${y + 3} Q${x} ${y - 9} ${x + 9} ${y + 3}`)
+      return (
+        stroke(`M${x - 11} ${y + 3} Q${x} ${y - 10} ${x + 11} ${y + 3}`, 4.5) +
+        stroke(
+          `M${x + 11 * out} ${y + 3} l${4 * out} 1 M${x + 9 * out} ${y - 1} l${4 * out} -2`,
+          2.5
+        )
+      )
     case "surprised":
-      return `<ellipse cx="${x}" cy="${y}" rx="9.5" ry="11.5" fill="${EYE}"/>${shine(x, y, 1.25)}`
-    case "confused":
-      if (side === "r")
-        return line(`M${x + 7} ${y - 7} L${x - 5} ${y} L${x + 7} ${y + 7}`)
-      return line(`M${x - 7} ${y - 7} L${x + 5} ${y} L${x - 7} ${y + 7}`)
+      return (
+        iris(12, 15, 0, 0, 3.2, 4.2) +
+        lights(0, -1, 1.1) +
+        `<circle cx="${x + 5}" cy="${y + 7}" r="1.6" fill="#fff"/>` +
+        lash(-3)
+      )
+    case "confused": {
+      // ぐるぐる目
+      const k = out
+      return stroke(
+        `M${x} ${y} a1.5 1.5 0 1 ${k > 0 ? 1 : 0} 3 0 a4 4 0 1 ${k > 0 ? 1 : 0} -8 0 a6.5 6.5 0 1 ${k > 0 ? 1 : 0} 13 0 a9 9 0 1 ${k > 0 ? 1 : 0} -18 0`,
+        2.6
+      )
+    }
     case "thinking":
-      return `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="9.5" fill="${EYE}"/><circle cx="${x + 3}" cy="${y - 5}" r="3" fill="#fff"/><circle cx="${x - 1}" cy="${y - 6.5}" r="1.3" fill="#fff"/>`
-    case "serious":
-      return `<path d="M${x - 8} ${y - 2} L${x + 8} ${y - 2} Q${x + 8} ${y + 9} ${x} ${y + 9} Q${x - 8} ${y + 9} ${x - 8} ${y - 2} Z" fill="${EYE}"/><circle cx="${x + 3}" cy="${y + 2}" r="2.2" fill="#fff"/>`
+      return iris(11, 14, 3, -3, 5, 7) + lights(3, -3, 0.9) + lash()
+    case "serious": {
+      const cid = `${ctx.id}-lid-${side}`
+      return (
+        `<clipPath id="${cid}"><rect x="${x - 14}" y="${y - 4}" width="28" height="22"/></clipPath>` +
+        `<g clip-path="url(#${cid})">${iris(11, 14, 0, 2)}${lights(0, 4, 0.7)}</g>` +
+        stroke(`M${x - 13} ${y - 4} L${x + 13} ${y - 4}`, 4.5) +
+        stroke(`M${x + 13 * out} ${y - 4} l${4 * out} -3`, 3)
+      )
+    }
     default:
-      return `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="9.5" fill="${EYE}"/>${shine(x, y)}`
+      return iris() + lights() + lash()
   }
 }
+
+/** 瞳・チークのグラデーション定義（キャラクターごとに id を分ける） */
+const defs = (ctx) =>
+  `<defs>` +
+  `<linearGradient id="${ctx.id}-iris" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${ctx.iris.dark}"/><stop offset="0.5" stop-color="${ctx.iris.mid}"/><stop offset="1" stop-color="${ctx.iris.light}"/></linearGradient>` +
+  `<radialGradient id="${ctx.id}-blush"><stop offset="0" stop-color="#ff7d9a" stop-opacity="0.75"/><stop offset="0.6" stop-color="#ff9fb4" stop-opacity="0.45"/><stop offset="1" stop-color="#ffb3c4" stop-opacity="0"/></radialGradient>` +
+  `</defs>`
 
 const brows = (l, r, e) => {
   const line = (d) =>
@@ -119,21 +162,28 @@ const extras = (e, r) => {
   return ""
 }
 
-const blushes = (b) =>
+const blushes = (b, ctx) =>
   b
     .map(
       ({ x, y }) =>
-        `<ellipse cx="${x}" cy="${y}" rx="11" ry="7" fill="${BLUSH}" opacity="0.85"/><path d="M${x - 5} ${y + 2} l3 -5 M${x} ${y + 2} l3 -5 M${x + 5} ${y + 2} l3 -5" stroke="#ff7f99" stroke-width="1.6" stroke-linecap="round"/>`
+        `<ellipse cx="${x}" cy="${y}" rx="16" ry="10" fill="url(#${ctx.id}-blush)"/><path d="M${x - 6} ${y + 2} l3 -5 M${x - 1} ${y + 2} l3 -5 M${x + 4} ${y + 2} l3 -5" stroke="#ff7f99" stroke-width="1.5" stroke-linecap="round"/>`
     )
     .join("")
 
-const face = ({ l, r, m, blush }, e) =>
-  blushes(blush) +
-  brows(l, r, e) +
-  eye(l.x, l.y, e, "l") +
-  eye(r.x, r.y, e, "r") +
+const up = (pt) => ({ x: pt.x, y: pt.y - 9 })
+
+/** 瞳を目の中心基準で拡大する（萌え調の大きな瞳） */
+const EYE_SCALE = 1.2
+const big = ({ x, y }, svgText) =>
+  `<g transform="translate(${x} ${y}) scale(${EYE_SCALE}) translate(${-x} ${-y})">${svgText}</g>`
+
+const face = ({ l, r, m, blush }, e, ctx) =>
+  blushes(blush, ctx) +
+  brows(up(l), up(r), e) +
+  big(l, eye(l.x, l.y, e, "l", ctx)) +
+  big(r, eye(r.x, r.y, e, "r", ctx)) +
   mouth(m.x, m.y, e) +
-  extras(e, r)
+  extras(e, up(r))
 
 const ow = (w = SW) =>
   `stroke="${INK}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"`
@@ -147,6 +197,8 @@ const paws = (fill, lx = 78, rx = 122, y = 170) =>
 
 export const species = {
   otter: {
+    iris: { dark: "#4a2412", mid: "#c0642a", light: "#ffc27a" },
+    sheen: "M66 64 Q84 52 104 54",
     color: { main: "#f2792e", bg: "#ffe1cc" },
     body: `
       <path d="M56 204 Q52 150 100 148 Q148 150 144 204 Z" fill="#c08a60" ${o}/>
@@ -175,6 +227,8 @@ export const species = {
     },
   },
   munchkin: {
+    iris: { dark: "#1e2366", mid: "#5866e0", light: "#a9c8ff" },
+    sheen: "M64 70 Q82 58 100 58",
     color: { main: "#5866e0", bg: "#dfe3ff" },
     body: `
       <path d="M58 204 Q54 150 100 148 Q146 150 142 204 Z" fill="#fff" ${o}/>
@@ -203,11 +257,13 @@ export const species = {
     },
     // 研究員の丸メガネ（細めの金縁）
     overlay: `
-      <circle cx="72" cy="110" r="16" fill="#fff" fill-opacity="0.18" stroke="#b08a3e" stroke-width="2.5"/>
-      <circle cx="128" cy="110" r="16" fill="#fff" fill-opacity="0.18" stroke="#b08a3e" stroke-width="2.5"/>
-      <path d="M88 108 Q100 102 112 108" fill="none" stroke="#b08a3e" stroke-width="2.5" stroke-linecap="round"/>`,
+      <circle cx="72" cy="110" r="22" fill="#fff" fill-opacity="0.18" stroke="#b08a3e" stroke-width="2.5"/>
+      <circle cx="128" cy="110" r="22" fill="#fff" fill-opacity="0.18" stroke="#b08a3e" stroke-width="2.5"/>
+      <path d="M94 106 Q100 102 106 106" fill="none" stroke="#b08a3e" stroke-width="2.5" stroke-linecap="round"/>`,
   },
   hamster: {
+    iris: { dark: "#4a1e2a", mid: "#b8506a", light: "#ffb0c0" },
+    sheen: "M62 70 Q80 60 98 60",
     color: { main: "#e2a40c", bg: "#fff1c7" },
     body: `
       <path d="M50 204 Q46 146 100 144 Q154 146 150 204 Z" fill="#fffaf3" ${o}/>
@@ -234,6 +290,8 @@ export const species = {
     },
   },
   penguin: {
+    iris: { dark: "#0d3442", mid: "#2a9cbb", light: "#9fe6f2" },
+    sheen: "M64 64 Q84 52 106 52",
     color: { main: "#2a9cbb", bg: "#d4eef5" },
     body: `
       <path d="M56 204 Q50 148 100 146 Q150 148 144 204 Z" fill="#3c4560" ${o}/>
@@ -271,7 +329,16 @@ const sparkles = (color) =>
   `<circle cx="214" cy="80" r="5" fill="${color}" opacity="0.35"/>` +
   `<circle cx="28" cy="32" r="4" fill="#ffd45e" opacity="0.7"/>`
 
-const figure = (s, e) => s.body + s.head + face(s.face, e) + (s.overlay ?? "")
+const figure = (s, e) =>
+  defs(s) +
+  s.body +
+  // 頭の下の影（セル塗り風）
+  `<ellipse cx="100" cy="152" rx="40" ry="7" fill="#3b2c2c" opacity="0.13"/>` +
+  s.head +
+  // 毛並みのツヤ
+  `<path d="${s.sheen}" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="5" stroke-linecap="round"/>` +
+  face(s.face, e, s) +
+  (s.overlay ?? "")
 
 const write = (file, content) => {
   fs.mkdirSync(path.dirname(file), { recursive: true })
@@ -284,6 +351,8 @@ const names = {
   hamster: "ジャンガリアンハムスター",
   penguin: "フンボルトペンギン",
 }
+
+for (const [id, s] of Object.entries(species)) s.id = id
 
 for (const [id, s] of Object.entries(species)) {
   for (const e of EXPRESSIONS)
