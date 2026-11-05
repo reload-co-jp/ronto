@@ -11,6 +11,8 @@ export const site = {
   },
   ogImage: "/og-default.png",
   locale: "ja_JP",
+  /** Google Analytics 4 の測定 ID */
+  gaMeasurementId: "G-DV08TNL5CT",
 } as const
 
 /** サイト内パスを絶対 URL に変換する */
