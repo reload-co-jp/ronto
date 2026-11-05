@@ -1,5 +1,11 @@
 import Link from "next/link"
-import { Avatar, colorsFor, displayName } from "@/components/topic/Participants"
+import {
+  Avatar,
+  colorsFor,
+  displayName,
+  isModerator,
+} from "@/components/topic/Participants"
+import { CharacterGrid } from "@/components/character/CharacterCard"
 import { TopicCard, TopicGrid } from "@/components/topic/TopicCard"
 import { Container, Section, SectionHeading } from "@/components/ui/primitives"
 import { css, mq, Style } from "@/components/ui/Style"
@@ -12,6 +18,7 @@ import {
   toCardData,
   topicPath,
 } from "@/lib/content"
+import { characters } from "@/lib/characters"
 import { site } from "@/lib/site"
 import { DiscussionMessage, Topic } from "@/lib/types"
 
@@ -362,7 +369,7 @@ const HeroChat = ({ topic }: { topic: Topic }) => {
   const sides = new Map(
     topic.participants.map((p) => [
       p.id,
-      p.persona === "moderator" ? "left" : i++ % 2 ? "left" : "right",
+      isModerator(p) ? "left" : i++ % 2 ? "left" : "right",
     ])
   )
   const messages = topic.discussion
@@ -388,7 +395,12 @@ const HeroChat = ({ topic }: { topic: Topic }) => {
               className={`HeroChat_msg HeroChat_msg--${sides.get(p.id)}`}
               style={{ "--bubble-bg": color.bubble } as React.CSSProperties}
             >
-              <Avatar participant={p} color={color} size={32} />
+              <Avatar
+                participant={p}
+                color={color}
+                size={32}
+                expression={m.expression}
+              />
               <span className="HeroChat_bubble">
                 <span className="HeroChat_name">{displayName(p)}</span>
                 <span className="HeroChat_text">{m.text}</span>
@@ -480,6 +492,16 @@ const HomePage = () => {
           ) : (
             <TopicGrid topics={latest} />
           )}
+        </Section>
+
+        <Section labelledBy="characters">
+          <SectionHeading
+            id="characters"
+            title="雑談の仲間たち"
+            en="CHARACTERS"
+            more={{ href: "/characters/", label: "キャラクター紹介" }}
+          />
+          <CharacterGrid characters={characters} />
         </Section>
 
         <Section labelledBy="categories">

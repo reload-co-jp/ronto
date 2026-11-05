@@ -1,0 +1,210 @@
+[
+  {
+    "id": "otter",
+    "name": "カワウソ",
+    "species": "コツメカワウソ",
+    "tagline": "「そもそも」を代わりに聞いてくれる、好奇心のかたまり",
+    "description": "Webメディアの編集者。気になったことはすぐ口に出す聞き役で、読者が置いてけぼりにならないよう素朴な疑問を投げかける。",
+    "occupation": "Webメディア編集者",
+    "shortTitle": "編集者",
+    "occupationDetail": "生活や社会のニュースを扱うWebメディアで、記事の企画と編集を担当している。難しい話を「読者に伝わる言葉」に置き換えるのが仕事。",
+    "personality": ["好奇心旺盛", "社交的", "おせっかい"],
+    "personalityDetail": "初対面でもすぐに打ち解ける人懐っこさが持ち味。話が専門的になると「ちょっと待って」と止めに入る。ときどき世話を焼きすぎて煙たがられる。",
+    "hobbies": ["食べ歩き", "旅行", "SNS"],
+    "likes": ["新しいもの", "楽しい話", "魚介料理"],
+    "dislikes": ["難しい専門用語", "長い説明"],
+    "specialties": ["素朴な疑問", "暮らしとニュースのつながり", "話題の整理"],
+    "role": "読者の代わりに素朴な疑問を投げかける",
+    "catchphrase": "そもそも、なんでそうなってるの？",
+    "chatRole": "moderator",
+    "color": {
+      "main": "#f2792e",
+      "bg": "#ffe1cc",
+      "bubble": "#fff1e6"
+    },
+    "fallbackIcon": "compass",
+    "profileImage": "/images/characters/otter/profile.svg",
+    "icon": "/images/characters/otter/icon.svg",
+    "expressionImages": {
+      "normal": "/images/characters/otter/normal.svg",
+      "happy": "/images/characters/otter/happy.svg",
+      "surprised": "/images/characters/otter/surprised.svg",
+      "confused": "/images/characters/otter/confused.svg",
+      "thinking": "/images/characters/otter/thinking.svg",
+      "serious": "/images/characters/otter/serious.svg"
+    },
+    "relationships": [
+      {
+        "characterId": "munchkin",
+        "label": "頼れる解説役",
+        "description": "分からないことはまずマンチカンに聞く。数字の話が長くなると、つい「で、結局どういうこと？」と急かしてしまう。"
+      },
+      {
+        "characterId": "hamster",
+        "label": "気の合う友だち",
+        "description": "食べ物の話でいちばん盛り上がる相手。ハムスターの家庭菜園の野菜をよくおすそ分けしてもらう。"
+      },
+      {
+        "characterId": "penguin",
+        "label": "ちょっと緊張する先生",
+        "description": "話が深くて面白いと思っているが、歴史の話が始まると長くなるのでタイミングを見て質問を挟む。"
+      }
+    ]
+  },
+  {
+    "id": "munchkin",
+    "name": "マンチカン",
+    "species": "マンチカン（猫）",
+    "tagline": "数字と論理で、話の土台をととのえる",
+    "description": "シンクタンクの研究員。制度や統計を確かめ、「それって本当？」を論理的に検証する。",
+    "occupation": "シンクタンクの研究員",
+    "shortTitle": "研究員",
+    "occupationDetail": "民間シンクタンクで、経済や社会制度に関する調査レポートを書いている。公的統計を読み込み、制度のしくみを整理するのが得意。",
+    "personality": ["冷静", "几帳面", "合理的", "少し皮肉屋"],
+    "personalityDetail": "感情より根拠を重んじる。曖昧な話にはすぐ「定義は？」と聞き返す。言い方が少し皮肉っぽいが、相手の疑問をばかにすることはない。",
+    "hobbies": ["読書", "統計分析", "将棋"],
+    "likes": ["数字", "論理", "整理された資料"],
+    "dislikes": ["根拠のない断定", "曖昧な説明"],
+    "specialties": ["制度のしくみ", "経済", "統計の読み方", "論理的な検証"],
+    "role": "制度・経済・統計の面から論理的に検証する",
+    "catchphrase": "それ、数字で見るとどうなるんだろう？",
+    "chatRole": "panelist",
+    "color": {
+      "main": "#5866e0",
+      "bg": "#dfe3ff",
+      "bubble": "#eef0ff"
+    },
+    "fallbackIcon": "calculator",
+    "profileImage": "/images/characters/munchkin/profile.svg",
+    "icon": "/images/characters/munchkin/icon.svg",
+    "expressionImages": {
+      "normal": "/images/characters/munchkin/normal.svg",
+      "happy": "/images/characters/munchkin/happy.svg",
+      "surprised": "/images/characters/munchkin/surprised.svg",
+      "confused": "/images/characters/munchkin/confused.svg",
+      "thinking": "/images/characters/munchkin/thinking.svg",
+      "serious": "/images/characters/munchkin/serious.svg"
+    },
+    "relationships": [
+      {
+        "characterId": "otter",
+        "label": "質問がうまい聞き手",
+        "description": "急かされるのは苦手だが、カワウソの素朴な質問で自分の説明の穴に気づくことも多い。"
+      },
+      {
+        "characterId": "hamster",
+        "label": "現場を知る相談相手",
+        "description": "統計では見えない暮らしの実感を教えてくれる存在。数字と現場の感覚がずれたときは、ハムスターの話をよく聞く。"
+      },
+      {
+        "characterId": "penguin",
+        "label": "将棋仲間で議論相手",
+        "description": "ときどき将棋を指す仲。短期のデータを重視するマンチカンと、長い歴史を重視するペンギンで見方が分かれることがある。"
+      }
+    ]
+  },
+  {
+    "id": "hamster",
+    "name": "ハムスター",
+    "species": "ジャンガリアンハムスター",
+    "tagline": "そこで暮らす人の気持ちを、いつも忘れない",
+    "description": "地方自治体の職員。制度が実際の暮らしや地域にどう届くのか、当事者の視点から考える。",
+    "occupation": "地方自治体の職員",
+    "shortTitle": "自治体職員",
+    "occupationDetail": "地方の市役所で、住民からの相談対応や地域の事業を担当している。制度が窓口でどう受け止められるかを日々見ている。",
+    "personality": ["温厚", "慎重", "共感力が高い"],
+    "personalityDetail": "話をよく聞き、相手の立場に立って考える。結論を急がず、極端な意見が出ると「ちょっと落ち着こう」と間に入る。",
+    "hobbies": ["家庭菜園", "料理", "地域イベント"],
+    "likes": ["安定した暮らし", "地域のつながり"],
+    "dislikes": ["急激な変化", "極端な主張"],
+    "specialties": ["暮らしと制度", "地域社会", "行政の現場", "当事者の声"],
+    "role": "生活者・地域・当事者の視点から考える",
+    "catchphrase": "実際にそこで暮らしている人はどう感じるかな？",
+    "chatRole": "panelist",
+    "color": {
+      "main": "#e2a40c",
+      "bg": "#fff1c7",
+      "bubble": "#fff7dc"
+    },
+    "fallbackIcon": "map",
+    "profileImage": "/images/characters/hamster/profile.svg",
+    "icon": "/images/characters/hamster/icon.svg",
+    "expressionImages": {
+      "normal": "/images/characters/hamster/normal.svg",
+      "happy": "/images/characters/hamster/happy.svg",
+      "surprised": "/images/characters/hamster/surprised.svg",
+      "confused": "/images/characters/hamster/confused.svg",
+      "thinking": "/images/characters/hamster/thinking.svg",
+      "serious": "/images/characters/hamster/serious.svg"
+    },
+    "relationships": [
+      {
+        "characterId": "otter",
+        "label": "にぎやかな友だち",
+        "description": "一緒にいると話が弾む。カワウソのおせっかいに助けられることも、振り回されることもある。"
+      },
+      {
+        "characterId": "munchkin",
+        "label": "数字に強い同年代",
+        "description": "マンチカンの分析には一目置いている。ただ、平均値だけで語られると「その平均に入らない人もいるよ」と返す。"
+      },
+      {
+        "characterId": "penguin",
+        "label": "物知りな相談相手",
+        "description": "地域の祭りや慣習の由来をよく尋ねる。ペンギンの長い説明も、ハムスターはいつも最後まで聞いている。"
+      }
+    ]
+  },
+  {
+    "id": "penguin",
+    "name": "ペンギン",
+    "species": "フンボルトペンギン",
+    "tagline": "「いつから？」をたどって、いまを読み解く",
+    "description": "大学で政治学・国際関係を研究している。歴史的な経緯や思想的な背景、海外との比較から議論に奥行きを与える。",
+    "occupation": "大学の政治学・国際関係の研究者",
+    "shortTitle": "政治学者",
+    "occupationDetail": "大学で政治学と国際関係を研究し、講義も受け持っている。制度や対立がどんな歴史の中で生まれたのかを調べるのが専門。",
+    "personality": ["博識", "慎重", "独立心が強い", "少し偏屈"],
+    "personalityDetail": "安易にどちらかの側につかず、自分で確かめるまで意見を保留する。話が長くなりがちで、こだわりが強いところもある。",
+    "hobbies": ["世界史", "地図", "博物館巡り", "クラシック音楽"],
+    "likes": ["歴史的背景", "異文化", "長期的な視点"],
+    "dislikes": ["歴史を無視した議論", "短絡的な判断"],
+    "specialties": ["歴史", "国際関係", "思想・宗教の背景", "海外との比較"],
+    "role": "歴史・国際関係・思想的背景を説明する",
+    "catchphrase": "それは、いつからそうなったんだろう？",
+    "chatRole": "panelist",
+    "color": {
+      "main": "#2a9cbb",
+      "bg": "#d4eef5",
+      "bubble": "#e8f6fa"
+    },
+    "fallbackIcon": "globe",
+    "profileImage": "/images/characters/penguin/profile.svg",
+    "icon": "/images/characters/penguin/icon.svg",
+    "expressionImages": {
+      "normal": "/images/characters/penguin/normal.svg",
+      "happy": "/images/characters/penguin/happy.svg",
+      "surprised": "/images/characters/penguin/surprised.svg",
+      "confused": "/images/characters/penguin/confused.svg",
+      "thinking": "/images/characters/penguin/thinking.svg",
+      "serious": "/images/characters/penguin/serious.svg"
+    },
+    "relationships": [
+      {
+        "characterId": "otter",
+        "label": "元気な聞き手",
+        "description": "カワウソの質問は単純に見えて本質を突いていることがある、と内心評価している。"
+      },
+      {
+        "characterId": "munchkin",
+        "label": "将棋仲間で議論相手",
+        "description": "データの扱いではマンチカンを信頼している。ただ「その統計はいつから取っているのか」は必ず確認する。"
+      },
+      {
+        "characterId": "hamster",
+        "label": "聞き上手な友人",
+        "description": "地域の慣習の話を持ちかけてくれるので、歴史の話をするのが楽しい相手。"
+      }
+    ]
+  }
+]

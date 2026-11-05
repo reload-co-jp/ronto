@@ -13,6 +13,10 @@
   "tags": ["タグ1", "タグ2"],
   "participants": [
     {
+      "id": "otter",
+      "character": "otter"
+    },
+    {
       "id": "moderator",
       "persona": "moderator"
     },
@@ -92,6 +96,11 @@
       "speaker": "moderator",
       "text": "友だちどうしの口調で。1回の発言は2〜4文程度。\n\n空行で段落を分けられる。",
       "kind": "question"
+    },
+    {
+      "speaker": "otter",
+      "text": "公式キャラクター（character）は expression で表情を指定できる（normal/happy/surprised/confused/thinking/serious）。",
+      "expression": "confused"
     },
     {
       "speaker": "consumer",

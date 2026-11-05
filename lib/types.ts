@@ -60,10 +60,71 @@ export interface Persona {
   icon: IconName
 }
 
-/** 記事ごとの登場人物。persona を指定すると標準役割の値を引き継ぎ、記事側の値で上書きする。 */
+/** キャラクターの表情（content/characters.json の expressionImages のキー） */
+export const CHARACTER_EXPRESSIONS = [
+  "normal",
+  "happy",
+  "surprised",
+  "confused",
+  "thinking",
+  "serious",
+] as const
+export type CharacterExpression = (typeof CHARACTER_EXPRESSIONS)[number]
+
+/** キャラクター同士の関係 */
+export interface CharacterRelationship {
+  characterId: string
+  /** 関係をひとことで（例：頼れる解説役） */
+  label: string
+  description: string
+}
+
+/**
+ * RonTo の公式キャラクター（content/characters.json）。
+ * 職業はキャラクター設定であり、実在の専門家としての権威を示すものではない。
+ */
+export interface Character {
+  id: string
+  /** 会話中に表示する呼び名 */
+  name: string
+  species: string
+  /** キャッチコピー */
+  tagline: string
+  /** 一言紹介 */
+  description: string
+  occupation: string
+  /** チャットで名前の横に表示する短い肩書き */
+  shortTitle: string
+  occupationDetail: string
+  /** 性格を表すキーワード */
+  personality: string[]
+  personalityDetail: string
+  hobbies: string[]
+  likes: string[]
+  dislikes: string[]
+  /** 得意な話題 */
+  specialties: string[]
+  /** 議論での役割 */
+  role: string
+  catchphrase: string
+  /** moderator（聞き役・チャットの左側固定）/ panelist */
+  chatRole: "moderator" | "panelist"
+  /** キャラクターごとの配色 */
+  color: { main: string; bg: string; bubble: string }
+  /** 画像がないときに使う線画アイコン */
+  fallbackIcon: IconName
+  relationships: CharacterRelationship[]
+  profileImage?: string
+  icon?: string
+  expressionImages: Partial<Record<CharacterExpression, string>>
+}
+
+/** 記事ごとの登場人物。persona / character を指定すると標準の値を引き継ぎ、記事側の値で上書きする。 */
 export interface Participant {
   id: string
   persona?: string
+  /** content/characters.json のキャラクター id */
+  character?: string
   nickname?: string
   profile?: string
   name: string
@@ -110,6 +171,8 @@ export interface DiscussionMessage {
   speaker: string
   text: string
   kind?: MessageKind
+  /** キャラクターの表情（character を持つ登場人物のみ有効） */
+  expression?: CharacterExpression
   sourceIds?: string[]
 }
 
@@ -211,9 +274,40 @@ export interface TopicCardData {
   thumbnail: string | null
   status: TopicStatus
   /** 議論の参加者（カードのアバター表示用） */
-  participants: Pick<Participant, "id" | "name" | "icon" | "persona">[]
+  participants: Pick<
+    Participant,
+    "id" | "name" | "icon" | "persona" | "character"
+  >[]
   /** 議論の発言数 */
   messageCount: number
   /** 議論の冒頭の発言（プレビュー用） */
   firstMessage: { speaker: string; text: string } | null
+}
+
+/**
+ * 記事の企画候補（content/article-plans.json）。
+ * 未作成の記事であり、公開記事としては扱わない（ページは生成されない）。
+ */
+export const PLAN_STATUSES = ["idea", "researching", "writing"] as const
+export type PlanStatus = (typeof PLAN_STATUSES)[number]
+
+export interface ArticlePlan {
+  /** 記事化するときの id（content/topics/{id}.json）の予定 */
+  id: string
+  title: string
+  category: string
+  tags: string[]
+  status: PlanStatus
+  /** 登場予定のキャラクター id */
+  characters: string[]
+  /** 執筆中の記事（下書き）があればその id。公開したら企画候補から外す */
+  topicId?: string
+  /** 問いの前提確認・参照予定の一次資料など編集メモ */
+  notes?: string
+}
+
+export interface ArticlePlanGroup {
+  id: string
+  name: string
+  plans: ArticlePlan[]
 }

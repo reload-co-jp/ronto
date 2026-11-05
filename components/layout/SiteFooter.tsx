@@ -65,6 +65,7 @@ const styles = css`
 
 const siteLinks = [
   { href: "/about/", label: "サイトについて" },
+  { href: "/characters/", label: "キャラクター紹介" },
   { href: "/about/#editorial-policy", label: "編集方針" },
   { href: "/sources/", label: "情報源について" },
   { href: site.publisher.url, label: "運営会社", external: true },

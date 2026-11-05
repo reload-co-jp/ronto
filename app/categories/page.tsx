@@ -6,7 +6,7 @@ import { categories, getTopicsByCategory } from "@/lib/content"
 import { pageMetadata } from "@/lib/seo"
 
 const description =
-  "経済・税金、政治・行政、地方・まちづくり、教育・子育て、社会保障・福祉、外交・安全保障。RonToのカテゴリ一覧です。"
+  "経済・税金、政治・行政、地方・まちづくり、教育・子育て、社会保障・福祉、外交・安全保障、宗教・思想・文化、労働・組織、ジェンダー・多様性、移民・多文化共生。RonToのカテゴリ一覧です。"
 
 export const metadata = pageMetadata({
   title: "カテゴリ",

@@ -2,9 +2,12 @@ import fs from "node:fs"
 import path from "node:path"
 import articleTypesJson from "@/content/article-types.json"
 import categoriesJson from "@/content/categories.json"
+import articlePlansJson from "@/content/article-plans.json"
 import personasJson from "@/content/personas.json"
+import { characters } from "./characters"
 import { showDrafts } from "./site"
 import {
+  ArticlePlanGroup,
   ArticleType,
   ArticleTypeId,
   Category,
@@ -40,6 +43,7 @@ export const loadAllTopics = (dir = TOPICS_DIR): Topic[] => {
   const ctx = {
     categoryIds: new Set(categories.map((c) => c.id)),
     personas: new Map(personas.map((x) => [x.id, x])),
+    characters: new Map(characters.map((x) => [x.id, x])),
   }
   const files = fs
     .readdirSync(dir)
@@ -140,12 +144,15 @@ export const toCardData = (t: Topic): TopicCardData => ({
   readingTime: readingTimeOf(t),
   thumbnail: resolveImage(t.thumbnail),
   status: t.status,
-  participants: t.participants.map(({ id, name, icon, persona }) => ({
-    id,
-    name,
-    icon,
-    persona,
-  })),
+  participants: t.participants.map(
+    ({ id, name, icon, persona, character }) => ({
+      id,
+      name,
+      icon,
+      persona,
+      ...(character ? { character } : {}),
+    })
+  ),
   messageCount: t.discussion.filter((d) => "speaker" in d).length,
   firstMessage: (() => {
     const m = t.discussion.find((d): d is DiscussionMessage => "speaker" in d)
@@ -155,3 +162,12 @@ export const toCardData = (t: Topic): TopicCardData => ({
 
 export const topicPath = (id: string) => `/topics/${id}/`
 export const categoryPath = (id: string) => `/categories/${id}/`
+
+/** キャラクターが登場する記事（表示対象のみ・新しい順） */
+export const getTopicsByCharacter = (characterId: string) =>
+  getVisibleTopics().filter((t) =>
+    t.participants.some((p) => p.character === characterId)
+  )
+
+/** 記事の企画候補（カテゴリ別）。未作成の記事であり、ページは生成しない */
+export const articlePlanGroups = articlePlansJson as ArticlePlanGroup[]

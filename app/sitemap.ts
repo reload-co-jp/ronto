@@ -5,6 +5,7 @@ import {
   getVisibleTopics,
   topicPath,
 } from "@/lib/content"
+import { characterPath, characters } from "@/lib/characters"
 import { absoluteUrl } from "@/lib/site"
 
 export const dynamic = "force-static"
@@ -19,6 +20,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
     "/",
     "/topics/",
     "/categories/",
+    "/characters/",
     "/elections/",
     "/about/",
     "/sources/",
@@ -30,6 +32,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
       lastModified: p === "/" || p === "/topics/" ? latest : undefined,
     })),
     ...categories.map((c) => ({ url: absoluteUrl(categoryPath(c.id)) })),
+    ...characters.map((c) => ({ url: absoluteUrl(characterPath(c.id)) })),
     ...topics.map((t) => ({
       url: absoluteUrl(topicPath(t.id)),
       lastModified: t.updatedAt ?? t.publishedAt,

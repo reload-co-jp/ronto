@@ -1,0 +1,280 @@
+[
+  {
+    "id": "politics-regional",
+    "name": "政治・地域",
+    "plans": [
+      {
+        "id": "ldp-regional-strength",
+        "title": "なぜ地方では自民党が強いと言われるのか？",
+        "category": "politics",
+        "tags": ["政党", "選挙", "地方"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "「強い」の定義（得票率・議席率・首長）を分けて確認する。選挙制度（小選挙区・一票の格差）と地域の組織構造を区別して扱う。"
+      },
+      {
+        "id": "two-party-system",
+        "title": "なぜ日本では二大政党制にならない？",
+        "category": "politics",
+        "tags": ["政党", "選挙制度"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "小選挙区比例代表並立制の制度的影響と、海外の事例を比較する。"
+      },
+      {
+        "id": "independent-voters",
+        "title": "無党派層は本当に政治に無関心なの？",
+        "category": "politics",
+        "tags": ["無党派層", "投票率", "世論調査"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "「無党派」の定義は調査ごとに異なる。調査主体・時期・設問を明記する。"
+      },
+      {
+        "id": "politicians-industry-groups",
+        "title": "政治家と業界団体はどんな関係にある？",
+        "category": "politics",
+        "tags": ["業界団体", "政治資金", "ロビー活動"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "政治資金規正法上の扱いと、政策要望という正当な活動を区別する。根拠のない癒着の断定をしない。"
+      },
+      {
+        "id": "hereditary-politicians",
+        "title": "世襲議員は本当に有利なの？",
+        "category": "politics",
+        "tags": ["世襲", "選挙", "政治家"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "「世襲」の定義（親族の範囲・地盤の継承）を先に整理する。"
+      }
+    ]
+  },
+  {
+    "id": "religion-politics",
+    "name": "宗教・政治・思想",
+    "plans": [
+      {
+        "id": "religious-groups-and-parties",
+        "title": "宗教団体は政党を応援できるのに、政治的な優遇は問題になるの？",
+        "category": "religion",
+        "tags": ["政教分離", "宗教団体", "憲法"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "憲法20条・89条の政教分離の対象は国家側であることを確認する。特定の宗教団体・政党への評価をしない。"
+      },
+      {
+        "id": "evangelicals-israel",
+        "title": "福音派はなぜイスラエルを支持するの？",
+        "category": "religion",
+        "tags": ["福音派", "アメリカ", "国際関係"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "penguin"],
+        "notes": "福音派を一枚岩として扱わない。世論調査の出典・時期を明記し、神学的背景と政治的要因を分ける。"
+      },
+      {
+        "id": "japanese-religiosity",
+        "title": "日本人は無宗教なのに、なぜ初詣や葬式をするの？",
+        "category": "religion",
+        "tags": ["宗教", "習慣", "文化"],
+        "status": "writing",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "「無宗教」という前提自体を確認する。宗教統計は調査主体・時期・設問を明記する。",
+        "topicId": "japanese-religiosity"
+      },
+      {
+        "id": "politicians-shrine-visits",
+        "title": "政治家が神社に参拝すると問題になるのはなぜ？",
+        "category": "religion",
+        "tags": ["政教分離", "参拝", "外交"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "判例（政教分離に関する最高裁判決）と外交上の論点を区別する。"
+      },
+      {
+        "id": "conservative-right-liberal-left",
+        "title": "保守と右翼、リベラルと左翼は何が違う？",
+        "category": "religion",
+        "tags": ["思想", "保守", "リベラル"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "言葉の使われ方は国・時代で異なる。定義を一つに固定せず、使われ方の違いを整理する。"
+      }
+    ]
+  },
+  {
+    "id": "labor",
+    "name": "労働・組織",
+    "plans": [
+      {
+        "id": "divided-labor-unions",
+        "title": "労働組合は団結した方が強いのに、なぜ分かれているの？",
+        "category": "labor",
+        "tags": ["労働組合", "政党"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "ナショナルセンターの歴史的経緯と支持政党との関係を、各組織の公表資料で確認する。"
+      },
+      {
+        "id": "union-membership-benefits",
+        "title": "労働組合に入るメリットはある？",
+        "category": "labor",
+        "tags": ["労働組合", "働き方"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "組合員数・推定組織率は厚生労働省「労働組合基礎調査」の最新年を参照する。"
+      },
+      {
+        "id": "management-vs-workers",
+        "title": "経営者と労働者の利益は本当に対立する？",
+        "category": "labor",
+        "tags": ["労使関係", "賃金"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"]
+      },
+      {
+        "id": "professional-associations-politics",
+        "title": "医師会や弁護士会は政治に影響力を持っている？",
+        "category": "labor",
+        "tags": ["業界団体", "医師会", "弁護士会"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "団体の法的位置づけ（任意加入・強制加入）の違いを確認する。影響力の推測と事実を分ける。"
+      },
+      {
+        "id": "strikes-in-japan",
+        "title": "ストライキは日本でももっと行われるべき？",
+        "category": "labor",
+        "tags": ["ストライキ", "労働争議"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "労働争議統計の件数・時期を明記する。賛否どちらかを促さない。"
+      }
+    ]
+  },
+  {
+    "id": "education-gender",
+    "name": "教育・ジェンダー",
+    "plans": [
+      {
+        "id": "womens-universities-quotas",
+        "title": "女子大は残すのに、大学の女子枠を作るのはなぜ？",
+        "category": "gender",
+        "tags": ["女子大", "入試", "ジェンダー"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "女子大と女子枠は目的・制度が異なる。各大学の公表資料を参照し、矛盾しているという前提を検証する。"
+      },
+      {
+        "id": "women-managers-fairness",
+        "title": "女性管理職を増やすことは本当に公平？",
+        "category": "gender",
+        "tags": ["女性活躍", "管理職", "公平性"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "「公平」の意味（機会の平等・結果の平等）を分けて扱う。"
+      },
+      {
+        "id": "mandatory-paternity-leave",
+        "title": "男性の育児休業取得を義務化すべき？",
+        "category": "gender",
+        "tags": ["育児休業", "働き方"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "現行の育児・介護休業法の制度内容と取得率（雇用均等基本調査）を確認する。"
+      },
+      {
+        "id": "politics-religion-in-schools",
+        "title": "学校で政治や宗教をどこまで教えるべき？",
+        "category": "education",
+        "tags": ["教育", "政治的中立性", "宗教教育"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "教育基本法14条・15条の条文を参照する。"
+      },
+      {
+        "id": "single-sex-schools",
+        "title": "男女別の学校は時代遅れなの？",
+        "category": "education",
+        "tags": ["男女別学", "学校"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"]
+      }
+    ]
+  },
+  {
+    "id": "migration-culture",
+    "name": "移民・文化",
+    "plans": [
+      {
+        "id": "adapting-to-japanese-culture",
+        "title": "日本に移住するなら、日本の文化や習慣に合わせるべき？",
+        "category": "migration",
+        "tags": ["移民", "文化", "多文化共生"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "外国人住民を一枚岩として扱わない。法的義務と社会的な期待を区別する。"
+      },
+      {
+        "id": "welfare-for-foreigners",
+        "title": "外国人に生活保護を認めるべき？",
+        "category": "migration",
+        "tags": ["生活保護", "外国人", "社会保障"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "法的な扱い（通知による準用）と最高裁判決を一次資料で確認する。受給状況の統計は時期・出典を明記する。"
+      },
+      {
+        "id": "immigration-social-security",
+        "title": "移民が増えると社会保障の負担は増える？",
+        "category": "migration",
+        "tags": ["移民", "社会保障", "財政"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "試算の前提（年齢構成・就労率・滞在期間）を明示する。"
+      },
+      {
+        "id": "foreign-land-purchases",
+        "title": "外国人の土地購入を規制すべき？",
+        "category": "migration",
+        "tags": ["土地", "安全保障", "規制"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "重要土地等調査法の内容と、国際約束（GATS等）との関係を確認する。"
+      }
+    ]
+  },
+  {
+    "id": "education-neutrality",
+    "name": "教育・政治的中立性",
+    "plans": [
+      {
+        "id": "teachers-unions-politics",
+        "title": "教員組合は政治活動をしていいの？ 教育現場の中立性とは？",
+        "category": "education",
+        "tags": ["教員組合", "政治的中立性", "教育公務員"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "組合としての活動と、教員個人の職務上の行為を区別する。"
+      },
+      {
+        "id": "education-civil-servants-restrictions",
+        "title": "教育公務員にはどのような政治活動の制限がある？",
+        "category": "education",
+        "tags": ["教育公務員", "政治活動", "法律"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "教育公務員特例法・地方公務員法・国家公務員法の関係を条文で確認する。"
+      },
+      {
+        "id": "teaching-political-positions",
+        "title": "学校で特定の政治的立場を教えることは許される？",
+        "category": "education",
+        "tags": ["政治的中立性", "主権者教育"],
+        "status": "idea",
+        "characters": ["otter", "munchkin", "hamster", "penguin"],
+        "notes": "教育基本法14条2項と文部科学省の通知を参照する。"
+      }
+    ]
+  }
+]

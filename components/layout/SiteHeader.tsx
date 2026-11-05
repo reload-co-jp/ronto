@@ -5,6 +5,7 @@ import { Logo } from "./Logo"
 export const mainNav = [
   { href: "/topics/", label: "トピック一覧" },
   { href: "/categories/", label: "カテゴリ" },
+  { href: "/characters/", label: "キャラクター" },
   { href: "/elections/", label: "選挙・特集" },
   { href: "/about/", label: "サイトについて" },
 ]

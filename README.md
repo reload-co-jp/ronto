@@ -32,6 +32,7 @@ app/                     ページ（App Router）
   page.tsx               トップ
   topics/                記事一覧・記事詳細 /topics/{id}/
   categories/            カテゴリ一覧・カテゴリ別一覧
+  characters/            キャラクター一覧・プロフィール /characters/{id}/
   elections/ about/ sources/ privacy/
   sitemap.ts robots.ts not-found.tsx
 components/
@@ -44,6 +45,8 @@ content/
   categories.json        カテゴリ定義
   article-types.json     記事形式（WHY / DISCUSSION / BENEFIT / COMPARISON / ELECTION）
   personas.json          標準の登場人物（生活者・経済・社会保障・行政・地方・進行役）
+  characters.json        公式キャラクター（4匹）のプロフィール・配色・画像
+  article-plans.json     記事の企画候補（カテゴリ別。未作成のためページは生成しない）
   elections.json         選挙特集データ（政策比較）
 lib/
   types.ts               コンテンツの型定義
@@ -93,6 +96,40 @@ public/
   - `kind`：`question`（質問）／`rebuttal`（反論）／`agree`（共感）／`fact`（事実確認）／`idea`（提案）／`summary`（まとめ）
 - 雑談の雰囲気でも、統計・制度に触れる発言には必ず出典（`sourceIds`）を付け、事実と意見を混同しない
 - 公開記事は発言6件以上が必須
+
+## キャラクター
+
+RonToの公式キャラクターは `content/characters.json` で一元管理する（`lib/characters.ts` で読み込み・検証）。
+
+- カワウソ（`otter`・コツメカワウソ）：Webメディア編集者。読者の代わりに素朴な疑問を投げかける聞き役（チャットでは左側）
+- マンチカン（`munchkin`）：シンクタンクの研究員。制度・経済・統計の検証
+- ハムスター（`hamster`・ジャンガリアンハムスター）：地方自治体の職員。生活者・地域・当事者の視点
+- ペンギン（`penguin`・フンボルトペンギン）：大学の政治学・国際関係の研究者。歴史・国際関係・思想的背景
+
+職業はキャラクター設定であり、実在の専門家としての権威を示すものではない。性格や役割は一貫させるが、政治的な賛否はテーマごとに固定しない。
+
+- 記事では `{ "id": "otter", "character": "otter" }` で参照する。名前・肩書き・アイコンなどはキャラクターから引き継ぎ、記事側の値で上書きできる
+- 発言に `"expression"`（`normal`／`happy`／`surprised`／`confused`／`thinking`／`serious`）を付けると表情が変わる
+- 記事内のアイコン・名前から `/characters/{id}/` へリンクされ、プロフィールの「登場する記事」は記事データから自動生成される
+- 未登録のキャラクター id は、下書きでは通常の登場人物として表示し（フォールバック）、公開記事ではビルドエラーにする。画像がない場合は線画アイコンで表示する
+- 画像は `node scripts/generate-character-art.mjs` で `public/images/characters/` に生成する（同じ線幅・頭身・表情パーツで描画）。絵柄を変えるときはスクリプトを編集して再生成する
+
+## 企画候補と編集ルール
+
+`content/article-plans.json` に企画候補をカテゴリ別に登録する（`status`：`idea`／`researching`／`writing`）。企画候補はページを生成せず、公開記事として扱わない。執筆を始めたら `topicId` に下書き記事の id を入れ、公開したら企画候補から外す（公開記事を参照しているとテストが失敗する）。
+
+政治・宗教・労働・ジェンダー・教育・移民など意見が分かれるテーマでは、以下を徹底する（`/about/#sensitive-topics` にも掲載）。
+
+- 問いに含まれる前提が正しいかを確認する
+- 集団を一枚岩として扱わない
+- 事実、主張、分析、推測を区別する
+- 制度の説明には法令や公的資料を優先して参照する
+- 統計には調査時期、対象、出典を付ける
+- 少数意見を不当に排除しない
+- 根拠のない疑惑を事実として扱わない
+- 特定の政党、宗教、思想、属性への支持・反対を促さない
+- AIキャラクターの発言は架空の議論として表示する
+- 結論が出ない場合は無理に結論を出さない
 
 ## 将来の拡張
 

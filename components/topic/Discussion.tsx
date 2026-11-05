@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { css, mq, Style } from "@/components/ui/Style"
 import {
   DiscussionItem,
@@ -7,7 +8,13 @@ import {
   Source,
 } from "@/lib/types"
 import { MultilineText } from "./Blocks"
-import { Avatar, colorsFor, displayName } from "./Participants"
+import {
+  Avatar,
+  colorsFor,
+  displayName,
+  isModerator,
+  profilePathOf,
+} from "./Participants"
 import { sourceRefStyles, SourceRefs } from "./SourceRefs"
 
 const styles = css`
@@ -153,6 +160,22 @@ const styles = css`
   .Msg--right .Msg_meta {
     flex-direction: row-reverse;
   }
+  .Msg_avatarLink {
+    flex: none;
+    border-radius: 50%;
+    line-height: 0;
+  }
+  .Msg_avatarLink:hover .Avatar {
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 0 var(--c-ink);
+  }
+  .Msg_name {
+    color: inherit;
+    text-decoration: none;
+  }
+  a.Msg_name:hover {
+    text-decoration: underline;
+  }
   .Msg_role {
     font-size: 0.65rem;
     font-weight: 500;
@@ -231,15 +254,12 @@ const styles = css`
 
 type Side = "left" | "right"
 
-/** 聞き役（moderator）は左、ほかの登場人物は登場順に右・左…と振り分ける */
+/** 聞き役（進行役・聞き役のキャラクター）は左、ほかの登場人物は登場順に右・左…と振り分ける */
 const sidesFor = (participants: Participant[]) => {
   const map = new Map<string, Side>()
   let i = 0
   for (const p of participants)
-    map.set(
-      p.id,
-      p.persona === "moderator" ? "left" : i++ % 2 ? "left" : "right"
-    )
+    map.set(p.id, isModerator(p) ? "left" : i++ % 2 ? "left" : "right")
   return map
 }
 
@@ -323,16 +343,41 @@ export const Discussion = ({
           const color = colors.get(p.id)!
           const side = sides.get(p.id)!
           const paragraphs = item.text.split(/\n{2,}/)
+          const href = profilePathOf(p)
+          const avatar = (
+            <Avatar
+              participant={p}
+              color={color}
+              size={42}
+              expression={item.expression}
+            />
+          )
           return (
             <li
               key={i}
               className={`Msg Msg--${side}`}
               style={{ "--bubble-bg": color.bubble } as React.CSSProperties}
             >
-              <Avatar participant={p} color={color} size={42} />
+              {href ? (
+                <Link
+                  className="Msg_avatarLink"
+                  href={href}
+                  aria-label={`${displayName(p)}のプロフィール`}
+                >
+                  {avatar}
+                </Link>
+              ) : (
+                avatar
+              )}
               <div className="Msg_main">
                 <p className="Msg_meta">
-                  <span>{displayName(p)}</span>
+                  {href ? (
+                    <Link className="Msg_name" href={href}>
+                      {displayName(p)}
+                    </Link>
+                  ) : (
+                    <span>{displayName(p)}</span>
+                  )}
                   {p.nickname && <span className="Msg_role">{p.name}</span>}
                   {item.kind && (
                     <span className="Msg_kind">{MESSAGE_KINDS[item.kind]}</span>

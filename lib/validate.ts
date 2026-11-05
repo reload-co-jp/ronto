@@ -1,6 +1,8 @@
 import {
   ARTICLE_TYPE_IDS,
   Block,
+  Character,
+  CHARACTER_EXPRESSIONS,
   DiscussionItem,
   ICON_NAMES,
   MESSAGE_KINDS,
@@ -42,7 +44,29 @@ const isStrArr = (v: unknown): v is string[] =>
 interface Context {
   categoryIds: Set<string>
   personas: Map<string, Persona>
+  /** 公式キャラクター（content/characters.json） */
+  characters?: Map<string, Character>
 }
+
+/** 未登録キャラクターのフォールバック */
+const unknownCharacterDefaults = {
+  name: "登場人物",
+  description: "キャラクター情報は準備中です。",
+  stance: "",
+  concerns: [],
+  icon: "user",
+}
+
+/** キャラクターから登場人物の既定値を作る（記事側の値で上書きできる） */
+const characterDefaults = (c: Character) => ({
+  nickname: c.name,
+  profile: `${c.species}・${c.occupation}`,
+  name: c.shortTitle,
+  description: c.description,
+  stance: c.role,
+  concerns: c.specialties,
+  icon: c.fallbackIcon,
+})
 
 export const validateTopic = (
   raw: unknown,
@@ -151,7 +175,26 @@ export const validateTopic = (
     const persona = isStr(v.persona) ? ctx.personas.get(v.persona) : undefined
     if (v.persona !== undefined && !persona)
       p.push(`participants[${i}].persona (${String(v.persona)}) が未定義`)
-    const merged = { ...persona, ...v } as Raw
+    let character: Character | undefined
+    if (v.character !== undefined) {
+      character = isStr(v.character)
+        ? ctx.characters?.get(v.character)
+        : undefined
+      // 未登録のキャラクターは公開記事ではエラー。下書きでは通常の登場人物として表示する
+      if (!character && published)
+        p.push(
+          `participants[${i}].character (${String(v.character)}) が characters.json にない`
+        )
+    }
+    const merged = {
+      ...persona,
+      ...(character
+        ? characterDefaults(character)
+        : v.character !== undefined
+          ? unknownCharacterDefaults
+          : {}),
+      ...v,
+    } as Raw
     for (const k of ["id", "name", "description", "stance"])
       if (!isStr(merged[k])) p.push(`participants[${i}].${k} は必須`)
     if (!ICON_NAMES.includes(merged.icon as never))
@@ -159,6 +202,7 @@ export const validateTopic = (
     return {
       id: merged.id as string,
       persona: persona?.id,
+      ...(character ? { character: character.id } : {}),
       name: merged.name as string,
       description: merged.description as string,
       stance: merged.stance as string,
@@ -228,6 +272,13 @@ export const validateTopic = (
     if (d.kind !== undefined && !(String(d.kind) in MESSAGE_KINDS))
       p.push(
         `discussion[${i}].kind は ${Object.keys(MESSAGE_KINDS).join("/")} のいずれか`
+      )
+    if (
+      d.expression !== undefined &&
+      !CHARACTER_EXPRESSIONS.includes(d.expression as never)
+    )
+      p.push(
+        `discussion[${i}].expression は ${CHARACTER_EXPRESSIONS.join("/")} のいずれか`
       )
     checkRefs(`discussion[${i}]`, d.sourceIds)
     return d as unknown as DiscussionItem
