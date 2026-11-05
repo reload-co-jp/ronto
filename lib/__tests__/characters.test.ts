@@ -14,7 +14,7 @@ import {
   loadAllTopics,
   personas,
 } from "../content"
-import { PLAN_STATUSES } from "../types"
+import { CHARACTER_EXPRESSIONS, PLAN_STATUSES } from "../types"
 import { validateTopic } from "../validate"
 
 const ctx = {
@@ -38,12 +38,12 @@ describe("content/characters.json", () => {
       const files = [
         c.profileImage,
         c.icon,
-        ...Object.values(c.expressionImages),
+        ...CHARACTER_EXPRESSIONS.map((e) => c.expressionImages[e]),
       ]
-      expect(c.profileImage, `${c.id} のプロフィール画像`).toBeTruthy()
-      expect(c.icon, `${c.id} のアイコン`).toBeTruthy()
-      for (const f of files)
+      for (const f of files) {
+        expect(f, `${c.id} の画像`).toBeTruthy()
         expect(fs.existsSync(path.join(process.cwd(), "public", f!))).toBe(true)
+      }
     }
   })
 

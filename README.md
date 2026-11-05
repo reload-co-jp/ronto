@@ -109,10 +109,10 @@ RonToの公式キャラクターは `content/characters.json` で一元管理す
 職業はキャラクター設定であり、実在の専門家としての権威を示すものではない。性格や役割は一貫させるが、政治的な賛否はテーマごとに固定しない。
 
 - 記事では `{ "id": "otter", "character": "otter" }` で参照する。名前・肩書き・アイコンなどはキャラクターから引き継ぎ、記事側の値で上書きできる
-- 発言に `"expression"`（`normal`／`happy`／`surprised`／`confused`／`thinking`／`serious`）を指定できる。`characters.json` の `expressionImages` に該当する画像がなければアイコンで表示する（現在は表情差分の画像を用意していない）
+- 発言に `"expression"`（`normal`／`happy`／`surprised`／`confused`／`thinking`／`serious`）を付けると表情が変わる
 - 記事内のアイコン・名前から `/characters/{id}/` へリンクされ、プロフィールの「登場する記事」は記事データから自動生成される
 - 未登録のキャラクター id は、下書きでは通常の登場人物として表示し（フォールバック）、公開記事ではビルドエラーにする。画像がない場合は線画アイコンで表示する
-- 画像は `node scripts/generate-character-art.mjs` で `public/images/characters/` に生成する。4匹はそれぞれ個別に描いた全身の1枚絵で、アイコンは同じ絵の頭部を切り出したもの。絵柄を変えるときはスクリプトを編集して再生成する
+- 画像は `node scripts/generate-character-art.mjs` で `public/images/characters/` に生成する（同じ線幅・頭身・表情パーツで描画）。絵柄を変えるときはスクリプトを編集して再生成する
 
 ## 企画候補と編集ルール
 

@@ -25,7 +25,14 @@
     "fallbackIcon": "compass",
     "profileImage": "/images/characters/otter/profile.svg",
     "icon": "/images/characters/otter/icon.svg",
-    "expressionImages": {},
+    "expressionImages": {
+      "normal": "/images/characters/otter/normal.svg",
+      "happy": "/images/characters/otter/happy.svg",
+      "surprised": "/images/characters/otter/surprised.svg",
+      "confused": "/images/characters/otter/confused.svg",
+      "thinking": "/images/characters/otter/thinking.svg",
+      "serious": "/images/characters/otter/serious.svg"
+    },
     "relationships": [
       {
         "characterId": "munchkin",
@@ -70,7 +77,14 @@
     "fallbackIcon": "calculator",
     "profileImage": "/images/characters/munchkin/profile.svg",
     "icon": "/images/characters/munchkin/icon.svg",
-    "expressionImages": {},
+    "expressionImages": {
+      "normal": "/images/characters/munchkin/normal.svg",
+      "happy": "/images/characters/munchkin/happy.svg",
+      "surprised": "/images/characters/munchkin/surprised.svg",
+      "confused": "/images/characters/munchkin/confused.svg",
+      "thinking": "/images/characters/munchkin/thinking.svg",
+      "serious": "/images/characters/munchkin/serious.svg"
+    },
     "relationships": [
       {
         "characterId": "otter",
@@ -115,7 +129,14 @@
     "fallbackIcon": "map",
     "profileImage": "/images/characters/hamster/profile.svg",
     "icon": "/images/characters/hamster/icon.svg",
-    "expressionImages": {},
+    "expressionImages": {
+      "normal": "/images/characters/hamster/normal.svg",
+      "happy": "/images/characters/hamster/happy.svg",
+      "surprised": "/images/characters/hamster/surprised.svg",
+      "confused": "/images/characters/hamster/confused.svg",
+      "thinking": "/images/characters/hamster/thinking.svg",
+      "serious": "/images/characters/hamster/serious.svg"
+    },
     "relationships": [
       {
         "characterId": "otter",
@@ -160,7 +181,14 @@
     "fallbackIcon": "globe",
     "profileImage": "/images/characters/penguin/profile.svg",
     "icon": "/images/characters/penguin/icon.svg",
-    "expressionImages": {},
+    "expressionImages": {
+      "normal": "/images/characters/penguin/normal.svg",
+      "happy": "/images/characters/penguin/happy.svg",
+      "surprised": "/images/characters/penguin/surprised.svg",
+      "confused": "/images/characters/penguin/confused.svg",
+      "thinking": "/images/characters/penguin/thinking.svg",
+      "serious": "/images/characters/penguin/serious.svg"
+    },
     "relationships": [
       {
         "characterId": "otter",

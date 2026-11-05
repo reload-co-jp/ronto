@@ -137,7 +137,7 @@ export const CharacterCard = ({ character }: { character: Character }) => (
     <div className="CharacterCard_visual">
       <CharacterVisual
         character={character}
-        src={character.profileImage ?? character.icon}
+        src={character.expressionImages.happy ?? character.icon}
       />
     </div>
     <div className="CharacterCard_body">
