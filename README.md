@@ -112,7 +112,7 @@ RonToの公式キャラクターは `content/characters.json` で一元管理す
 - 発言に `"expression"`（`normal`／`happy`／`surprised`／`confused`／`thinking`／`serious`）を付けると表情が変わる
 - 記事内のアイコン・名前から `/characters/{id}/` へリンクされ、プロフィールの「登場する記事」は記事データから自動生成される
 - 未登録のキャラクター id は、下書きでは通常の登場人物として表示し（フォールバック）、公開記事ではビルドエラーにする。画像がない場合は線画アイコンで表示する
-- 画像は `node scripts/generate-character-art.mjs` で `public/images/characters/` に生成する（同じ線幅・頭身・表情パーツで描画）。絵柄を変えるときはスクリプトを編集して再生成する
+- 画像は `public/images/characters/{id}/` に置き、`content/characters.json` から参照する。表情別画像（`expressionImages`）がない表情は `icon` で表示する
 
 ## 企画候補と編集ルール
 

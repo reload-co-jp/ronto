@@ -29,6 +29,10 @@ const styles = css`
     overflow: hidden;
     background: #fff3dc;
   }
+  .CharactersPage_groupImages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
   .CharactersPage_group img {
     display: block;
     width: 100%;
@@ -60,12 +64,17 @@ const CharactersPage = () => (
     />
     <div className="CharactersPage">
       <figure className="CharactersPage_group">
-        <img
-          src="/images/characters/group.svg"
-          alt="コツメカワウソ、マンチカン、ジャンガリアンハムスター、フンボルトペンギンの4匹が並んだイラスト"
-          width={880}
-          height={300}
-        />
+        <div className="CharactersPage_groupImages">
+          {characters.map((c) => (
+            <img
+              key={c.id}
+              src={c.profileImage}
+              alt={c.name}
+              width={1254}
+              height={1254}
+            />
+          ))}
+        </div>
         <figcaption>
           左から{characters.map((c) => c.name).join("・")}。
           疑問を投げかける聞き役と、それぞれの視点を持つ3匹で話を進めます。

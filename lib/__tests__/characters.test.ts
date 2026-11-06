@@ -35,13 +35,13 @@ describe("content/characters.json", () => {
 
   it("参照している画像ファイルがすべて存在する", () => {
     for (const c of characters) {
+      expect(c.icon, `${c.id} の画像`).toBeTruthy()
       const files = [
         c.profileImage,
         c.icon,
         ...CHARACTER_EXPRESSIONS.map((e) => c.expressionImages[e]),
-      ]
+      ].filter(Boolean)
       for (const f of files) {
-        expect(f, `${c.id} の画像`).toBeTruthy()
         expect(fs.existsSync(path.join(process.cwd(), "public", f!))).toBe(true)
       }
     }
