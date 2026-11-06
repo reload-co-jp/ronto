@@ -85,6 +85,16 @@
       "sourceIds": ["mhlw-maikin"]
     },
     {
+      "speaker": "otter",
+      "text": "ちょっと待って、「名目」とか「実質」とか言われると急に難しくなる……。つまり、給料の数字より物価の上がり方のほうが大きいってこと？",
+      "kind": "question",
+      "expression": "confused"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "そう、その理解で合っている。言葉は難しくても、中身は「財布の中身で買える量」の話なんだ。"
+    },
+    {
       "narration": "網の上でカルビがじゅうっと音を立てる。"
     },
     {
