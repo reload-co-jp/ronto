@@ -10,20 +10,20 @@
   "thumbnail": "/images/topics/my-number.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "administration",
-      "persona": "administration"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "welfare",
-      "persona": "welfare"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -69,69 +69,77 @@
       "divider": "そもそも何のため？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "マイナンバーって、そもそもなんで一人ひとりに番号が必要なの？",
-      "kind": "question"
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "administration",
-      "text": "役所の手続きって、税金とか年金とか健康保険とか、別々の機関が同じ人の情報を扱ってるんだ。名前と住所だけだと、引っ越しとか結婚で変わったときに同じ人か確かめるのが大変。番号があれば正確に結びつけられる。",
+      "speaker": "munchkin",
+      "text": "役所の手続きは、税金、年金、健康保険と、別々の機関が同じ人の情報を扱っている。名前と住所だけだと、引っ越しや結婚で変わったときに同じ人か確かめるのが大変だ。番号があれば正確に結びつけられる。",
       "kind": "fact",
       "sourceIds": ["digital"]
     },
     {
-      "speaker": "welfare",
-      "text": "福祉の面だと、所得を正確につかんで、必要な人に支援を届けやすくするって目的もあるよね。コロナのときの給付金は、手続きに時間がかかったのが問題になったし。"
+      "speaker": "hamster",
+      "text": "福祉の面だと、所得を正確につかんで、必要な人に支援を届けやすくするって目的もあるよ。コロナのときの給付金は、窓口でも手続きに時間がかかって大変だったんだ。",
+      "expression": "serious"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "番号があるのは分かったけど、カードはなんで持たなきゃいけないの？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "カードは任意なんだよ。番号はカードがなくても全員に割り当てられてる。カードは本人確認とか、オンライン手続きとか、保険証として使うための「道具」って感じ。",
+      "speaker": "munchkin",
+      "text": "カードは任意だよ。番号はカードがなくても全員に割り当てられている。カードは本人確認やオンライン手続き、保険証として使うための「道具」だと考えると整理しやすい。",
       "kind": "fact",
       "sourceIds": ["digital"]
     },
     {
-      "narration": "ナツミがサンドイッチをかじりながらうなずく。"
+      "narration": "ハムスターがサンドイッチをかじりながらうなずく。"
     },
     {
       "divider": "不安の正体"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "でも、情報がまとめられて漏れたら怖いなって思っちゃう。ほかの人の情報がひもづいてたってニュースもあったよね。",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "speaker": "administration",
-      "text": "ひもづけのミスは実際に起きて、点検が行われたよ。ただ、仕組みとしては情報は各機関にバラバラに管理されてて、番号だけで全部の情報が見られるわけじゃないんだ。カードのICチップにも、税金とか病気の情報は入ってない。",
+      "speaker": "munchkin",
+      "text": "ひもづけのミスは実際に起きて、点検が行われた。ただ、仕組みとしては情報は各機関にバラバラに管理されていて、番号だけで全部の情報が見られるわけじゃない。カードのICチップにも、税金や病気の情報は入っていないんだ。",
       "kind": "fact",
       "sourceIds": ["digital"]
     },
     {
-      "speaker": "welfare",
-      "text": "保険証の切りかえでは、お年寄りとか障害のある人とか、カードの管理が難しい人への配慮が必要だと思う。カードがなくても受診できる「資格確認書」があるけど、知られてないと病院の窓口で混乱しちゃう。",
+      "speaker": "hamster",
+      "text": "保険証の切りかえでは、お年寄りや障害のある人みたいに、カードの管理が難しい人への配慮が必要だと思う。カードがなくても受診できる「資格確認書」があるけど、知られていないと病院の窓口で混乱しちゃう。",
       "kind": "idea",
       "sourceIds": ["digital-hoken"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "国が国民に番号を振る仕組みは、日本ではずっと前から議論されては反発を受けてきた歴史があるんだ。「国に管理される」という不安は昔からあるもので、技術だけでは解消できない。信頼をどう積み重ねるかの問題なんだよ。",
+      "expression": "thinking"
     },
     {
       "divider": "どう付き合う？"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "便利になるところもあるのは分かった。不安を減らすには何が大事なんだろう？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "トラブルがあったときに、何が起きてどう直したかをちゃんと公表すること。それと、自分の情報がいつどの機関に使われたかを確認できる仕組みを、もっと知ってもらうことかな。",
+      "speaker": "penguin",
+      "text": "トラブルがあったときに、何が起きてどう直したかをきちんと公表すること。それと、自分の情報がいつどの機関に使われたかを確認できる仕組みを、もっと知ってもらうことだろうね。",
       "kind": "summary"
     },
     {
-      "narration": "「じゃあ、帰りに確認してみる」とユイ。"
+      "narration": "「じゃあ、帰りに確認してみる」とカワウソ。"
     }
   ],
   "summary": {
@@ -228,6 +236,6 @@
     "emoji": "☕",
     "place": "区役所の近くのカフェ",
     "time": "平日の昼休み",
-    "description": "引っ越しの手続きで区役所に行ってきたユイ。マイナンバーカードを手に「これ、結局なんのためにあるんだっけ」と首をかしげる。たまたま近くで働くタクヤとナツミも合流。"
+    "description": "引っ越しの手続きで区役所に行ってきたカワウソ。マイナンバーカードを手に「これ、結局なんのためにあるんだっけ」と首をかしげる。近くで打ち合わせをしていた3匹も合流。"
   }
 }

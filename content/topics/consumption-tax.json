@@ -13,20 +13,20 @@
   "tags": ["消費税", "税金", "家計", "軽減税率"],
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "welfare",
-      "persona": "welfare"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -89,65 +89,71 @@
       "divider": "下がると何が変わる？"
     },
     {
-      "speaker": "moderator",
-      "text": "食料品の消費税を下げるって話、どうなの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "食料品の消費税を下げるって話、どうなの？8%が1%になったら、1万円の買い物で700円くらい違う計算だよね？",
+      "kind": "question",
+      "expression": "happy"
     },
     {
-      "speaker": "consumer",
-      "text": "食費は毎日のことだから、下がるのは素直にうれしい！8%が1%になったら、1万円の買い物で700円くらい違う計算だよね。"
+      "speaker": "hamster",
+      "text": "食費は毎日のことだから、下がるのは素直にうれしいよね。家計が苦しいって相談も増えているし。",
+      "expression": "happy"
     },
     {
-      "speaker": "economist",
-      "text": "家計には分かりやすい効果だね。ただ、税率を下げても、その分がそのまま値札に反映されるとは限らないよ。仕入れ値とか人件費が上がってたら、安くなった実感はあんまりないかも。",
-      "kind": "rebuttal"
-    },
-    {
-      "speaker": "welfare",
-      "text": "私が気になるのは財源。消費税って社会保障の大事な財源でしょ。減った分をどこで補うのかはっきりしないと、医療とか介護とか年金が心配になる。",
+      "speaker": "munchkin",
+      "text": "家計には分かりやすい効果だね。ただ、税率を下げても、その分がそのまま値札に反映されるとは限らない。仕入れ値や人件費が上がっていたら、安くなった実感はあまりないかもしれない。",
       "kind": "rebuttal",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "hamster",
+      "text": "それに財源が心配。消費税って社会保障の大事な財源でしょ。減った分をどこで補うのかはっきりしないと、医療や介護、年金が心配になる。",
+      "kind": "rebuttal",
+      "expression": "confused",
       "sourceIds": ["mof-shohi"]
     },
     {
-      "narration": "ドリンクバーのメロンソーダを持ってハルが戻ってくる。"
+      "narration": "ドリンクバーのメロンソーダを持って、カワウソが戻ってくる。"
     },
     {
       "divider": "誰が得をする？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "結局、誰が一番得するの？",
       "kind": "question"
     },
     {
-      "speaker": "economist",
+      "speaker": "munchkin",
       "text": "金額で見ると、食料品をたくさん買う家ほど減税額は大きくなる。一方で、収入に対する負担の軽さで見ると、収入の少ない家ほど効果を感じやすい。どっちの物差しで見るかで「得」の評価が変わるんだ。",
       "kind": "fact"
     },
     {
-      "speaker": "welfare",
-      "text": "収入の少ない家を支えるのが目的なら、給付金みたいに対象を絞った支援のほうが効率的だ、って意見もあるよ。",
+      "speaker": "munchkin",
+      "text": "収入の少ない家を支えるのが目的なら、給付金みたいに対象を絞った支援のほうが効率的、という意見もあるよ。",
       "kind": "idea"
     },
     {
-      "speaker": "consumer",
-      "text": "給付金って申請が面倒だったり、届くまで時間がかかったりするじゃん。買い物のたびに自動で安くなるほうが、私は実感しやすいなあ。",
+      "speaker": "hamster",
+      "text": "でも給付金って、窓口で見ていると申請が大変そうなんだよね。届くまで時間もかかる。買い物のたびに自動で安くなるほうが、実感はしやすいと思う。",
       "kind": "rebuttal"
     },
     {
       "divider": "始め方と終わり方"
     },
     {
-      "speaker": "consumer",
-      "text": "あと、外食は対象外なんだよね？お店で食べるのと持ち帰りで税率の差が今より大きくなると、ややこしそう。"
+      "speaker": "otter",
+      "text": "あと、外食は対象外なんだよね？お店で食べるのと持ち帰りで税率の差が今より大きくなると、ややこしそう。",
+      "expression": "confused"
     },
     {
-      "speaker": "welfare",
-      "text": "期間限定ってところも大事だと思う。2年後に税率を戻すとき、実質的には増税みたいに感じるかもしれない。始める前に、終わり方まで考えておかないと。",
-      "kind": "idea"
+      "speaker": "penguin",
+      "text": "期間限定というところも大事だね。2年後に税率を戻すとき、実質的には増税のように感じるかもしれない。一度下げた税を元に戻すのは、どの国でも政治的に難しいとされてきた。始める前に、終わり方まで決めておかないと。",
+      "kind": "idea",
+      "expression": "serious"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "「誰が得するか」は物差しによって変わるし、財源と終わり方まで含めて考えなきゃいけないってことか。",
       "kind": "summary"
     }
@@ -260,6 +266,6 @@
     "emoji": "🛒",
     "place": "スーパー帰りのファミレス",
     "time": "土曜の昼1時",
-    "description": "週末のまとめ買いを終えたユイとハルが、ケンジ、ナツミとファミレスで合流。レシートの「消費税」の欄を見ながら、ニュースで聞いた食料品の消費税引き下げの話に。"
+    "description": "週末のまとめ買いを終えたカワウソとハムスターが、マンチカン、ペンギンとファミレスで合流。レシートの「消費税」の欄を見ながら、ニュースで聞いた食料品の消費税引き下げの話になる。"
   }
 }

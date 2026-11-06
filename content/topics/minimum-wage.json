@@ -10,21 +10,20 @@
   "thumbnail": "/images/topics/minimum-wage.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "パートやアルバイトで働く人の立場から、時給と暮らしを考える。"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -70,65 +69,73 @@
       "divider": "誰が得をする？"
     },
     {
-      "speaker": "moderator",
-      "text": "最低賃金が上がると、まず誰が得するの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "この店、10月から時給が上がったんだって。最低賃金が上がると、そもそも誰が得するの？",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "consumer",
-      "text": "時給で働いてる人！私もバイトしてるけど、時給が数十円上がるだけでも、月にするとけっこう違うんだよ。物価も上がってるし、ほんと助かる。"
+      "speaker": "hamster",
+      "text": "まずは時給で働いている人だね。市役所の窓口でも、パートの方から「数十円でも、月にするとけっこう違う」って聞くよ。物価も上がっているから、助かる人は多いと思う。",
+      "expression": "happy"
     },
     {
-      "speaker": "economist",
-      "text": "最低賃金の近くで働いてる人の給料が直接上がるし、それより少し上の時給の人にも引き上げが広がることがある。給料が増えた分、お金を使う人が増えて経済にプラス、って見方もあるね。"
+      "speaker": "munchkin",
+      "text": "数字で見ると、最低賃金の近くで働く人の給料が直接上がる。それより少し上の時給にも引き上げが波及することがあるね。給料が増えた分お金を使う人が増えて、経済にプラスになるという見方もある。",
+      "expression": "thinking"
     },
     {
-      "narration": "ドリンクバーから戻ってきたゴロウが、少し難しい顔をしている。"
+      "narration": "ドリンクバーから戻ってきたハムスターが、少し難しい顔をしている。"
     },
     {
       "divider": "誰が負担する？"
     },
     {
-      "speaker": "regional",
-      "text": "でもね、地方の小さいお店とか会社は大変なんだよ。売上がそんなに伸びてないのに人件費だけ上がると苦しい。値上げしたらお客さんが減るかも、って悩みをよく聞く。",
-      "kind": "rebuttal"
+      "speaker": "hamster",
+      "text": "ただね、地域の小さいお店や会社は大変なんだ。売上がそんなに伸びていないのに人件費だけ上がると苦しい。値上げしたらお客さんが減るかも、って相談をよく受けるよ。",
+      "kind": "rebuttal",
+      "expression": "serious"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "でも、最低賃金が低いままだと生活できないし、人も集まらないでしょ？",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "surprised"
     },
     {
-      "speaker": "regional",
-      "text": "それもその通りなんだよ。人手不足だから、給料を上げないと人が来ない。上げても苦しい、上げなくても苦しい、っていうジレンマ。"
+      "speaker": "hamster",
+      "text": "それもその通り。人手不足だから、給料を上げないと人が来ない。上げても苦しい、上げなくても苦しい、っていうジレンマなんだ。"
     },
     {
-      "speaker": "economist",
-      "text": "研究でも、引き上げで雇用が減るかどうかは、上げ幅とかペースとか地域の状況で結果が分かれてる。急に大きく上げるほど負担が大きくなりやすい、とは言えるね。",
-      "kind": "fact"
+      "speaker": "munchkin",
+      "text": "研究でも、引き上げで雇用が減るかどうかは、上げ幅やペース、地域の状況で結果が分かれている。「上げたら必ず失業が増える」も「影響はない」も、どちらも言い過ぎ。急に大きく上げるほど負担が大きくなりやすい、とは言えるね。",
+      "kind": "fact",
+      "expression": "normal"
     },
     {
       "divider": "地域による違い"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "最低賃金って都道府県で違うんだよね？その差ってどう考えればいいの？",
       "kind": "question",
       "sourceIds": ["mhlw-min"]
     },
     {
-      "speaker": "regional",
-      "text": "物価とか家賃が違うから、差があること自体には理由がある。でも差が大きいと、若い人が時給の高い都会に出ていく理由の一つになっちゃう。地方にとっては悩ましいところ。"
+      "speaker": "penguin",
+      "text": "物価や家賃が違うから、差があること自体には理由がある。ただ、差が大きいと、若い人が時給の高い都会に出ていく理由のひとつになる。全国一律にするか地域別にするかは、国によって考え方がちがう論点でもあるんだ。",
+      "expression": "thinking"
     },
     {
-      "speaker": "economist",
-      "text": "会社が給料を上げても続けられるように、生産性を上げる設備投資の支援とか、人件費が上がった分を取引価格に反映しやすくする取り組みもセットで必要だね。",
+      "speaker": "munchkin",
+      "text": "会社が給料を上げても続けられるように、生産性を上げる設備投資の支援や、人件費が上がった分を取引価格に反映しやすくする取り組みもセットで必要だね。賃金だけ上げて終わり、では計算が合わない。",
       "kind": "idea"
     },
     {
-      "speaker": "consumer",
-      "text": "時給を上げることと、お店が続けられることを、両方考えなきゃいけないんだね。私のバイト先にも、ずっと続いてほしいし。",
-      "kind": "summary"
+      "speaker": "otter",
+      "text": "時給を上げることと、お店が続けられることを、両方考えなきゃいけないんだね。このファミレスにも、ずっと続いてほしいし。",
+      "kind": "summary",
+      "expression": "happy"
     }
   ],
   "summary": {
@@ -212,6 +219,6 @@
     "emoji": "🍝",
     "place": "深夜のファミレス",
     "time": "平日の夜11時",
-    "description": "シフト終わりのユイ（本業のかたわら週末にカフェでバイト中）と、仕事帰りの3人がファミレスに集合。「10月から時給がちょっと上がったんだ」とユイがうれしそうに話す。"
+    "description": "締め切り明けのカワウソが、仕事帰りの3匹をファミレスに呼び出した。メニューの端に貼られた「アルバイト募集　時給アップ！」の紙を見て、カワウソが首をかしげる。"
   }
 }

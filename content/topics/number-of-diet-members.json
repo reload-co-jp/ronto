@@ -10,20 +10,20 @@
   "thumbnail": "/images/topics/number-of-diet-members.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "administration",
-      "persona": "administration"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -59,18 +59,16 @@
       "divider": "多すぎる？"
     },
     {
-      "speaker": "moderator",
-      "text": "国会議員って多すぎるって声、よく聞くけどどうなの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "国会議員って多すぎるって声、よく聞くけどどうなの？正直、何してるのか分からない議員もいる気がして。減らしたら税金の節約にもなるし。",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "consumer",
-      "text": "正直、何してるのか分からない議員もいる気がして。減らしてもいいんじゃない？税金の節約にもなるし。"
-    },
-    {
-      "speaker": "administration",
-      "text": "お金の面では、議員を減らせばお給料とか秘書の費用は減るね。でも国の予算全体から見たら、その割合は大きくないんだ。数を減らすことの意味を、お金以外からも考えたほうがいいと思う。",
-      "kind": "rebuttal"
+      "speaker": "munchkin",
+      "text": "お金の面では、議員を減らせば給料や秘書の費用は減る。でも国の予算全体から見たら、その割合は大きくない。数を減らす意味は、お金以外からも考えたほうがいいね。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
       "narration": "「へい、お待ち！」とラーメンが4つ並ぶ。"
@@ -79,27 +77,29 @@
       "divider": "誰の声が届く？"
     },
     {
-      "speaker": "regional",
+      "speaker": "hamster",
       "text": "地方としては、議員が減ると人口の少ない地域の代表がもっと少なくなるのが心配。すでに、県ごとの代表を出せない地域もあるんだよ。",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "serious"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "議員の数って、何を基準に決めるのがいいんだろう。",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "人口あたりの議員の数をほかの国と比べる方法があるけど、国の仕組みが違うから単純には比べられないんだ。国会の仕事の量とか、委員会を回すのに必要な人数って視点もある。"
+      "speaker": "penguin",
+      "text": "人口あたりの議員の数をほかの国と比べる方法はある。ただ、議会が二院制か一院制か、連邦制かどうかで役割が違うから、単純には比べられないんだ。国会の仕事の量や、委員会を回すのに必要な人数という視点もあるね。",
+      "expression": "thinking"
     },
     {
-      "speaker": "consumer",
-      "text": "数を減らすより、一人ひとりがちゃんと働いてるかチェックできるほうが大事なのかも。",
+      "speaker": "munchkin",
+      "text": "数を減らすより、一人ひとりがちゃんと働いているかをチェックできるほうが大事かもしれない。質を測る物差しがないまま、数だけ議論しても答えは出ないよ。",
       "kind": "idea"
     },
     {
-      "speaker": "regional",
-      "text": "そうだね。数の話と一緒に、地方とか少数意見をどう国会に届けるか、選挙の仕組み全体で考えないとね。",
+      "speaker": "hamster",
+      "text": "そうだね。数の話と一緒に、地方や少数意見をどう国会に届けるか、選挙の仕組み全体で考えないとね。",
       "kind": "summary"
     }
   ],
@@ -172,6 +172,6 @@
     "emoji": "🍜",
     "place": "駅前のラーメン屋",
     "time": "日曜の夜9時",
-    "description": "ラーメンを待つあいだ、テレビで流れていた国会中継を見ながら、ユイが「国会議員って多すぎない？」と言い出す。"
+    "description": "ラーメンを待つあいだ、テレビで流れていた国会中継を見ながら、カワウソが「国会議員って多すぎない？」と言い出す。"
   }
 }

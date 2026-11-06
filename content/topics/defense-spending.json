@@ -10,26 +10,20 @@
   "thumbnail": "/images/topics/defense-spending.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "security",
-      "name": "安全保障の視点",
-      "description": "周辺国の動きや国際情勢から、国の守りを考える。",
-      "stance": "「何から、どう守るのか」という具体的な脅威と備えを考える。",
-      "concerns": ["国際情勢", "抑止力", "同盟"],
-      "icon": "globe",
-      "nickname": "シュウ",
-      "profile": "37歳・大学で国際関係を研究している。ゼミの同期"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -86,40 +80,45 @@
       "divider": "なんで増やすことに？"
     },
     {
-      "speaker": "moderator",
-      "text": "シュウって安全保障の研究してるんだよね。防衛費をすごく増やすってニュース見たけど、そもそもなんで？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "ペンギンって安全保障も研究してるんだよね。防衛費をすごく増やすってニュースを見たけど、そもそもなんで？",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "security",
-      "text": "政府の説明だと、周りの国の軍事力が強くなってたり、ミサイルの発射が続いてたりして、日本を取り巻く環境が厳しくなってるから。「攻撃しても割に合わない」と相手に思わせる力、つまり抑止力を高めるのがねらいなんだ。",
+      "speaker": "penguin",
+      "text": "政府の説明だと、周りの国の軍事力が強くなっていたり、ミサイルの発射が続いていたりして、日本を取り巻く環境が厳しくなっているから。「攻撃しても割に合わない」と相手に思わせる力、つまり抑止力を高めるのがねらいなんだ。",
       "kind": "fact",
+      "expression": "serious",
       "sourceIds": ["cas"]
     },
     {
-      "speaker": "consumer",
-      "text": "危ないから備えるっていうのは分かるよ。でも金額がすごいよね。5年で約43兆円って、生活の感覚じゃ想像つかない。",
+      "speaker": "hamster",
+      "text": "危ないから備える、っていうのは分かるよ。でも金額がすごいよね。5年で約43兆円って、暮らしの感覚じゃ想像がつかないな。",
       "kind": "question",
+      "expression": "surprised",
       "sourceIds": ["cas"]
     },
     {
       "divider": "お金はどこから？"
     },
     {
-      "speaker": "economist",
-      "text": "財源の話は避けて通れないね。歳出の見直しとか、使い残したお金の活用に加えて、増税も財源に入ってる。どこまで借金に頼らずにまかなえるかは、財政全体の問題だよ。",
+      "speaker": "munchkin",
+      "text": "財源の話は避けて通れない。歳出の見直しや使い残したお金の活用に加えて、増税も財源に入っている。どこまで借金に頼らずにまかなえるかは、財政全体の問題だね。",
       "kind": "fact",
       "sourceIds": ["cas"]
     },
     {
-      "speaker": "consumer",
-      "text": "増税って聞くと身構えちゃう。防衛より先に、物価高の対策とか子育てにお金を回してほしいって気持ちもあるし。",
-      "kind": "rebuttal"
+      "speaker": "hamster",
+      "text": "増税って聞くと身構えちゃう。防衛より先に、物価高の対策や子育てにお金を回してほしいって声も、きっと多いと思う。",
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "speaker": "security",
-      "text": "その気持ちはもっともだと思う。ただ、安全が損なわれたら経済も暮らしも成り立たない、っていう考え方もある。どっちか一つを選ぶ話じゃなくて、優先順位とバランスの問題なんだよね。",
-      "kind": "rebuttal"
+      "speaker": "penguin",
+      "text": "その気持ちはもっともだ。ただ、安全が損なわれたら経済も暮らしも成り立たない、という考え方もある。どっちか一つを選ぶ話じゃなくて、優先順位とバランスの問題なんだよ。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
       "narration": "バーテンダーが2杯目のハイボールを置いていく。"
@@ -128,23 +127,24 @@
       "divider": "何にどれだけ必要？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "「GDP比2%」ってよく出てくるけど、それって何の数字？",
       "kind": "question"
     },
     {
-      "speaker": "security",
-      "text": "NATOっていう北米とヨーロッパの同盟の国々が目安にしてきた水準がGDP比2%。でも国によって状況は違うから、数字そのものより「何にお金を使うか」が大事だって指摘もある。"
+      "speaker": "penguin",
+      "text": "NATOという北米とヨーロッパの同盟の国々が、目安にしてきた水準がGDP比2%。でも国によって置かれた状況は違うから、数字そのものより「何にお金を使うか」が大事だという指摘もある。"
     },
     {
-      "speaker": "economist",
-      "text": "それは賛成。金額ありきじゃなくて、どんな装備や体制が必要で、それにいくらかかるのかを示してくれたほうが、税金を払う側は納得しやすいよ。",
+      "speaker": "munchkin",
+      "text": "それは賛成。金額ありきじゃなくて、どんな装備や体制が必要で、それにいくらかかるのかを示してくれたほうが、税金を払う側は納得しやすい。数字は目的のあとに来るべきだね。",
       "kind": "agree"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "「なんとなく必要そう」じゃなくて、使い道をちゃんと説明してくれたら、判断しやすくなるかも。",
-      "kind": "summary"
+      "kind": "summary",
+      "expression": "happy"
     }
   ],
   "summary": {
@@ -240,8 +240,8 @@
   "updatedAt": "2026-11-04",
   "scene": {
     "emoji": "🍸",
-    "place": "同窓会の二次会のバー",
+    "place": "学会帰りのバー",
     "time": "土曜の夜10時",
-    "description": "大学のゼミの同窓会のあと、4人で静かなバーへ。大学で国際関係を研究しているシュウが近況を話すうちに、話題はニュースでよく見る「防衛費の増額」に。"
+    "description": "学会の発表を終えたペンギンを、3匹がねぎらいに静かなバーへ。国際関係の研究の近況を聞くうちに、話題はニュースでよく見る「防衛費の増額」に。"
   }
 }

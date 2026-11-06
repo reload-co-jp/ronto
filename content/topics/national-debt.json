@@ -10,20 +10,20 @@
   "thumbnail": "/images/topics/national-debt.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "welfare",
-      "persona": "welfare"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -69,29 +69,33 @@
       "divider": "国の借金って家のローンと同じ？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "ねえこれ見て、「国の借金、過去最大」だって。家のローンみたいに考えていいの？いつか返せなくなるんじゃない？",
-      "kind": "question"
+      "kind": "question",
+      "expression": "surprised"
     },
     {
-      "speaker": "consumer",
-      "text": "私も同じ感覚。収入よりずっと借金が多いなら、普通の家なら破産だよね。"
+      "speaker": "hamster",
+      "text": "私も同じ感覚だなあ。収入よりずっと借金が多いなら、普通の家なら破産だよね。",
+      "expression": "confused"
     },
     {
-      "speaker": "economist",
-      "text": "似てるところと違うところがあるんだよ。違うのは、国は自分の通貨の円で借りてて、借りてる相手の多くが国内の銀行とか日本銀行だってこと。だから家計みたいに「明日から返せません」とはなりにくい。",
+      "speaker": "munchkin",
+      "text": "似ているところと違うところがある。違うのは、国は自分の通貨の円で借りていて、借りている相手の多くが国内の銀行や日本銀行だということ。だから家計みたいに「明日から返せません」とはなりにくい。",
       "kind": "fact",
+      "expression": "thinking",
       "sourceIds": ["mof-data"]
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "じゃあ心配しなくていいの？",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "そこまでは言えない。家計と同じで、利子の支払いが増えると、ほかに使えるお金が減る。借金が大きいほど、金利がちょっと上がるだけで影響が大きくなるんだ。",
-      "kind": "rebuttal"
+      "speaker": "munchkin",
+      "text": "そこまでは言えない。家計と同じで、利子の支払いが増えると、ほかに使えるお金が減る。借金が大きいほど、金利が少し上がるだけで影響が大きくなるんだ。",
+      "kind": "rebuttal",
+      "expression": "serious"
     },
     {
       "narration": "店員さんがお通しの枝豆を置いていく。"
@@ -100,43 +104,45 @@
       "divider": "金利が上がるとどうなる？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "最近、金利が上がり始めたって聞くけど……。",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "国債は満期が来たら新しい国債で借りかえるんだけど、そのときの金利が高いと、利払いが少しずつ増えていく。すぐ破綻って話じゃないけど、予算の中で利払いの割合がじわじわ増えるのは確か。"
+      "speaker": "munchkin",
+      "text": "国債は満期が来たら新しい国債で借りかえるんだけど、そのときの金利が高いと、利払いが少しずつ増えていく。すぐ破綻という話じゃないけど、予算の中で利払いの割合がじわじわ増えるのは確かだね。"
     },
     {
-      "speaker": "welfare",
-      "text": "そこが心配なんだよね。予算の大きな部分は社会保障でしょ。利払いが増えて「じゃあ医療とか年金を削ろう」ってなったら、困るのは病気の人とかお年寄りだよ。",
-      "kind": "rebuttal"
+      "speaker": "hamster",
+      "text": "そこが心配なんだよね。予算の大きな部分は社会保障でしょ。利払いが増えて「じゃあ医療や年金を削ろう」ってなったら、困るのは病気の人やお年寄りだよ。",
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
       "divider": "減らすべき？"
     },
     {
-      "speaker": "consumer",
-      "text": "でもさ、借金を減らそうとして増税とか支出カットをされたら、それはそれで生活が苦しくなるじゃん。",
+      "speaker": "otter",
+      "text": "でもさ、借金を減らそうとして増税や支出カットをされたら、それはそれで生活が苦しくなるじゃん。",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "そのジレンマがまさに論点。景気が弱いときに急いで減らそうとすると、経済が冷えて税収も減りかねない。かといって先送りし続けたら、将来の選択肢がどんどん狭まる。"
+      "speaker": "penguin",
+      "text": "そのジレンマがまさに論点なんだ。景気が弱いときに急いで減らそうとすると、経済が冷えて税収も減りかねない。かといって先送りし続ければ、将来の選択肢がどんどん狭まる。どの国も、この綱渡りを何十年も続けてきたんだよ。",
+      "expression": "thinking"
     },
     {
-      "speaker": "welfare",
-      "text": "あと、借金で何に使ったかも大事だと思う。子育てとか教育みたいに将来の支え手を増やすお金と、その場しのぎのお金じゃ、同じ借金でも意味が違うよ。",
+      "speaker": "hamster",
+      "text": "あと、借金で何に使ったかも大事だと思う。子育てや教育みたいに将来の支え手を増やすお金と、その場しのぎのお金じゃ、同じ借金でも意味が違うよ。",
       "kind": "idea"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "借金の大きさだけじゃなくて、「金利」と「使い道」と「返し方」をセットで見なきゃいけないってことか。",
       "kind": "summary"
     },
     {
-      "narration": "「とりあえず、今日の会計は割り勘で」とケンジが笑った。"
+      "narration": "「とりあえず、今日の会計は割り勘で」とマンチカンがきっちり電卓をたたいた。"
     }
   ],
   "summary": {
@@ -227,6 +233,6 @@
     "emoji": "🍺",
     "place": "給料日あとの大衆居酒屋",
     "time": "水曜の夜7時半",
-    "description": "仕事帰りに集まった4人。ニュースアプリの「国の借金、過去最大」という見出しを見たハルが「これ、そのうち日本つぶれるの？」とスマホを差し出す。"
+    "description": "仕事帰りに集まった4匹。ニュースアプリの「国の借金、過去最大」という見出しを見たカワウソが「これ、そのうち日本つぶれるの？」とスマホを差し出す。"
   }
 }

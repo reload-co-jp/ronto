@@ -10,21 +10,20 @@
   "thumbnail": "/images/topics/voter-turnout.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "「投票に行ってもあまり変わらない」と感じている20代の感覚で考える。"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "administration",
-      "persona": "administration"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -69,27 +68,25 @@
       "divider": "一票で変わる？"
     },
     {
-      "speaker": "moderator",
-      "text": "選挙、行かない人も多いよね。正直、行かない理由ってなんだろう。",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "選挙、行かない人も多いよね。私も「自分ひとりの一票じゃ何も変わらない」って思っちゃう。誰に入れればいいかも分からないし、忙しいとつい後回しに……。",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "consumer",
-      "text": "私は「自分ひとりの一票じゃ何も変わらない」って思っちゃう。誰に入れればいいかも分からないし、忙しいとつい後回しに……。"
+      "speaker": "penguin",
+      "text": "その感覚は分かるよ。実際、一票で結果が決まることはめったにない。でも選挙の結果は、「誰が勝ったか」だけじゃなく「どの世代がどれだけ投票したか」という形でも政治家に伝わるんだ。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
-      "speaker": "administration",
-      "text": "その感覚は分かるよ。実際、一票で結果が決まることはめったにない。でも選挙の結果って、「誰が勝ったか」だけじゃなくて「どの世代がどれだけ投票したか」っていう形でも政治家に伝わるんだ。",
-      "kind": "rebuttal"
-    },
-    {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "どういうこと？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "政治家は次の選挙でも当選したいから、よく投票に来る人たちの関心に応えようとしがち。若い世代の投票率が低いと、若い世代の課題は後回しにされやすい、っていう指摘があるんだよ。",
+      "speaker": "munchkin",
+      "text": "政治家は次の選挙でも当選したいから、よく投票に来る人たちの関心に応えようとしがちだ。若い世代の投票率が低いと、若い世代の課題は後回しにされやすい、という指摘がある。",
       "kind": "fact",
       "sourceIds": ["soumu-ritu"]
     },
@@ -100,40 +97,42 @@
       "divider": "誰の声が届く？"
     },
     {
-      "speaker": "regional",
-      "text": "地方選挙だともっと身近だよ。投票率が低いと、地元の団体とか組織に支えられた候補が有利になりやすい。結果、いつも同じ顔ぶれが選ばれる、なんてことも。"
+      "speaker": "hamster",
+      "text": "地方選挙だともっと身近だよ。投票率が低いと、地元の団体や組織に支えられた候補が有利になりやすい。結果、いつも同じ顔ぶれが選ばれる、なんてこともあるんだ。"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "投票しないのも一つの意思表示だと思ってたけど、「なんでもいい」って受け取られちゃうかもしれないんだね。",
-      "kind": "agree"
+      "kind": "agree",
+      "expression": "surprised"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "でも、入れたい人がいないときはどうすればいいの？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "「この人ならまだまし」っていう選び方でいいと思う。自分にとって一番大事なテーマを一つ決めて比べるのもアリ。どうしても選べなければ白票を入れることもできるよ。",
+      "speaker": "penguin",
+      "text": "「この人ならまだまし」という選び方でいいと思う。自分にとって一番大事なテーマを一つ決めて比べるのもアリだ。どうしても選べなければ白票を入れることもできる。",
       "kind": "idea"
     },
     {
       "divider": "投票しやすくするには"
     },
     {
-      "speaker": "regional",
-      "text": "投票所が遠いとか、移動手段がないって人もいるよね。期日前投票所を商業施設とか大学に置く自治体もあるけど、まだ地域差がある。",
+      "speaker": "hamster",
+      "text": "投票所が遠いとか、移動手段がないって人もいるよね。期日前投票所を商業施設や大学に置く自治体もあるけど、まだ地域差があるんだ。選挙の事務は自治体の仕事だから、私たちも工夫を続けないと。",
       "kind": "idea",
       "sourceIds": ["soumu-naruhodo"]
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "期日前投票なら行けそう。次は「自分の生活に一番関わるテーマ」を一つ決めて、候補者を比べてみる。",
-      "kind": "summary"
+      "kind": "summary",
+      "expression": "happy"
     },
     {
-      "narration": "ハルは入場券をそっとカバンにしまった。"
+      "narration": "カワウソは入場券をそっとカバンにしまった。"
     }
   ],
   "summary": {
@@ -223,6 +222,6 @@
     "emoji": "☕",
     "place": "選挙前の週末のカフェ",
     "time": "日曜の午後2時",
-    "description": "投票日を1週間後にひかえた日曜日。家に届いた投票所入場券をテーブルに置いて、ハルが「正直、行く意味あるのかな」とつぶやく。"
+    "description": "投票日を1週間後にひかえた日曜日。家に届いた投票所入場券をテーブルに置いて、カワウソが「正直、行く意味あるのかな」とつぶやく。"
   }
 }

@@ -10,30 +10,20 @@
   "thumbnail": "/images/topics/nuclear-restart.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "consumer",
-      "persona": "consumer"
-    },
-    {
-      "id": "safety",
-      "name": "安全・環境の視点",
-      "description": "事故のリスクや廃棄物、環境への影響を重視する。",
-      "stance": "もしものときの被害と、長い時間軸での負担を考える。",
-      "concerns": ["事故リスク", "放射性廃棄物", "避難計画"],
-      "icon": "heart",
-      "nickname": "アオイ",
-      "profile": "30歳・環境NGOのスタッフ。マイ箸を持ち歩いている"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -78,63 +68,68 @@
       "divider": "なんで再稼働の話が？"
     },
     {
-      "speaker": "moderator",
-      "text": "電気代、高っ。原発を動かすかどうかって、なんでずっと話題なの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "電気代、高っ。原発を動かすかどうかって、そもそもなんでずっと話題なの？",
+      "kind": "question",
+      "expression": "surprised"
     },
     {
-      "speaker": "economist",
-      "text": "大きいのは電気代と脱炭素だね。日本は火力発電の燃料の多くを輸入に頼ってて、燃料の値段とか為替の影響を受けやすい。原発が動けば燃料の輸入を減らせるし、発電のときに二酸化炭素もほとんど出ない。",
+      "speaker": "munchkin",
+      "text": "大きいのは電気代と脱炭素だね。日本は火力発電の燃料の多くを輸入に頼っていて、燃料の値段や為替の影響を受けやすい。原発が動けば燃料の輸入を減らせるし、発電のときに二酸化炭素もほとんど出ない。",
       "kind": "fact",
       "sourceIds": ["enecho"]
     },
     {
-      "speaker": "consumer",
-      "text": "電気代、ほんとに困ってる。下がるなら再稼働もしかたないかなって気持ちはある。"
+      "speaker": "otter",
+      "text": "電気代、ほんとに困ってる。下がるなら再稼働もしかたないかなって気持ちはあるよ。",
+      "expression": "confused"
     },
     {
-      "speaker": "safety",
-      "text": "その気持ちは分かるよ。でも福島の事故では、たくさんの人が長いあいだふるさとに帰れなくなった。電気代の問題と、事故が起きたときの被害を同じ天秤にかけていいのかな、って思うんだ。",
-      "kind": "rebuttal"
+      "speaker": "penguin",
+      "text": "その気持ちは分かる。でも福島の事故では、たくさんの人が長いあいだふるさとに帰れなくなった。電気代の問題と、事故が起きたときの被害を、同じ天秤にかけていいのかな、と私は思うんだ。",
+      "kind": "rebuttal",
+      "expression": "serious"
     },
     {
       "divider": "安全はどう確かめる？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "事故のあと、安全のルールって変わったんだよね？",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "うん。独立性の高い原子力規制委員会ができて、地震とか津波への備えを厳しくした新しい規制基準ができた。再稼働するには、その審査に合格しないといけない。",
+      "speaker": "munchkin",
+      "text": "うん。独立性の高い原子力規制委員会ができて、地震や津波への備えを厳しくした新しい規制基準ができた。再稼働するには、その審査に合格しないといけない。",
       "kind": "fact",
       "sourceIds": ["nra"]
     },
     {
-      "speaker": "safety",
-      "text": "基準が厳しくなったのは確か。それでも「絶対に事故が起きない」わけじゃないよね。いざというとき住民が安全に逃げられるか、避難計画にはまだ課題が多いと思う。",
-      "kind": "rebuttal"
+      "speaker": "hamster",
+      "text": "基準が厳しくなったのは確かだね。それでも「絶対に事故が起きない」わけじゃない。いざというとき住民が安全に逃げられるか、避難計画にはまだ課題が多いと思う。役所の立場だと、そこがいちばん気になるよ。",
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "narration": "鍋のちくわぶを取り合うハルとユイ。"
+      "narration": "鍋のちくわぶを取り合うカワウソとハムスター。"
     },
     {
       "divider": "地元から見ると"
     },
     {
-      "speaker": "regional",
-      "text": "原発がある地域の事情もややこしいんだよ。原発が地元の雇用とか税収を支えてきた面があって、止まったままだと地域経済が苦しくなる。でも事故のリスクを一番近くで背負うのも、その地域の人たち。"
+      "speaker": "hamster",
+      "text": "原発がある地域の事情もややこしいんだ。原発が地元の雇用や税収を支えてきた面があって、止まったままだと地域経済が苦しくなる。でも事故のリスクを一番近くで背負うのも、その地域の人たちなんだよね。"
     },
     {
-      "speaker": "safety",
-      "text": "あと、使い終わった燃料とかの放射性廃棄物を最終的にどこに処分するか、まだ決まってないんだ。将来の世代に負担を残す問題でもあるよ。",
+      "speaker": "penguin",
+      "text": "あと、使い終わった燃料などの放射性廃棄物を最終的にどこに処分するか、まだ決まっていない。何万年という時間軸で、将来の世代に負担を残す問題でもあるんだ。",
       "kind": "fact",
+      "expression": "thinking",
       "sourceIds": ["enecho"]
     },
     {
-      "speaker": "economist",
-      "text": "再稼働だけじゃなくて、再生可能エネルギーをどこまで増やせるかとか、省エネとか、電気のつくり方全体の組み合わせで考えなきゃいけないね。",
+      "speaker": "munchkin",
+      "text": "再稼働だけじゃなく、再生可能エネルギーをどこまで増やせるか、省エネをどう進めるか。電気のつくり方全体の組み合わせで計算しないとね。",
       "kind": "summary"
     }
   ],
@@ -229,8 +224,8 @@
   "updatedAt": "2026-11-04",
   "scene": {
     "emoji": "🍢",
-    "place": "ケンジの部屋でおでんの家飲み",
+    "place": "マンチカンの部屋でおでんの家飲み",
     "time": "1月の寒い夜",
-    "description": "冬の電気代の請求書を見てため息をつくケンジの部屋で、おでんを囲む4人。環境NGOで働くアオイも来ていて、話は原発の再稼働に。"
+    "description": "冬の電気代の請求書を見てため息をつくマンチカンの部屋で、おでんを囲む4匹。話は原発の再稼働に。"
   }
 }

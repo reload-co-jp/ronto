@@ -10,27 +10,20 @@
   "thumbnail": "/images/topics/political-funding.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "administration",
-      "persona": "administration"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "「政治にお金がかかるのはなぜ？」という素朴な疑問から考える。"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "campaign",
-      "name": "政治活動の視点",
-      "description": "政治家や政党の活動の実態から考える。",
-      "stance": "選挙や日常の政治活動に、実際にどんな費用がかかるかを説明する。",
-      "concerns": ["選挙運動", "事務所運営", "政策づくり"],
-      "icon": "user",
-      "nickname": "ミナト",
-      "profile": "31歳・国会議員の事務所で働く秘書。いつも忙しそう"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -86,70 +79,73 @@
       "divider": "政治ってお金かかるの？"
     },
     {
-      "speaker": "moderator",
-      "text": "ミナトの仕事って大変そう。そもそも政治活動って、そんなにお金かかるの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "そもそも政治活動って、そんなにお金かかるの？",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "campaign",
-      "text": "かかるかかる。地元と東京の事務所の家賃、秘書とかスタッフのお給料、ポスターやチラシ、集会の会場費。選挙のときだけじゃなくて、ふだんからお金が必要なんだよ。"
+      "speaker": "penguin",
+      "text": "かかるんだよ。地元と東京の事務所の家賃、秘書やスタッフの給料、ポスターやチラシ、集会の会場費。選挙のときだけじゃなく、ふだんからお金が必要なんだ。"
     },
     {
-      "speaker": "consumer",
+      "speaker": "hamster",
       "text": "でも議員にはお給料が出てるでしょ？それじゃ足りないの？",
       "kind": "question"
     },
     {
-      "speaker": "campaign",
-      "text": "議員本人の生活費とは別に、組織として動くお金が大きいんだ。だから政党とか政治団体として、献金とかパーティーでお金を集めてる。"
+      "speaker": "penguin",
+      "text": "議員本人の生活費とは別に、組織として動くお金が大きいんだ。だから政党や政治団体として、献金やパーティーでお金を集めている。"
     },
     {
-      "narration": "おでんの大根が届く。湯気の向こうでタクヤが指を折って数えはじめる。"
+      "narration": "おでんの大根が届く。湯気の向こうでマンチカンが指を折って数えはじめる。"
     },
     {
       "divider": "お金の出どころ"
     },
     {
-      "speaker": "administration",
-      "text": "収入源は大きく分けて、党費、個人とか企業・団体からの献金、政治資金パーティー、それと税金から配られる政党交付金。政党交付金は、国民1人あたり年250円を基準にした総額が配られてるんだよ。",
+      "speaker": "munchkin",
+      "text": "収入源は大きく分けて、党費、個人や企業・団体からの献金、政治資金パーティー、それと税金から配られる政党交付金。政党交付金は、国民1人あたり年250円を基準にした総額が配られている。",
       "kind": "fact",
       "sourceIds": ["soumu-shikin"]
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "え、税金からも出てるの？なのに企業からも献金をもらうのってどうなの。お金を出した会社の言うことを聞くようにならない？",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "surprised"
     },
     {
-      "speaker": "administration",
-      "text": "政党交付金は、まさに企業・団体献金に頼りすぎないようにするのも目的の一つでできたんだ。ただ企業・団体献金は今も政党や政党支部には認められてて、禁止すべきかは政党の間でも意見が分かれてる。"
+      "speaker": "penguin",
+      "text": "政党交付金は、まさに企業・団体献金に頼りすぎないようにすることも目的の一つとして、1990年代の政治改革でできたんだ。ただ企業・団体献金は今も政党や政党支部には認められていて、禁止すべきかは政党の間でも意見が分かれている。",
+      "expression": "thinking"
     },
     {
-      "speaker": "campaign",
-      "text": "企業献金も、企業が政治に参加する一つの形だって考え方もあるんだよ。大事なのは、誰からいくらもらったかが見えることだと思う。",
+      "speaker": "munchkin",
+      "text": "企業献金も、企業が政治に参加する一つの形だという考え方もある。どちらが正しいかの前に、誰からいくらもらったかが見えることが大前提だね。",
       "kind": "rebuttal"
     },
     {
       "divider": "どう透明にする？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "「見える」っていう点では、何が問題なの？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "政治資金パーティーの収入の扱いが大きな問題になったよね。2024年の法改正で、パーティー券を買った人の名前を公開する基準が「20万円超」から「5万円超」に下げられたりして、見直しが進んでる。",
+      "speaker": "munchkin",
+      "text": "政治資金パーティーの収入の扱いが大きな問題になった。2024年の法改正で、パーティー券を買った人の名前を公開する基準が「20万円超」から「5万円超」に下げられたりして、見直しが進んでいる。",
       "kind": "fact",
       "sourceIds": ["soumu-shikin"]
     },
     {
-      "speaker": "consumer",
-      "text": "報告書が公開されてても、普通の人が読むのは大変だよ。もっと分かりやすく比べられたらいいのに。",
+      "speaker": "hamster",
+      "text": "報告書が公開されていても、普通の人が読むのは大変だよね。もっと分かりやすく比べられたらいいのに。",
       "kind": "idea"
     },
     {
-      "speaker": "campaign",
+      "speaker": "penguin",
       "text": "お金の流れが見えることは、政治家にとっても信頼を得るために大切なんだ。「かかるお金」と「見えるお金」はセットで考えないとね。",
       "kind": "summary"
     }
@@ -231,6 +227,6 @@
     "emoji": "🍢",
     "place": "ガード下の立ち飲み屋",
     "time": "木曜の夜9時",
-    "description": "残業帰りに立ち飲み屋に寄った4人。国会議員の事務所で秘書として働くミナトが「今日も政治資金の説明でバタバタだった」とこぼす。"
+    "description": "残業帰りに立ち飲み屋に寄った4匹。政治資金の特集記事を担当しているカワウソが「調べれば調べるほど分からなくなってきた」とこぼす。"
   }
 }

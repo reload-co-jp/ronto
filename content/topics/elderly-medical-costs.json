@@ -10,21 +10,20 @@
   "thumbnail": "/images/topics/elderly-medical-costs.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "welfare",
-      "persona": "welfare"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "保険料を払う現役世代の会社員として、手取りへの影響を考える。"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -92,24 +91,25 @@
       "divider": "誰がどれだけ払ってる？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "病院の窓口で払う割合って、年齢で違うんだっけ？",
       "kind": "question"
     },
     {
-      "speaker": "welfare",
-      "text": "うん。70歳未満は3割、70〜74歳は2割、75歳以上は基本1割。でも75歳以上でも所得が一定以上あれば2割とか3割になるから、年齢だけで決まってるわけじゃないんだよ。",
+      "speaker": "hamster",
+      "text": "うん。70歳未満は3割、70〜74歳は2割、75歳以上は基本1割。でも75歳以上でも所得が一定以上あれば2割や3割になるから、年齢だけで決まっているわけじゃないんだよ。",
       "kind": "fact",
       "sourceIds": ["mhlw-iryo"]
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "そうなんだ。でも正直、毎月給料から引かれる保険料がどんどん重くなってて……。それが高齢者の医療に回ってるって聞くと、もやもやしちゃう。",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "speaker": "economist",
-      "text": "75歳以上の医療費は、窓口負担を除くと約4割が現役世代の保険からの支援金なんだ。お年寄りが増えるほど、この仕送りが増える仕組みになってる。",
+      "speaker": "munchkin",
+      "text": "数字で見ると、75歳以上の医療費は、窓口負担を除くと約4割が現役世代の保険からの支援金。お年寄りが増えるほど、この仕送りが増える仕組みになっている。",
       "kind": "fact",
       "sourceIds": ["mhlw-iryo"]
     },
@@ -120,39 +120,48 @@
       "divider": "負担を増やすと何が起きる？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "じゃあ高齢者の窓口負担を増やせば解決？",
       "kind": "question"
     },
     {
-      "speaker": "welfare",
-      "text": "そんな単純じゃないよ〜。お年寄りは病気になりやすくて通院も多いでしょ。年金だけで暮らしてる人が負担増で病院に行くのを控えたら、病気が悪化して、かえって医療費が増えることもあるの。現場でもそういう人を見るよ。",
-      "kind": "rebuttal"
+      "speaker": "hamster",
+      "text": "ちょっと落ち着こう、そんなに単純じゃないんだ。お年寄りは病気になりやすくて通院も多いでしょ。年金だけで暮らしている人が負担増で病院に行くのを控えたら、病気が悪化して、かえって医療費が増えることもある。窓口でもそういう心配の声を聞くよ。",
+      "kind": "rebuttal",
+      "expression": "serious"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "でもさ、お年寄りの中にもお金持ちはいるじゃん。年齢で一律に軽くするのって公平なのかな。",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "そこは大事な論点。年齢じゃなくて、所得とか資産に応じて負担してもらおうって意見は根強いよ。ただ、資産を正確に把握する仕組みをつくるのが難しいんだよね。",
-      "kind": "agree"
+      "speaker": "munchkin",
+      "text": "そこは大事な論点。年齢じゃなく、所得や資産に応じて負担してもらおうという意見は根強い。ただ、資産を正確に把握する仕組みをつくるのが難しいんだよね。",
+      "kind": "agree",
+      "expression": "thinking"
     },
     {
       "divider": "どう支え合う？"
     },
     {
-      "speaker": "welfare",
-      "text": "それと、医療費の自己負担に上限がある高額療養費制度みたいな安全網は守ってほしい。誰でも重い病気になる可能性はあるから。"
+      "speaker": "penguin",
+      "text": "そもそも、高齢になるほど負担を軽くする仕組みは、お年寄りの多くが今より貧しかった時代に形づくられてきたものなんだ。社会の姿が変われば、支え合いの形も見直されていく。ただ、医療費の自己負担に上限がある高額療養費制度のような安全網は、どの時代でも守るべき土台だと思う。",
+      "expression": "thinking"
     },
     {
-      "speaker": "consumer",
-      "text": "現役世代の負担を抑えることと、困ってるお年寄りを守ることって、両立できる気がしてきた。「誰が払えるか」で分けるのがカギなんだね。",
-      "kind": "summary"
+      "speaker": "hamster",
+      "text": "そうだね。誰でも重い病気になる可能性はあるから。",
+      "kind": "agree"
     },
     {
-      "narration": "「お母さんにも、制度のこと話してみる」とユイ。"
+      "speaker": "otter",
+      "text": "現役世代の負担を抑えることと、困っているお年寄りを守ることって、両立できる気がしてきた。「誰が払えるか」で分けるのがカギなんだね。",
+      "kind": "summary",
+      "expression": "happy"
+    },
+    {
+      "narration": "「母にも、制度のこと話してみる」とカワウソ。"
     }
   ],
   "summary": {
@@ -236,6 +245,6 @@
     "emoji": "🍲",
     "place": "商店街のもつ鍋屋",
     "time": "日曜の夕方6時",
-    "description": "夜勤明けのナツミも合流して、もつ鍋をつつく4人。ユイが「お母さんの病院代の自己負担が上がるかもって心配してた」と話しはじめる。"
+    "description": "もつ鍋をつつく4匹。カワウソが「実家の母が、病院代の自己負担が上がるかもって心配してた」と話しはじめる。"
   }
 }

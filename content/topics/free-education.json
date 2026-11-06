@@ -10,23 +10,20 @@
   "thumbnail": "/images/topics/free-education.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "子どもの進学を控えた保護者として、教育費の負担を考える。",
-      "profile": "41歳・メーカー勤務。中学2年の子をもつ親"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "welfare",
-      "persona": "welfare",
-      "profile": "40歳・看護師。小学生と高校生の母"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -62,16 +59,17 @@
       "divider": "なんで無償化？"
     },
     {
-      "speaker": "moderator",
-      "text": "高校とか大学の無償化って、親の立場からするとどうなの？",
+      "speaker": "otter",
+      "text": "高校とか大学の無償化って、家計からするとどうなの？",
       "kind": "question"
     },
     {
-      "speaker": "consumer",
-      "text": "とにかく教育費が重いの！高校、大学って考えると何百万円もかかる。無償になるなら、子どもの進路の選択肢を狭めなくて済むから本当にありがたい。"
+      "speaker": "hamster",
+      "text": "窓口で子育て世帯の話を聞くと、とにかく教育費が重いみたい。高校、大学って考えると何百万円もかかる。無償になるなら、子どもの進路の選択肢を狭めなくて済むから、ありがたいって声は多いよ。",
+      "expression": "happy"
     },
     {
-      "speaker": "welfare",
+      "speaker": "hamster",
       "text": "家の経済状況で進学をあきらめる子がいるのは、社会にとっても損失だよね。支援が必要な家庭にしっかり届くことが大事だと思う。",
       "kind": "agree"
     },
@@ -79,17 +77,19 @@
       "divider": "全員か、必要な人だけか"
     },
     {
-      "speaker": "economist",
-      "text": "ただ、収入の多い家まで一律に無償化するのがいいかは議論があるよ。限られたお金を、本当に必要な家庭に集中させたほうが効果的だって考え方もある。",
-      "kind": "rebuttal"
+      "speaker": "munchkin",
+      "text": "ただ、収入の多い家まで一律に無償化するのがいいかは議論がある。限られたお金を、本当に必要な家庭に集中させたほうが効果的だという考え方もあるね。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "でも所得制限があると、ちょっとだけ基準を超えた家が何の支援も受けられなくて苦しい、ってことも起きるよね。",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "speaker": "welfare",
+      "speaker": "hamster",
       "text": "そうなんだよね。線引きの境目で不公平感が生まれやすい。一律の支援は分かりやすくて、申請の手間も少ないっていう良さがあるの。"
     },
     {
@@ -99,21 +99,23 @@
       "divider": "お金と副作用"
     },
     {
-      "speaker": "economist",
-      "text": "もう一つ心配なのは、私立の学校が無償化の分だけ学費を上げちゃうかもしれないこと。それだと家計の負担は思ったほど減らない。お金も大きいから、どこから出すかも示さないとね。",
-      "kind": "fact"
+      "speaker": "munchkin",
+      "text": "もう一つ心配なのは、私立の学校が無償化の分だけ学費を上げてしまうかもしれないこと。それだと家計の負担は思ったほど減らない。お金も大きいから、どこから出すかも示さないとね。",
+      "kind": "fact",
+      "expression": "serious"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "大学の無償化はどう考えればいいの？",
       "kind": "question"
     },
     {
-      "speaker": "welfare",
-      "text": "大学は行かない人もいるから、高校とは話がちょっと違うの。行かない人も含めた税金で支えることの公平さとか、教育の質をどう保つかも考えないと。"
+      "speaker": "penguin",
+      "text": "大学は行かない人もいるから、高校とは話が少し違う。行かない人も含めた税金で支えることの公平さや、教育の質をどう保つかも考えないと。大学の学費は国によって無償に近いところから高額なところまで幅があって、それぞれの歴史や考え方が反映されているんだ。",
+      "expression": "thinking"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "「誰に」「どこまで」支援するかで、答えが変わるんだね。",
       "kind": "summary"
     }
@@ -198,8 +200,8 @@
   "updatedAt": "2026-11-04",
   "scene": {
     "emoji": "🥞",
-    "place": "保護者会のあとのパンケーキ屋",
+    "place": "パンケーキ屋",
     "time": "平日の午後3時",
-    "description": "子どもの学校の保護者会のあと、ママ友のユイとナツミに、ケンジとハルが合流。話題は、これからかかる高校や大学の学費のこと。"
+    "description": "進学費用の特集記事を担当することになったカワウソが、3匹をパンケーキ屋に呼び出した。話題は、これからかかる高校や大学の学費のこと。"
   }
 }

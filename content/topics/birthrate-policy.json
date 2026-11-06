@@ -10,21 +10,20 @@
   "thumbnail": "/images/topics/birthrate-policy.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "子育て中、またはこれから子どもを持つか考えている世代の感覚で考える。"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "welfare",
-      "persona": "welfare"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -81,48 +80,51 @@
       "divider": "なんで子どもが減ってる？"
     },
     {
-      "speaker": "moderator",
-      "text": "子どもの数ってどのくらい減ってるの？",
+      "speaker": "otter",
+      "text": "子どもの数って、そもそもどのくらい減ってるの？",
       "kind": "question"
     },
     {
-      "speaker": "welfare",
-      "text": "2024年に生まれた子どもは約68万6千人で、過去最少。1人の女性が一生に産む子どもの数の目安の「合計特殊出生率」も1.15まで下がってるよ。",
+      "speaker": "munchkin",
+      "text": "2024年に生まれた子どもは約68万6千人で、過去最少。1人の女性が一生に産む子どもの数の目安「合計特殊出生率」も1.15まで下がっているよ。",
       "kind": "fact",
+      "expression": "serious",
       "sourceIds": ["mhlw-vital"]
     },
     {
-      "speaker": "consumer",
-      "text": "実感としては、お金の不安が大きいなあ。教育費、家賃、それに共働きじゃないと暮らせないのに、保育園とか仕事との両立が大変そうで。「ほしいけど今は無理」って周りでもよく聞く。"
+      "speaker": "hamster",
+      "text": "窓口で若い世帯の話を聞くと、お金の不安が大きいみたい。教育費、家賃、それに共働きじゃないと暮らせないのに、保育園や仕事との両立が大変そうで。「ほしいけど今は無理」って声はよく聞くよ。"
     },
     {
-      "speaker": "regional",
-      "text": "地元から見ると、そもそも若い人が都会に出ていっちゃうって問題もあるんだよね。子育てしやすくても、働く場所がなければ戻ってこない。"
+      "speaker": "hamster",
+      "text": "地方から見ると、そもそも若い人が都会に出ていっちゃうって問題もあるんだ。子育てしやすくても、働く場所がなければ戻ってこない。",
+      "expression": "confused"
     },
     {
-      "narration": "ハルが水筒のお茶を配る。"
+      "narration": "ハムスターが水筒のお茶をみんなに配る。"
     },
     {
       "divider": "お金を配れば増える？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "国は児童手当を増やしたんだよね？それで子どもって増えるのかな。",
       "kind": "question",
       "sourceIds": ["cfa"]
     },
     {
-      "speaker": "welfare",
-      "text": "お金の負担が軽くなるのは、子育て中の家庭には大きいよ。ただ、すでに子どもがいる家庭への支援が中心だから、結婚とか最初の子どもをためらってる若い世代に届いてるかは、議論があるんだよね。",
-      "kind": "rebuttal"
+      "speaker": "munchkin",
+      "text": "お金の負担が軽くなるのは、子育て中の家庭には大きい。ただ、すでに子どもがいる家庭への支援が中心だから、結婚や最初の子どもをためらっている若い世代に届いているかは議論があるね。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
-      "speaker": "consumer",
-      "text": "私たちの世代だと、手当より「働き方」とか「住まい」のほうが切実かも。育休を取りやすいとか、残業が少ないとか、そういう変化のほうが効く気がする。",
+      "speaker": "penguin",
+      "text": "少子化は日本だけじゃなく、多くの国が長いあいだ向き合ってきたテーマなんだ。手当だけでなく、働き方や住まい、価値観の変化まで含めて、時間をかけて取り組んできた国が多い。一つの政策ですぐ数字が変わる、と考えないほうがいいだろうね。",
       "kind": "idea"
     },
     {
-      "speaker": "regional",
+      "speaker": "hamster",
       "text": "地域によっても効く対策が違うよ。保育園の空きが足りない都会と、そもそも仕事が少ない地方じゃ、必要なものが違うんだ。",
       "kind": "idea"
     },
@@ -130,19 +132,21 @@
       "divider": "効果ってどう測る？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "じゃあ、少子化対策が効いたかどうかってどう判断するの？",
-      "kind": "question"
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "welfare",
-      "text": "出生数っていろんな理由で動くから、一つの政策の効果だけ取り出すのは難しいの。だから「子育てしやすくなったか」とか「望む人が子どもを持てているか」も見ていく必要があると思う。",
+      "speaker": "munchkin",
+      "text": "出生数はいろんな理由で動くから、一つの政策の効果だけ取り出すのは難しい。だから「子育てしやすくなったか」「望む人が子どもを持てているか」も物差しにする必要があると思う。",
       "kind": "summary"
     },
     {
-      "speaker": "consumer",
-      "text": "子どもを持つかどうかは自分たちで決めることだけど、「ほしいのに無理」って状態は減らしてほしいな。",
-      "kind": "agree"
+      "speaker": "hamster",
+      "text": "子どもを持つかどうかは、それぞれが決めることだもんね。でも「ほしいのに無理」って状態は、減らしていけたらいいな。",
+      "kind": "agree",
+      "expression": "happy"
     }
   ],
   "summary": {
@@ -232,6 +236,6 @@
     "emoji": "🧺",
     "place": "河川敷でピクニック",
     "time": "秋の日曜、昼すぎ",
-    "description": "天気のいい日曜日。お弁当を広げた4人の横を、子ども連れの家族が通りすぎていく。「子どもってかわいいけど、うちはまだ無理かなあ」とユイがぽつり。"
+    "description": "天気のいい日曜日。お弁当を広げた4匹の横を、子ども連れの家族が通りすぎていく。「最近、子どもの数が過去最少ってニュースばっかりだね」とカワウソがつぶやく。"
   }
 }

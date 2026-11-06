@@ -10,21 +10,20 @@
   "thumbnail": "/images/topics/tokyo-concentration.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "consumer",
-      "persona": "consumer",
-      "stance": "地方出身で東京で働く会社員として、暮らしやすさを考える。"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -60,27 +59,25 @@
       "divider": "なんで東京に集まる？"
     },
     {
-      "speaker": "moderator",
-      "text": "なんでみんな東京に行っちゃうんだろうね。",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "そもそも、なんでみんな東京に行っちゃうんだろうね。私も、やりたい仕事が東京にしかなかったんだけど。",
+      "kind": "question",
+      "expression": "confused"
     },
     {
-      "speaker": "consumer",
-      "text": "私も地方出身だけど、やりたい仕事が東京にしかなかったんだよね。大学も選択肢が多いし、友だちもみんな東京に出てきた。"
+      "speaker": "munchkin",
+      "text": "会社の本社や大学など、情報が集まっているところには、さらに人や会社が集まる。集まること自体に、仕事を生み出す効率の良さがあるんだ。"
     },
     {
-      "speaker": "economist",
-      "text": "会社の本社とか大学とか、情報が集まってるところには、さらに人や会社が集まるんだよ。集まること自体に、仕事を生み出す効率の良さがあるんだ。"
-    },
-    {
-      "speaker": "regional",
-      "text": "その「効率の良さ」の裏で、地方からは若い人がいなくなってる。特に若い女性が戻ってこないってよく聞くよ。仕事の選択肢とか、地域の雰囲気が合わないって感じる人もいるみたい。",
+      "speaker": "hamster",
+      "text": "その「効率の良さ」の裏で、地方からは若い人がいなくなっているんだ。特に若い女性が戻ってこないって、役所でもよく話題になるよ。仕事の選択肢や、地域の雰囲気が合わないと感じる人もいるみたい。",
       "kind": "rebuttal",
+      "expression": "serious",
       "sourceIds": ["stat-idou"]
     },
     {
-      "speaker": "economist",
-      "text": "東京とその周りの3県を合わせた東京圏には、日本の人口の約3割が住んでるんだよね。",
+      "speaker": "munchkin",
+      "text": "数字で見ると、東京とその周りの3県を合わせた東京圏には、日本の人口の約3割が住んでいる。",
       "kind": "fact",
       "sourceIds": ["stat-jinsui"]
     },
@@ -91,41 +88,43 @@
       "divider": "集中するのって悪いこと？"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "東京に集まること自体は、悪いことなの？",
       "kind": "question"
     },
     {
-      "speaker": "economist",
-      "text": "経済全体で見れば、集まることで生産性が上がる面はあるよ。無理に分散させたら、国全体の稼ぐ力が落ちるって心配もある。",
+      "speaker": "munchkin",
+      "text": "経済全体で見れば、集まることで生産性が上がる面はある。無理に分散させたら、国全体の稼ぐ力が落ちるという心配もあるね。",
       "kind": "rebuttal"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "でも東京の暮らしも楽じゃないよ。家賃は高いし、満員電車だし。子どもを育てるとなると広い家は無理。",
-      "kind": "rebuttal"
+      "kind": "rebuttal",
+      "expression": "confused"
     },
     {
-      "speaker": "regional",
-      "text": "それに首都直下地震みたいな大災害が起きたら、国の中心と大勢の人が同時に被災するかもしれない。リスクが一か所に集まってるのも問題だよ。"
+      "speaker": "penguin",
+      "text": "それに首都直下地震のような大災害が起きたら、国の中心と大勢の人が同時に被災するかもしれない。リスクが一か所に集まっているのも問題だ。東京への集中を和らげようという政策は、高度成長期から何度も掲げられてきたけれど、流れはなかなか変わらなかったんだよ。",
+      "expression": "thinking"
     },
     {
       "divider": "どうすれば変わる？"
     },
     {
-      "speaker": "consumer",
+      "speaker": "otter",
       "text": "リモートワークが広がって、地方に住んだまま東京の仕事をする人も出てきたよね。働き方が変われば、住む場所の選択肢も広がると思う。",
       "kind": "idea"
     },
     {
-      "speaker": "regional",
-      "text": "地方の側も、若い人が「住みたい」と思える仕事とか暮らしをつくらないと。補助金で呼び込むだけじゃ長続きしないんだ。",
+      "speaker": "hamster",
+      "text": "地方の側も、若い人が「住みたい」と思える仕事や暮らしをつくらないと。補助金で呼び込むだけじゃ長続きしないんだ。",
       "kind": "idea",
       "sourceIds": ["chisou"]
     },
     {
-      "speaker": "economist",
-      "text": "「東京を弱くする」んじゃなくて、「地方にも選ばれる理由をつくる」って方向で考えると、ケンカにならなさそうだね。",
+      "speaker": "munchkin",
+      "text": "「東京を弱くする」んじゃなくて、「地方にも選ばれる理由をつくる」という方向で考えると、ケンカにならなさそうだね。",
       "kind": "summary"
     }
   ],
@@ -222,8 +221,8 @@
   "updatedAt": "2026-11-04",
   "scene": {
     "emoji": "🍺",
-    "place": "ゴロウの地元の居酒屋",
+    "place": "ハムスターの地元の居酒屋",
     "time": "年末の帰省中、12月30日の夜",
-    "description": "年末、ゴロウの地元に遊びに来た3人。東京で働くユイは「同級生、ほとんど東京に出ちゃったなあ」と店内を見回す。"
+    "description": "年末、ハムスターの地元に遊びに来た3匹。地方出身で東京で働くカワウソは「私の同級生も、ほとんど東京に出ちゃったなあ」と店内を見回す。"
   }
 }

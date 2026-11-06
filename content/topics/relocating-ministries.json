@@ -10,20 +10,20 @@
   "thumbnail": "/images/topics/relocating-ministries.webp",
   "participants": [
     {
-      "id": "moderator",
-      "persona": "moderator"
+      "id": "otter",
+      "character": "otter"
     },
     {
-      "id": "regional",
-      "persona": "regional"
+      "id": "munchkin",
+      "character": "munchkin"
     },
     {
-      "id": "administration",
-      "persona": "administration"
+      "id": "hamster",
+      "character": "hamster"
     },
     {
-      "id": "economist",
-      "persona": "economist"
+      "id": "penguin",
+      "character": "penguin"
     }
   ],
   "sections": [
@@ -60,74 +60,78 @@
   ],
   "discussion": [
     {
-      "narration": "車窓に富士山が見えてきたころ、タクヤが観光パンフレットを指さす。"
+      "narration": "車窓に富士山が見えてきたころ、ペンギンが観光パンフレットを指さす。"
     },
     {
       "divider": "なんで役所を地方に？"
     },
     {
-      "speaker": "administration",
-      "text": "そういえば文化庁って、2023年に京都に移ったんだよ。国の役所が丸ごと地方に移ったのはけっこう珍しい。",
+      "speaker": "penguin",
+      "text": "そういえば文化庁は、2023年に京都に移ったんだよ。国の役所が丸ごと地方に移ったのは、かなり珍しいことなんだ。",
       "kind": "fact",
       "sourceIds": ["bunka"]
     },
     {
-      "speaker": "moderator",
-      "text": "へえ！でもなんで役所を地方に移そうって話になるの？",
-      "kind": "question"
+      "speaker": "otter",
+      "text": "へえ！でも、そもそもなんで役所を地方に移そうって話になるの？",
+      "kind": "question",
+      "expression": "surprised"
     },
     {
-      "speaker": "regional",
-      "text": "人も仕事も東京に集まりすぎてるからだよ。国の役所が地方にあれば、そこで働く人とか関係する仕事が生まれるし、「地方でも国の仕事ができる」っていうメッセージにもなる。"
+      "speaker": "hamster",
+      "text": "人も仕事も東京に集まりすぎているからだよ。国の役所が地方にあれば、そこで働く人や関係する仕事が生まれるし、「地方でも国の仕事ができる」っていうメッセージにもなる。",
+      "expression": "happy"
     },
     {
-      "speaker": "economist",
-      "text": "でも、役所で働く人の数って、地域全体から見るとそんなに多くないんだよね。移転だけで地域経済がガラッと変わるって期待しすぎるのは危ないかも。",
-      "kind": "rebuttal"
+      "speaker": "munchkin",
+      "text": "でも、役所で働く人の数は、地域全体から見るとそんなに多くない。移転だけで地域経済がガラッと変わると期待しすぎるのは危ないね。",
+      "kind": "rebuttal",
+      "expression": "thinking"
     },
     {
-      "speaker": "regional",
-      "text": "数だけ見ればね。でも関係する団体とか企業も一緒に動けば効果は広がるでしょ。文化庁の京都移転も、そういう波及効果を期待してのことだと思うよ。",
+      "speaker": "hamster",
+      "text": "数だけ見ればね。でも関係する団体や企業も一緒に動けば、効果は広がるでしょ。文化庁の京都移転も、そういう波及効果を期待してのことだと思うよ。",
       "kind": "rebuttal"
     },
     {
       "divider": "仕事は回るの？"
     },
     {
-      "speaker": "administration",
-      "text": "役所側として気になるのは仕事の進め方かな。国会は東京にあるし、法案とか予算の調整でほかの省庁と頻繁にやりとりする。離れてると移動とか調整の手間が増えるんだ。"
+      "speaker": "munchkin",
+      "text": "気になるのは仕事の進め方だ。国会は東京にあるし、法案や予算の調整でほかの省庁と頻繁にやりとりする。離れていると移動や調整の手間が増える。"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "今ってオンライン会議が当たり前じゃん。それでも難しいの？",
       "kind": "question"
     },
     {
-      "speaker": "administration",
-      "text": "オンラインでできる仕事はかなり増えたよ。でも国会での答弁とか、緊急時の対応とか、対面が必要な場面は残ってる。移すなら、どの仕事を地方に置くかの切り分けが大事。",
+      "speaker": "munchkin",
+      "text": "オンラインでできる仕事はかなり増えた。でも国会での答弁や、緊急時の対応みたいに、対面が必要な場面は残っている。移すなら、どの仕事を地方に置くかの切り分けが大事だね。",
       "kind": "idea"
     },
     {
-      "narration": "車内販売のワゴンが通りすぎる。ケンジがコーヒーを買う。"
+      "narration": "車内販売のワゴンが通りすぎる。カワウソがアイスを買う。"
     },
     {
       "divider": "災害への備えとしても"
     },
     {
-      "speaker": "economist",
-      "text": "効率とは別に、リスク分散っていう視点もあるね。首都直下地震みたいな大災害で東京が止まったとき、国の機能が分散してれば被害を抑えられる。"
+      "speaker": "penguin",
+      "text": "効率とは別に、リスク分散という視点もある。首都直下地震のような大災害で東京が止まったとき、国の機能が分散していれば被害を抑えられる。首都機能をどう分散するかは、日本でも何十年も議論されてきたテーマなんだ。",
+      "expression": "thinking"
     },
     {
-      "speaker": "regional",
-      "text": "そうそう、それも大きい。地方移転は地方のためだけじゃなくて、国全体の備えでもあるんだよ。"
+      "speaker": "hamster",
+      "text": "そうそう、それも大きい。地方移転は地方のためだけじゃなくて、国全体の備えでもあるんだよね。"
     },
     {
-      "speaker": "administration",
-      "text": "その目的なら、省庁ごと移さなくても、地方にバックアップの拠点を置くって手もある。目的によって最適な形が変わるんだよね。",
+      "speaker": "munchkin",
+      "text": "その目的なら、省庁ごと移さなくても、地方にバックアップの拠点を置くという手もある。目的によって最適な形が変わるんだ。",
       "kind": "idea"
     },
     {
-      "speaker": "moderator",
+      "speaker": "otter",
       "text": "地方を元気にしたいのか、災害に備えたいのか、効率を保ちたいのか。何を一番にするかで、移し方が変わるってことか。",
       "kind": "summary"
     }
@@ -221,6 +225,6 @@
     "emoji": "🚄",
     "place": "京都旅行帰りの新幹線",
     "time": "日曜の夕方",
-    "description": "連休に京都を旅行した帰り、駅弁と缶ビールを広げた4人。「そういえば文化庁って京都に引っ越したんだよね」というタクヤのひと言から、話は国の役所の地方移転へ。"
+    "description": "連休に京都の博物館めぐりをした帰り、駅弁を広げた4匹。「そういえば文化庁って京都に引っ越したんだよ」というペンギンのひと言から、話は国の役所の地方移転へ。"
   }
 }
