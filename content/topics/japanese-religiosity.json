@@ -5,14 +5,28 @@
   "lead": "お正月には神社に行き、お葬式はお寺に頼み、クリスマスも楽しむ。それでも「宗教は？」と聞かれると「特にない」と答える。この“ちぐはぐ”に見える状態は、どこから来ているのでしょうか。",
   "category": "religion",
   "type": "why",
-  "status": "draft",
+  "status": "published",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
   "featured": false,
   "tags": ["宗教", "習慣", "文化", "政教分離"],
   "participants": [
-    { "id": "otter", "character": "otter" },
-    { "id": "munchkin", "character": "munchkin" },
-    { "id": "hamster", "character": "hamster" },
-    { "id": "penguin", "character": "penguin" }
+    {
+      "id": "otter",
+      "character": "otter"
+    },
+    {
+      "id": "munchkin",
+      "character": "munchkin"
+    },
+    {
+      "id": "hamster",
+      "character": "hamster"
+    },
+    {
+      "id": "penguin",
+      "character": "penguin"
+    }
   ],
   "scene": {
     "emoji": "⛩️",
@@ -39,6 +53,12 @@
               "note": "各宗教団体の報告に基づく。信者の定義・数え方は団体ごとに異なる",
               "asOf": "2024-12-31",
               "sourceIds": ["s1"]
+            },
+            {
+              "label": "「何か信仰や信心を持っている」と答えた人",
+              "value": "28%",
+              "note": "統計数理研究所「日本人の国民性調査」第13次（2013年、有効回答1,591人）",
+              "sourceIds": ["s5"]
             }
           ]
         },
@@ -56,6 +76,11 @@
         {
           "type": "paragraph",
           "text": "「無宗教」という言葉は、特定の教団に所属していないこと、教義を信じていないこと、宗教的な行事に参加しないことなど、人によって意味が異なります。どの意味で使うかによって、「無宗教なのに初詣をする」ことが矛盾かどうかの見え方も変わります。"
+        },
+        {
+          "type": "paragraph",
+          "text": "統計数理研究所の「日本人の国民性調査」では、「何か信仰とか信心とかを持っていますか」という問いに「持っている、信じている」と答えた人は1958年以降おおむね3割前後で推移しています。教団の報告による信者数とは、数え方も問い方も異なる数字です。",
+          "sourceIds": ["s5"]
         }
       ]
     }
@@ -96,13 +121,27 @@
       "sourceIds": ["s1"]
     },
     {
+      "speaker": "munchkin",
+      "text": "逆に、本人に聞いた調査もある。統計数理研究所の「日本人の国民性調査」で「何か信仰や信心を持っているか」と聞くと、2013年は「持っている」が28%。1950年代からずっと3割前後なんだ。",
+      "kind": "fact",
+      "expression": "thinking",
+      "sourceIds": ["s5"]
+    },
+    {
+      "speaker": "otter",
+      "text": "団体の数字だと人口より多いのに、本人に聞くと3割。同じ「宗教」でも、数え方でこんなにちがうんだね。",
+      "kind": "agree",
+      "expression": "surprised"
+    },
+    {
       "divider": "「宗教」という言葉のズレ"
     },
     {
       "speaker": "penguin",
-      "text": "それは、いつからそうなったんだろう？ という話でもあるね。神社とお寺は、長いあいだ神仏習合といって一体的に扱われてきた。明治のはじめに神仏分離が進められて、いまの「神社は神社、お寺はお寺」という形が整っていったんだ。",
+      "text": "それは、いつからそうなったんだろう？ という話でもあるね。神社とお寺は、長いあいだ神仏習合といって一体的に扱われてきた。明治政府は1868年に神仏習合をやめるよう命じて、そこから「神社は神社、お寺はお寺」という形が整っていったんだ。",
       "kind": "fact",
-      "expression": "thinking"
+      "expression": "thinking",
+      "sourceIds": ["s4"]
     },
     {
       "speaker": "penguin",
@@ -181,12 +220,20 @@
         "sourceIds": ["s1"]
       },
       {
+        "text": "統計数理研究所「日本人の国民性調査」で「信仰や信心を持っている」と答えた人は28%（2013年）。1958年以降おおむね3割前後で推移",
+        "sourceIds": ["s5"]
+      },
+      {
         "text": "日本国憲法第20条は信教の自由を保障し、国およびその機関による宗教教育その他の宗教的活動を禁じている",
         "sourceIds": ["s3"]
+      },
+      {
+        "text": "明治政府は1868年、神仏習合をやめるよう命じ、神社で僧侶が祭祀に関わることなどが禁じられた",
+        "sourceIds": ["s4"]
       }
     ],
     "openQuestions": [
-      "個人の信仰の有無を尋ねる世論調査は設問や時期によって結果が変わる。どの調査を参照するのが妥当か",
+      "個人の信仰の有無を尋ねる世論調査は設問や時期によって結果が変わる。2013年以降の動きや、他の調査との違いをどう読むか",
       "地域の祭礼への参加を、宗教的な行為と習慣のどちらとして扱うべきか"
     ]
   },
@@ -204,7 +251,7 @@
       "title": "令和7年の宗教統計調査の結果を公表します（宗教年鑑 令和7年版 概要）",
       "url": "https://www.bunka.go.jp/tokei_hakusho_shuppan/hakusho_nenjihokokusho/shukyo_nenkan/pdf/r07nenkan_gaiyo.pdf",
       "publisher": "文化庁",
-      "accessedAt": "2026-11-05"
+      "accessedAt": "2026-11-16"
     },
     {
       "id": "s2",
@@ -219,11 +266,26 @@
       "url": "https://laws.e-gov.go.jp/law/321CONSTITUTION",
       "publisher": "e-Gov法令検索（デジタル庁）",
       "accessedAt": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Shinbutsu bunri（神仏分離）",
+      "url": "https://d-museum.kokugakuin.ac.jp/bts/detail/?id=3940",
+      "publisher": "國學院大學デジタルミュージアム（神道基本用語集）",
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "s5",
+      "title": "日本人の国民性調査 #3.1 宗教を信じるか（全体）",
+      "url": "https://www.ism.ac.jp/kokuminsei/table/data/html/ss3/3_1/3_1_all.htm",
+      "publisher": "統計数理研究所",
+      "accessedAt": "2026-11-16"
     }
   ],
   "related": [],
   "editorial": {
     "aiGenerated": true,
-    "notes": "下書き。公開前に要確認：(1) 神仏分離・「宗教」の訳語の定着に関する記述を学術文献で確認し出典を追加 (2) 個人の信仰の有無に関する世論調査（調査主体・時期・設問）を追加するか検討 (3) 宗教年鑑の公表日を確認（PDFの表記は令和7年12月）"
+    "notes": "2026-11-16公開。確認済み：s1 の信者数（令和6年12月31日現在 175,054,047人、令和7年12月公表）を原文で確認。神仏分離に s4、個人の信仰の有無に s5（国民性調査 2013年）を追加。追記候補：(1) 「宗教」が religion の訳語として定着した経緯の学術文献を出典に追加 (2) 国民性調査の2018年以降の結果が公開されていれば更新",
+    "factCheckedAt": "2026-11-16"
   }
 }
