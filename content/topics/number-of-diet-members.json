@@ -4,7 +4,7 @@
   "description": "「国会議員は多すぎる」という声がある一方、「減らすと地方や少数意見の声が届きにくくなる」という意見もあります。人口あたりの議員数の国際比較や、定数削減の論点を整理します。",
   "category": "politics",
   "type": "comparison",
-  "status": "draft",
+  "status": "published",
   "featured": false,
   "tags": ["国会議員", "定数", "国会"],
   "thumbnail": "/images/topics/number-of-diet-members.webp",
@@ -34,12 +34,41 @@
         {
           "type": "paragraph",
           "text": "国会は衆議院と参議院の二院からなり、それぞれの定数は公職選挙法で定められています。衆議院は小選挙区と比例代表を組み合わせた選挙制度（小選挙区比例代表並立制）で選ばれます。",
-          "sourceIds": ["shugiin"]
+          "sourceIds": ["koshoku", "shugiin"]
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "label": "衆議院の定数",
+              "value": "465人",
+              "note": "小選挙区289人・比例代表176人",
+              "asOf": "2026-11-16",
+              "sourceIds": ["koshoku"]
+            },
+            {
+              "label": "参議院の定数",
+              "value": "248人",
+              "note": "選挙区148人・比例代表100人",
+              "asOf": "2026-11-16",
+              "sourceIds": ["koshoku"]
+            }
+          ]
         },
         {
           "type": "paragraph",
           "text": "議員定数の削減は、行政改革や「身を切る改革」の一環として、たびたび政党間で議論されてきました。",
           "sourceIds": ["shugiin"]
+        },
+        {
+          "type": "paragraph",
+          "text": "2026年11月12日には、自民党・日本維新の会・国民民主党の3党が、衆議院の定数を比例代表で31削減することなどを盛り込んだ公職選挙法の改正案を提出しました。衆議院の政治改革に関する特別委員会で11月17日に審議入りする予定です。",
+          "sourceIds": ["gian-222-3", "nhk-31", "nhk-31-start"]
+        },
+        {
+          "type": "callout",
+          "title": "編集部注",
+          "text": "法案の審議状況は変化しています。成立の有無や削減の内容は、記事上部の更新日とあわせて出典元でご確認ください。"
         }
       ]
     },
@@ -63,6 +92,13 @@
       "text": "国会議員って多すぎるって声、よく聞くけどどうなの？正直、何してるのか分からない議員もいる気がして。減らしたら税金の節約にもなるし。",
       "kind": "question",
       "expression": "confused"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "いまの定数は、衆議院が465人、参議院が248人。ちょうど今月、衆議院の比例代表を31減らすことなどを盛り込んだ法案が3党から出されて、これから審議に入るところだね。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["koshoku", "gian-222-3", "nhk-31"]
     },
     {
       "speaker": "munchkin",
@@ -136,13 +172,24 @@
     ],
     "knownFacts": [
       {
+        "text": "衆議院の定数は465人（小選挙区289人・比例代表176人）、参議院の定数は248人（選挙区148人・比例代表100人）",
+        "asOf": "2026-11-16",
+        "sourceIds": ["koshoku"]
+      },
+      {
         "text": "衆議院は小選挙区比例代表並立制で選ばれる",
-        "sourceIds": ["shugiin"]
+        "sourceIds": ["koshoku"]
+      },
+      {
+        "text": "2026年11月12日、自民・維新・国民の3党が衆議院の定数を比例代表で31削減することなどを盛り込んだ法案を提出した（11月16日時点で衆議院で審議前）",
+        "asOf": "2026-11-16",
+        "sourceIds": ["gian-222-3", "nhk-31"]
       }
     ],
     "openQuestions": [
       "適正な議員の数をどのような基準で決めるべきか",
-      "定数を変える場合、小選挙区と比例代表のどちらを減らすべきか"
+      "定数を変える場合、小選挙区と比例代表のどちらを減らすべきか",
+      "提出された法案が成立するか、審議の中で削減の数や方法が変わるか"
     ]
   },
   "takeaways": [
@@ -157,17 +204,48 @@
       "title": "衆議院ウェブサイト",
       "url": "https://www.shugiin.go.jp/",
       "publisher": "衆議院",
-      "accessedAt": "2026-11-04"
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "koshoku",
+      "title": "公職選挙法 第4条（議員の定数）",
+      "url": "https://laws.e-gov.go.jp/law/325AC1000000100",
+      "publisher": "e-Gov法令検索（デジタル庁）",
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "gian-222-3",
+      "title": "第222回国会 衆法第3号 現行の衆議院選挙制度の見直しのための公職選挙法の一部を改正する等の法律案（審議経過情報）",
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE378A.htm",
+      "publisher": "衆議院",
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "nhk-31",
+      "title": "自民 維新 国民 定数31削減法案を共同提出“今国会成立を”",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261112de74738",
+      "publisher": "NHK",
+      "publishedAt": "2026-11-12",
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "nhk-31-start",
+      "title": "比例31削減法案 あす審議入りで与野党が合意 衆院政治改革特委",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261116de76769",
+      "publisher": "NHK",
+      "publishedAt": "2026-11-16",
+      "accessedAt": "2026-11-16"
     }
   ],
   "related": ["voter-turnout", "campaign-promises"],
   "editorial": {
     "aiGenerated": true,
-    "notes": "下書き。国会での審議・制度改正の最新状況を一次情報で確認してから公開する。"
+    "notes": "2026-11-16公開。定数は公職選挙法第4条で確認。3党提出法案（第222回国会 衆法第3号、11月12日受理）は審議経過情報で確認、比例31削減の内容と審議入り予定は NHK 報道による。法案本文が掲載されたら一次情報に差し替え、成立・修正があれば本文・knownFacts・updatedAt を更新すること",
+    "factCheckedAt": "2026-11-16"
   },
   "lead": "議員の数を減らせば、税金の節約になり、国会もスリムになる。そんな主張は分かりやすく聞こえます。でも、議員の数は何を基準に決めればいいのでしょうか。",
-  "publishedAt": "2026-11-04",
-  "updatedAt": "2026-11-04",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
   "scene": {
     "emoji": "🍜",
     "place": "駅前のラーメン屋",
