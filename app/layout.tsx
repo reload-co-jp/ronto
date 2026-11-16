@@ -10,6 +10,10 @@ import "./global.css"
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   ...pageMetadata({ description: site.description, path: "/" }),
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
   title: {
     default: `${site.name}（ロント）｜${site.tagline}`,
     template: `%s | ${site.name}`,
