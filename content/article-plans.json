@@ -4,15 +4,6 @@
     "name": "政治・地域",
     "plans": [
       {
-        "id": "ldp-regional-strength",
-        "title": "なぜ地方では自民党が強いと言われるのか？",
-        "category": "politics",
-        "tags": ["政党", "選挙", "地方"],
-        "status": "idea",
-        "characters": ["otter", "munchkin", "hamster", "penguin"],
-        "notes": "「強い」の定義（得票率・議席率・首長）を分けて確認する。選挙制度（小選挙区・一票の格差）と地域の組織構造を区別して扱う。"
-      },
-      {
         "id": "two-party-system",
         "title": "なぜ日本では二大政党制にならない？",
         "category": "politics",
