@@ -64,16 +64,6 @@
         "notes": "福音派を一枚岩として扱わない。世論調査の出典・時期を明記し、神学的背景と政治的要因を分ける。"
       },
       {
-        "id": "japanese-religiosity",
-        "title": "日本人は無宗教なのに、なぜ初詣や葬式をするの？",
-        "category": "religion",
-        "tags": ["宗教", "習慣", "文化"],
-        "status": "writing",
-        "characters": ["otter", "munchkin", "hamster", "penguin"],
-        "notes": "「無宗教」という前提自体を確認する。宗教統計は調査主体・時期・設問を明記する。",
-        "topicId": "japanese-religiosity"
-      },
-      {
         "id": "politicians-shrine-visits",
         "title": "政治家が神社に参拝すると問題になるのはなぜ？",
         "category": "religion",

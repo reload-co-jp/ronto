@@ -5,9 +5,9 @@
   "lead": "毎日の買い物で必ず払っている消費税。「下がればうれしい」のは当然ですが、消費税は年金や医療などの社会保障を支える財源でもあります。引き下げで得をするのは誰で、その分の負担はどこに回るのでしょうか。",
   "category": "economy",
   "type": "benefit",
-  "publishedAt": "2026-11-04",
-  "updatedAt": "2026-11-04",
-  "status": "draft",
+  "publishedAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "status": "published",
   "featured": true,
   "thumbnail": "/images/topics/consumption-tax.webp",
   "tags": ["消費税", "税金", "家計", "軽減税率"],
@@ -58,8 +58,8 @@
         },
         {
           "type": "paragraph",
-          "text": "政府は2026年8月、食料品の消費税率を2027年4月から2年間、1%に引き下げる基本方針を決定し、10月には関連法案を国会に提出しました。",
-          "sourceIds": ["nhk-policy", "nhk-bill"]
+          "text": "政府は2026年8月、食料品の消費税率を2027年4月から2年間、1%に引き下げる基本方針を決定し、10月9日に関連法案を国会に提出しました。法案は11月6日に衆議院で可決され、2026年11月16日時点では参議院で審議中です（まだ成立していません）。",
+          "sourceIds": ["nhk-policy", "nhk-bill", "shugiin-tax"]
         },
         {
           "type": "callout",
@@ -93,6 +93,13 @@
       "text": "食料品の消費税を下げるって話、どうなの？8%が1%になったら、1万円の買い物で700円くらい違う計算だよね？",
       "kind": "question",
       "expression": "happy"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "まず今の状況から。政府が10月に出した法案は、11月6日に衆議院で可決されて、いまは参議院で審議中。まだ成立したわけじゃないから、決まった話として考えないほうがいいね。",
+      "kind": "fact",
+      "expression": "serious",
+      "sourceIds": ["shugiin-tax"]
     },
     {
       "speaker": "hamster",
@@ -208,10 +215,15 @@
         "text": "政府は2026年10月9日、関連法案を国会に提出した",
         "asOf": "2026-10-09",
         "sourceIds": ["nhk-bill"]
+      },
+      {
+        "text": "関連法案は2026年11月6日に衆議院で可決され、参議院の特別委員会に付託された（11月16日時点で参議院審議中）",
+        "asOf": "2026-11-16",
+        "sourceIds": ["shugiin-tax"]
       }
     ],
     "openQuestions": [
-      "法案が成立するか、実施の時期や内容が変わるか",
+      "参議院で法案が可決・成立するか、実施の時期や内容が変わるか",
       "減収分を補う財源をどう確保するか",
       "税率の引き下げが、実際の店頭価格にどの程度反映されるか",
       "期間終了後に税率を戻すのか、延長するのか"
@@ -231,14 +243,14 @@
       "title": "消費税の軽減税率制度について",
       "url": "https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/index.htm",
       "publisher": "国税庁",
-      "accessedAt": "2026-11-04"
+      "accessedAt": "2026-11-16"
     },
     {
       "id": "mof-shohi",
       "title": "消費税など（消費課税）に関する資料",
       "url": "https://www.mof.go.jp/tax_policy/summary/consumption/",
       "publisher": "財務省",
-      "accessedAt": "2026-11-04"
+      "accessedAt": "2026-11-16"
     },
     {
       "id": "nhk-policy",
@@ -246,7 +258,7 @@
       "url": "https://news.web.nhk/newsweb/na/na-k10015197191000",
       "publisher": "NHK",
       "publishedAt": "2026-08-05",
-      "accessedAt": "2026-11-04"
+      "accessedAt": "2026-11-16"
     },
     {
       "id": "nhk-bill",
@@ -254,13 +266,21 @@
       "url": "https://news.web.nhk/newsweb/na/nd-20261009de56958",
       "publisher": "NHK",
       "publishedAt": "2026-10-09",
-      "accessedAt": "2026-11-04"
+      "accessedAt": "2026-11-16"
+    },
+    {
+      "id": "shugiin-tax",
+      "title": "第222回国会 閣法第1号 租税及び社会保険料による負担の軽減のための飲食料品に係る消費税率の臨時的な引下げ及び就業者負担軽減支援金の支給に関する法律案（審議経過情報）",
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE342E.htm",
+      "publisher": "衆議院",
+      "accessedAt": "2026-11-16"
     }
   ],
   "related": ["weak-yen", "national-debt"],
   "editorial": {
     "aiGenerated": true,
-    "notes": "下書き。法案の審議状況（成立・施行時期）、財源、就業者負担軽減支援金などの詳細を一次情報（官邸・財務省・国税庁・国会会議録）で確認してから公開する。"
+    "notes": "2026-11-16公開。衆議院の議案審議経過情報で、関連法案（第222回国会 閣法第1号）の衆院可決（11月6日）と参院特別委付託（11月11日）を確認。成立・施行、参院での修正の有無が確定したら本文・knownFacts・updatedAt を更新すること。就業者負担軽減支援金の仕組みは本文未記載（法案本文で確認してから追記を検討）",
+    "factCheckedAt": "2026-11-16"
   },
   "scene": {
     "emoji": "🛒",
