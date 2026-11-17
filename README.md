@@ -80,7 +80,7 @@ public/
 
 初期の20テーマすべてに、チャット形式のAIディスカッション（メインコンテンツ）を作成済み。
 
-- 公開（22本。初期20テーマすべてと、企画候補から作成した `ldp-regional-strength`・`japanese-religiosity`）：数値・制度は政府等の一次情報で確認できる範囲に限定して記述
+- 公開（23本。初期20テーマすべてと、企画候補から作成した `ldp-regional-strength`・`japanese-religiosity`・`education-civil-servants-restrictions`）：数値・制度は政府等の一次情報で確認できる範囲に限定して記述
 - 国会審議中のテーマ（`consumption-tax`・`number-of-diet-members`・`selective-surname`）は、2026-11-16 時点の審議状況を記載。成立・修正があれば本文と `updatedAt` を更新する
 
 ## ディスカッション（メインコンテンツ）の書き方

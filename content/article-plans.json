@@ -239,15 +239,6 @@
         "notes": "組合としての活動と、教員個人の職務上の行為を区別する。"
       },
       {
-        "id": "education-civil-servants-restrictions",
-        "title": "教育公務員にはどのような政治活動の制限がある？",
-        "category": "education",
-        "tags": ["教育公務員", "政治活動", "法律"],
-        "status": "idea",
-        "characters": ["otter", "munchkin", "hamster", "penguin"],
-        "notes": "教育公務員特例法・地方公務員法・国家公務員法の関係を条文で確認する。"
-      },
-      {
         "id": "teaching-political-positions",
         "title": "学校で特定の政治的立場を教えることは許される？",
         "category": "education",
