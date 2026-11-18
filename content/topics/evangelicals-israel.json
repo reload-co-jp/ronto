@@ -1,0 +1,224 @@
+{
+  "id": "evangelicals-israel",
+  "title": "福音派はなぜイスラエルを支持するの？",
+  "description": "アメリカの福音派キリスト教徒の多くは、イスラエルに好意的だと言われます。その背景にある神学的な考え方と政治的な要因を分け、世論調査の数字とともに整理します。",
+  "lead": "アメリカの中東政策を語るとき、「福音派の支持」がよく話題になります。キリスト教徒がなぜユダヤ人国家のイスラエルを支持するのでしょうか。そして福音派は皆同じ考えなのでしょうか。",
+  "category": "religion",
+  "type": "why",
+  "status": "published",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "featured": false,
+  "tags": ["福音派", "アメリカ", "イスラエル", "国際関係"],
+  "participants": [
+    { "id": "otter", "character": "otter" },
+    { "id": "munchkin", "character": "munchkin" },
+    { "id": "penguin", "character": "penguin" }
+  ],
+  "scene": {
+    "emoji": "📚",
+    "place": "大学の図書館のラウンジ",
+    "time": "平日の午後",
+    "description": "ペンギンの研究室がある大学の図書館。海外ニュースの特集を読んでいたカワウソが、ペンギンとマンチカンに疑問をぶつけた。"
+  },
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "福音派（エバンジェリカル）は、聖書の権威や個人の回心体験を重視するプロテスタントの潮流で、単一の教会組織ではありません。教派も政治的な考え方もさまざまで、人種や世代によっても意見の傾向が異なります。"
+        },
+        {
+          "type": "paragraph",
+          "text": "米ピュー・リサーチ・センターが2025年3月に行った調査では、白人の福音派プロテスタントの約7割がイスラエルに好意的な見方を示し、ユダヤ系アメリカ人と並んで好意的な割合が高いグループでした。ただし、同センターの2026年の調査では、アメリカ全体でイスラエルへの否定的な見方が増えており、特に若い世代で目立つとされています。",
+          "sourceIds": ["s1", "s2"]
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "label": "イスラエルに好意的な白人福音派",
+              "value": "約7割",
+              "note": "ピュー・リサーチ・センター、2025年3月24〜30日調査",
+              "asOf": "2025-03-30",
+              "sourceIds": ["s1"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "神学的な背景としてよく挙げられるのが、19世紀に広まった「ディスペンセーション主義」です。聖書の預言を歴史の段階ごとに読み解き、ユダヤ人がイスラエルの地に戻ることを終末に向かう神の計画の一部とみなす考え方で、アメリカの福音派の一部に影響を与えてきました。創世記の「あなたを祝福する者をわたしは祝福する」という一節を根拠に、イスラエル支持を信仰上の務めと考える人もいます。",
+          "sourceIds": ["s3"]
+        },
+        {
+          "type": "paragraph",
+          "text": "ただし、福音派のイスラエル支持を神学だけで説明することはできません。冷戦期以来の米国とイスラエルの同盟関係、共和党の支持基盤としての福音派の政治的な組織化、安全保障や対テロをめぐる考え方なども重なっています。また、福音派の中にもパレスチナの人々への人道的な配慮を重視する人や、ディスペンセーション主義をとらない人がいます。"
+        }
+      ]
+    }
+  ],
+  "discussion": [
+    { "narration": "カワウソが海外ニュースの特集記事を広げる。" },
+    {
+      "speaker": "otter",
+      "text": "アメリカの福音派ってイスラエルを強く応援してるって書いてあるんだけど、キリスト教の人たちがどうしてユダヤ人の国を応援するの？",
+      "kind": "question",
+      "expression": "confused"
+    },
+    {
+      "speaker": "penguin",
+      "text": "先に言っておくと、福音派は一つの教会じゃなくて、聖書の権威や回心を重視するプロテスタントの大きな流れの呼び名なんだ。中身はかなり多様だよ。",
+      "kind": "fact",
+      "expression": "normal"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "数字で見ると、ピュー・リサーチ・センターの2025年3月の調査では、白人の福音派の約7割がイスラエルに好意的だった。ユダヤ系アメリカ人と並んで高い水準だね。",
+      "kind": "fact",
+      "expression": "thinking",
+      "sourceIds": ["s1"]
+    },
+    { "divider": "信仰の面から" },
+    {
+      "speaker": "otter",
+      "text": "やっぱり信仰が関係してるの？",
+      "kind": "question",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "penguin",
+      "text": "よく挙げられるのは「ディスペンセーション主義」という考え方。ユダヤ人がイスラエルの地に戻ることを、聖書に書かれた神の計画の一部と見るんだ。創世記の「あなたを祝福する者をわたしは祝福する」という一節を、イスラエル支持の根拠にする人もいる。",
+      "kind": "fact",
+      "expression": "serious",
+      "sourceIds": ["s3"]
+    },
+    {
+      "speaker": "otter",
+      "text": "へえ、宗教的な理由があるんだね。",
+      "kind": "agree",
+      "expression": "surprised"
+    },
+    { "divider": "政治の面から" },
+    {
+      "speaker": "munchkin",
+      "text": "でも信仰だけで説明すると見誤ると思う。冷戦期からの米国とイスラエルの同盟関係や、安全保障の考え方、それに福音派が共和党の重要な支持基盤として組織化されてきたことも大きい。",
+      "kind": "rebuttal",
+      "expression": "serious"
+    },
+    {
+      "speaker": "penguin",
+      "text": "そうだね。神学的な背景と政治的な要因は分けて考えたほうがいい。同じ「イスラエル支持」でも、理由は人によってちがうんだ。",
+      "kind": "agree",
+      "expression": "normal"
+    },
+    { "divider": "みんな同じ考え？" },
+    {
+      "speaker": "otter",
+      "text": "じゃあ福音派の人はみんなイスラエル支持なんだ。",
+      "kind": "question",
+      "expression": "normal"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "そこが落とし穴。さっきの数字も「白人の福音派」の約7割で、残りの人は好意的ではないし、人種や世代でも差がある。2026年の同じセンターの調査では、アメリカ全体でイスラエルへの否定的な見方が増えていて、特に若い人で目立つとされているよ。",
+      "kind": "rebuttal",
+      "expression": "thinking",
+      "sourceIds": ["s1", "s2"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "福音派の中にも、パレスチナの人々の人道状況を重く見る人や、ディスペンセーション主義をとらない人がいる。「福音派はこう考える」とひとくくりにしないことが大事だね。",
+      "kind": "fact",
+      "expression": "normal"
+    },
+    {
+      "speaker": "otter",
+      "text": "信仰の考え方と、政治や同盟の事情が重なってるけど、福音派の中にもいろんな意見があるってことか。",
+      "kind": "summary",
+      "expression": "happy"
+    }
+  ],
+  "summary": {
+    "points": [
+      "福音派は単一の教会組織ではなく、聖書の権威や回心を重視するプロテスタントの多様な潮流",
+      "ピュー・リサーチ・センターの2025年3月の調査で、白人福音派の約7割がイスラエルに好意的だった",
+      "神学的背景として、ユダヤ人のイスラエル帰還を神の計画とみなすディスペンセーション主義などが挙げられる",
+      "政治的要因として、米国とイスラエルの同盟関係や、福音派の共和党支持基盤としての組織化がある",
+      "2026年の調査では米国全体でイスラエルへの否定的な見方が増えており、福音派も一枚岩ではない"
+    ],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [
+      {
+        "who": "米国の福音派",
+        "impact": "信仰と政治的立場の結びつきが注目される一方、内部の意見の多様さは見えにくい"
+      },
+      {
+        "who": "中東の人々",
+        "impact": "米国の世論や中東政策を通じて、間接的に影響を受ける"
+      }
+    ],
+    "knownFacts": [
+      {
+        "text": "ピュー・リサーチ・センターの2025年3月24〜30日の調査で、ユダヤ系アメリカ人と白人福音派プロテスタントは、それぞれ約7割がイスラエルに好意的だった",
+        "asOf": "2025-03-30",
+        "sourceIds": ["s1"]
+      },
+      {
+        "text": "ピュー・リサーチ・センターは2026年4月、米国でイスラエルとネタニヤフ首相への否定的な見方が、特に若い世代で増え続けていると報告した",
+        "asOf": "2026-04-07",
+        "sourceIds": ["s2"]
+      }
+    ],
+    "openQuestions": [
+      "若い世代の福音派の意識は、今後どう変わっていくのか",
+      "宗教的な信念は、外交政策にどの程度の影響を与えているのか"
+    ]
+  },
+  "takeaways": [
+    "福音派のイスラエル支持には、神学的背景と政治的要因の両方がある",
+    "「福音派」を一枚岩として扱わない"
+  ],
+  "furtherQuestions": [
+    "宗教団体は政党を応援できるのに、政治的な優遇は問題になるの？",
+    "保守と右翼、リベラルと左翼は何が違う？",
+    "宗教は国際政治にどんな影響を与えていると思いますか？"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "How Americans view Israel and the Israel-Hamas war at the start of Trump's second term",
+      "url": "https://www.pewresearch.org/short-reads/2025/04/08/how-americans-view-israel-and-the-israel-hamas-war-at-the-start-of-trumps-second-term/",
+      "publisher": "Pew Research Center",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "id": "s2",
+      "title": "Negative views of Israel, Netanyahu continue to rise among Americans, especially young people",
+      "url": "https://www.pewresearch.org/short-reads/2026/04/07/negative-views-of-israel-netanyahu-continue-to-rise-among-americans-especially-young-people/",
+      "publisher": "Pew Research Center",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "id": "s3",
+      "title": "Dispensationalism",
+      "url": "https://www.britannica.com/topic/dispensationalism",
+      "publisher": "Encyclopaedia Britannica",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "related": ["religious-groups-and-parties", "japanese-religiosity"],
+  "editorial": {
+    "aiGenerated": true,
+    "factCheckedAt": "2026-11-18",
+    "notes": "2026-11-18公開。ピュー調査の「イスラエル」への好意度は国そのものについての設問で、イスラエル政府・国民を分けた2026年の設問とは異なる点に注意。追記候補：福音派の世代別・人種別の内訳を同センターの資料で確認して追加。"
+  }
+}

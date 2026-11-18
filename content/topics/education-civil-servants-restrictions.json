@@ -262,8 +262,8 @@
   ],
   "furtherQuestions": [
     "学校で政治をどこまで教えるべきだと思いますか？",
-    "教員組合は政治活動をしていいの？（企画中）",
-    "学校で特定の政治的立場を教えることは許される？（企画中）"
+    "教員組合は政治活動をしていいの？ 教育現場の中立性とは？",
+    "学校で特定の政治的立場を教えることは許される？"
   ],
   "sources": [
     {
@@ -316,7 +316,7 @@
       "accessedAt": "2026-11-17"
     }
   ],
-  "related": [],
+  "related": ["teachers-unions-politics", "teaching-political-positions"],
   "editorial": {
     "aiGenerated": true,
     "factCheckedAt": "2026-11-17",

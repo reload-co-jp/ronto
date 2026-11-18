@@ -1,0 +1,227 @@
+{
+  "id": "conservative-right-liberal-left",
+  "title": "保守と右翼、リベラルと左翼は何が違う？",
+  "description": "ニュースやSNSで飛び交う「保守」「右翼」「リベラル」「左翼」。同じ言葉でも、国や時代、使う人によって意味がちがいます。言葉の由来と使われ方の違いを整理します。",
+  "lead": "「あの人は保守だ」「リベラルだ」とレッテルのように使われる言葉。でも、その意味を説明しようとすると意外と難しいものです。一つの定義に決めつけず、使われ方の違いを見ていきます。",
+  "category": "religion",
+  "type": "why",
+  "status": "published",
+  "publishedAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "featured": false,
+  "tags": ["思想", "保守", "リベラル", "右派・左派"],
+  "participants": [
+    { "id": "otter", "character": "otter" },
+    { "id": "munchkin", "character": "munchkin" },
+    { "id": "hamster", "character": "hamster" },
+    { "id": "penguin", "character": "penguin" }
+  ],
+  "scene": {
+    "emoji": "🍻",
+    "place": "居酒屋の座敷",
+    "time": "週末の夜",
+    "description": "SNSで「保守」と「リベラル」が言い争っている投稿を見たカワウソが、「そもそもどう違うの？」と3匹に聞いてみた。"
+  },
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "「右」と「左」という呼び方は、フランス革命期の1789年の国民議会で、議長席から見て右側に国王の権限を重んじる人々が、左側に改革を求める人々が座ったことに由来するとされています。もともとは座席の位置を示す言葉でした。",
+          "sourceIds": ["s1", "s2"]
+        },
+        {
+          "type": "paragraph",
+          "text": "「保守主義」は、急激な変化よりも伝統や慣習、既存の制度の中で培われた知恵を重んじる考え方とされます。「リベラリズム（自由主義）」は、個人の自由や権利を重視する考え方です。ただし、リベラリズムには国家の介入を抑える立場もあれば、平等を実現するために国家の役割を重視する立場もあり、国によって意味が大きく異なります。",
+          "sourceIds": ["s3", "s4"]
+        },
+        {
+          "type": "list",
+          "items": [
+            "保守・リベラル：主に考え方や価値観の傾向を表す言葉",
+            "右派・左派：政治的な立ち位置を相対的に表す言葉",
+            "右翼・左翼：日本語では、とくに強い主張や運動をする団体・人を指して使われることがある",
+            "いずれも相対的な言葉で、比べる相手や時代によって位置が変わる"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "アメリカでは「リベラル」が民主党寄りの、政府の役割を重視する立場を指すことが多い一方、ヨーロッパでは「リベラル」が市場の自由を重視する立場を指すこともあります。日本では戦後長く「保守」と「革新」という対比が使われ、外交・安全保障や憲法をめぐる態度が主な対立軸とされてきました。同じ言葉でも、どこの、いつの話かで指す中身がちがうのです。",
+          "sourceIds": ["s4"]
+        },
+        {
+          "type": "paragraph",
+          "text": "また、一人の人が経済政策では政府の役割を重視し、社会問題では伝統を重んじる、というように、分野によって立ち位置が異なることも珍しくありません。こうした言葉を相手を批判するレッテルとして使うと、具体的な政策の中身の議論が見えにくくなります。"
+        }
+      ]
+    }
+  ],
+  "discussion": [
+    {
+      "narration": "カワウソがSNSの画面を見せる。「保守は〜」「リベラルは〜」という投稿が並んでいる。"
+    },
+    {
+      "speaker": "otter",
+      "text": "SNSで保守とリベラルがけんかしてるんだけど、そもそも保守と右翼って同じ？ リベラルと左翼は？",
+      "kind": "question",
+      "expression": "confused"
+    },
+    {
+      "speaker": "penguin",
+      "text": "まず由来からいこう。「右」と「左」は、フランス革命のころの議会で、国王の権限を重んじる人が右側、改革を求める人が左側に座ったことから来ていると言われているんだ。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["s1", "s2"]
+    },
+    {
+      "speaker": "otter",
+      "text": "えっ、座る場所の話だったの？",
+      "kind": "agree",
+      "expression": "surprised"
+    },
+    { "divider": "保守とリベラル" },
+    {
+      "speaker": "penguin",
+      "text": "保守主義は、急な変化より、伝統や長く続いてきた制度の知恵を大事にする考え方。リベラリズムは、個人の自由や権利を重視する考え方。どちらも「何を優先するか」の傾向を表す言葉なんだ。",
+      "kind": "fact",
+      "expression": "thinking",
+      "sourceIds": ["s3", "s4"]
+    },
+    {
+      "speaker": "munchkin",
+      "text": "ややこしいのは、リベラルの意味が国によってちがうこと。アメリカだと政府の役割を大きく考える立場を指すことが多いけど、ヨーロッパでは市場の自由を重んじる立場を指すこともある。",
+      "kind": "fact",
+      "expression": "serious",
+      "sourceIds": ["s4"]
+    },
+    {
+      "speaker": "hamster",
+      "text": "日本だと、昔は「保守と革新」って言ってたよね。親の世代はそっちのほうがなじみがあるみたい。",
+      "kind": "fact",
+      "expression": "normal"
+    },
+    {
+      "speaker": "penguin",
+      "text": "そうそう。戦後の日本では、憲法や安全保障への態度が保守と革新を分ける大きな軸だった。だから日本の「保守・リベラル」は、欧米の言葉の意味とぴったり重ならないんだ。",
+      "kind": "fact",
+      "expression": "normal"
+    },
+    { "divider": "右翼・左翼は？" },
+    {
+      "speaker": "otter",
+      "text": "じゃあ右翼と左翼は？",
+      "kind": "question",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "右派・左派は立ち位置を相対的に表す言葉。日本語の「右翼」「左翼」は、とくに強い主張や運動をする団体や人を指して使われることが多いね。保守＝右翼、リベラル＝左翼と同じ意味で使うと、ずれが出やすい。",
+      "kind": "fact",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "hamster",
+      "text": "それに、一人の中でも分野で考えがちがうよね。うちの近所のおじさん、福祉はもっと手厚くって言うけど、地域の伝統行事は絶対守れって人だし。",
+      "kind": "rebuttal",
+      "expression": "happy"
+    },
+    {
+      "speaker": "penguin",
+      "text": "まさにそれ。経済では政府の役割重視、社会では伝統重視、みたいな組み合わせは珍しくない。一本の線の右か左かで人を分けるのは、かなり大ざっぱなんだ。",
+      "kind": "agree",
+      "expression": "normal"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "だからレッテルとして使うより、「この政策のどこに賛成で、どこに反対か」を話したほうが建設的だと思うよ。",
+      "kind": "idea",
+      "expression": "happy"
+    },
+    {
+      "speaker": "otter",
+      "text": "言葉の意味は国や時代でちがうし、人によっても分野ごとに考えがちがう。ラベルより中身を見よう、ってことだね。",
+      "kind": "summary",
+      "expression": "happy"
+    }
+  ],
+  "summary": {
+    "points": [
+      "「右」「左」は、フランス革命期の議会の座席の位置に由来するとされる",
+      "保守主義は伝統や既存の制度の知恵を、リベラリズムは個人の自由や権利を重視する考え方とされる",
+      "「リベラル」の意味は国によって異なり、米国と欧州でも指す立場がちがうことがある",
+      "日本では戦後「保守・革新」という対比が使われ、憲法や安全保障への態度が主な軸とされてきた",
+      "一人の人でも分野によって立ち位置が異なることが多く、レッテルとして使うと政策の中身が見えにくくなる"
+    ],
+    "argumentsFor": [],
+    "argumentsAgainst": [],
+    "affectedParties": [
+      {
+        "who": "有権者",
+        "impact": "ラベルだけで政党や候補者を判断すると、政策の中身を見落としやすい"
+      }
+    ],
+    "knownFacts": [
+      {
+        "text": "政治的な「左」「右」の呼び方は、フランス革命期の議会の座席配置に由来するとされる",
+        "sourceIds": ["s1", "s2"]
+      }
+    ],
+    "openQuestions": [
+      "いまの日本で、政治的な対立軸は何になっているのか",
+      "世代によって「保守」「リベラル」の受け止め方はちがうのか"
+    ]
+  },
+  "takeaways": [
+    "保守・リベラル・右・左は相対的な言葉で、国や時代で意味が変わる",
+    "ラベルより、具体的な政策への賛否で話す"
+  ],
+  "furtherQuestions": [
+    "なぜ日本では二大政党制にならない？",
+    "あなたは自分を保守だと思いますか、リベラルだと思いますか？",
+    "福音派はなぜイスラエルを支持するの？"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Left (politics)",
+      "url": "https://www.britannica.com/topic/left",
+      "publisher": "Encyclopaedia Britannica",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "id": "s2",
+      "title": "Right (politics)",
+      "url": "https://www.britannica.com/topic/right",
+      "publisher": "Encyclopaedia Britannica",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "id": "s3",
+      "title": "Conservatism",
+      "url": "https://www.britannica.com/topic/conservatism",
+      "publisher": "Encyclopaedia Britannica",
+      "accessedAt": "2026-11-18"
+    },
+    {
+      "id": "s4",
+      "title": "Liberalism",
+      "url": "https://www.britannica.com/topic/liberalism",
+      "publisher": "Encyclopaedia Britannica",
+      "accessedAt": "2026-11-18"
+    }
+  ],
+  "related": ["two-party-system", "japanese-religiosity"],
+  "editorial": {
+    "aiGenerated": true,
+    "factCheckedAt": "2026-11-18",
+    "notes": "2026-11-18公開。定義を一つに固定しない方針。追記候補：日本の有権者のイデオロギー認識（世代によって政党の保革の位置づけが異なるとする研究）を、一次資料を確認のうえ追加。"
+  }
+}
