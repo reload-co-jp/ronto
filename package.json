@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
     "jsdom": "^31.0.1",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "typescript-eslint": "^8.72.1",
     "vitest": "^5.1.0"
   },
