@@ -21,9 +21,6 @@ const styles = css`
     display: grid;
     gap: 32px;
   }
-  .SiteFooter .Logo {
-    color: #fff;
-  }
   .SiteFooter_concept {
     margin-top: 12px;
     color: #c9c2b8;
