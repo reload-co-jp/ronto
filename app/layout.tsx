@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { JsonLd } from "@/components/ui/primitives"
 import { pageMetadata } from "@/lib/seo"
-import { site } from "@/lib/site"
+import { showDrafts, site } from "@/lib/site"
 import "./global.css"
 
 export const metadata: Metadata = {
@@ -43,6 +43,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
       />
+      {/* Google AdSense（本番ビルドのみ） */}
+      {!showDrafts && (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.adsenseClientId}`}
+          crossOrigin="anonymous"
+        />
+      )}
     </head>
     <body>
       <SiteHeader />
