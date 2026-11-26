@@ -1,5 +1,7 @@
 export const site = {
   name: "RonTo",
+  /** 読み仮名（検索エンジン向けの別名） */
+  alternateName: "ロント",
   url: "https://rnt.reload.co.jp",
   tagline: "社会のあれこれ、ちょっと考えてみよう。",
   description:
@@ -10,6 +12,7 @@ export const site = {
     url: "https://reload.co.jp/",
   },
   ogImage: "/og-default.png",
+  logo: { url: "/images/logo.png", width: 2172, height: 724 },
   locale: "ja_JP",
   /** Google Analytics 4 の測定 ID */
   gaMeasurementId: "G-DV08TNL5CT",

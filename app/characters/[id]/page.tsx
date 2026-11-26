@@ -16,7 +16,12 @@ import {
   characters,
   getCharacter,
 } from "@/lib/characters"
-import { getTopicsByCharacter, toCardData } from "@/lib/content"
+import {
+  getTopicsByCharacter,
+  pngSizeOf,
+  resolveImage,
+  toCardData,
+} from "@/lib/content"
 import { pageMetadata } from "@/lib/seo"
 import { absoluteUrl } from "@/lib/site"
 import { CHARACTER_EXPRESSIONS, CharacterExpression } from "@/lib/types"
@@ -35,6 +40,8 @@ export const generateMetadata = async ({
     title: `${c.name}（${c.species}）のプロフィール`,
     description: `${c.tagline}。${c.description}`,
     path: characterPath(c.id),
+    image: resolveImage(c.profileImage),
+    imageSize: pngSizeOf(c.profileImage),
   })
 }
 

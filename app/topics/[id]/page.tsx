@@ -35,7 +35,7 @@ import {
   topicPath,
 } from "@/lib/content"
 import { formatDate } from "@/lib/format"
-import { pageMetadata } from "@/lib/seo"
+import { pageMetadata, publisherJsonLd } from "@/lib/seo"
 import { absoluteUrl, site } from "@/lib/site"
 import { Topic } from "@/lib/types"
 
@@ -490,11 +490,8 @@ const TopicPage = async ({ params }: Props) => {
             name: `${site.name}編集部`,
             url: site.url,
           },
-          publisher: {
-            "@type": "Organization",
-            name: site.publisher.name,
-            url: site.publisher.url,
-          },
+          publisher: publisherJsonLd,
+          isAccessibleForFree: true,
           citation: topic.sources.map((s) => ({
             "@type": "CreativeWork",
             name: s.title,
