@@ -1,0 +1,406 @@
+{
+  "id": "president-stock-trading",
+  "title": "大統領は株式売買していいの？",
+  "description": "アメリカのトランプ大統領の口座で、在任中に数万件の株式売買が行われていると開示されました。大統領の株取引は法律で禁止されているのか、議会で進む「株取引禁止法案」はなぜ大統領を対象にしないのか、日本の大臣のルールとも比べながら整理します。",
+  "lead": "「大統領が株を売り買いしていいの？ 政策を決める本人なんだから、インサイダーみたいなものでは？」。トランプ大統領の取引件数が報じられるたびに、そんな疑問が出てきます。法律は何を決めていて、何を決めていないのでしょうか。",
+  "category": "politics",
+  "type": "discussion",
+  "status": "published",
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "featured": false,
+  "tags": ["アメリカ", "大統領", "株式投資", "利益相反", "政治倫理"],
+  "participants": [
+    {
+      "id": "otter",
+      "character": "otter"
+    },
+    {
+      "id": "munchkin",
+      "character": "munchkin"
+    },
+    {
+      "id": "hamster",
+      "character": "hamster"
+    },
+    {
+      "id": "penguin",
+      "character": "penguin"
+    }
+  ],
+  "scene": {
+    "emoji": "📈",
+    "place": "駅前のファミレス",
+    "time": "週末の昼",
+    "description": "新NISAで積み立てを始めたハムスターが、スマホで「トランプ大統領、2万件超の株取引」というニュースを見つける。ドリンクバーから戻ってきた3匹に、カワウソがさっそく話を振る。"
+  },
+  "sections": [
+    {
+      "id": "background",
+      "heading": "基本情報・背景",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "アメリカでは、大統領も含む政府高官に、株式や債券などの売買を一定期間内に報告することが義務づけられています。2012年のSTOCK法（議会の知識を使った取引を禁じる法律）により、大統領と副大統領は、取引の通知を受けてから30日以内、遅くとも取引から45日以内に報告書（OGE Form 278-T）を出す必要があります。",
+          "sourceIds": ["s1"]
+        },
+        {
+          "type": "paragraph",
+          "text": "一方で、職務と自分の金銭的な利害が重なる案件に関わることを禁じる連邦法（合衆国法典第18編208条）は、大統領と副大統領を対象から外しています。つまり、大統領は「取引を報告する義務」はあるものの、「株を持つこと・売買すること」そのものを禁じる法律はありません。",
+          "sourceIds": ["s2"]
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "label": "2025年の取引件数",
+              "value": "2万1,000件超",
+              "note": "1期目（4年間）は約500件",
+              "asOf": "2026-09-09",
+              "sourceIds": ["s4"]
+            },
+            {
+              "label": "2026年1〜3月の取引件数",
+              "value": "3,600件超",
+              "note": "取引額は合計2億2,000万〜7億5,000万ドル（報告書は金額を幅で記載）",
+              "asOf": "2026-03-31",
+              "sourceIds": ["s3"]
+            },
+            {
+              "label": "投資口座の資産",
+              "value": "8億5,800万ドル以上",
+              "note": "8つの投資口座の合計",
+              "asOf": "2026-09-09",
+              "sourceIds": ["s4"]
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "編集部注",
+          "text": "この記事は2026年11月26日時点の情報に基づきます。大統領が個別の取引を指示した、あるいは政府の内部情報を使って取引したという事実は、確認されていません。特定の政治家や政党への支持・不支持を促すものではありません。"
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "heading": "そもそも何が問題なのか",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "トランプ氏側は、外部の金融機関が投資判断の全権を持ち、自動化された運用に大きく頼っていると説明しています。ホワイトハウスも、大統領は個別の取引を指示できず「利益相反はない」としています。一方で、資産が値上がりすれば利益を受けるのは大統領本人です。関税や規制など、株価を大きく動かす決定をする立場の人が株を持ち続けてよいのか、という点が議論になっています。",
+          "sourceIds": ["s4"]
+        },
+        {
+          "type": "paragraph",
+          "text": "議会では、議員の株取引を制限する法案がいくつも出ています。下院は2026年7月22日、議員と配偶者・扶養する子が在任中に個別株を買うことを禁じる「Stop Insider Trading Act」を232対198で可決しましたが、この法案は大統領と副大統領を対象にしていません。大統領・副大統領も含めて取引を禁じる超党派の法案（Restore Trust in Congress Act など）もありますが、成立の見通しは立っていません。",
+          "sourceIds": ["s5", "s6"]
+        },
+        {
+          "type": "paragraph",
+          "text": "上院の委員会では2025年7月、大統領・副大統領にも保有株の売却を求める法案（HONEST Act）が8対7で可決されました。ただし、大統領・副大統領への適用は次の任期からとされ、トランプ大統領はSNSで提案者の議員を批判しました。",
+          "sourceIds": ["s7"]
+        },
+        {
+          "type": "callout",
+          "title": "比べてみよう：日本の大臣のルール",
+          "text": "日本では、閣議決定である「国務大臣、副大臣及び大臣政務官規範」が、在任中の株式などの取引を自粛するよう定め、就任時に持っている株式は信託銀行などに預けることとしています。法律ではないため罰則はありませんが、「在任中は売買しない」ことが原則になっています。",
+          "sourceIds": ["s8"]
+        }
+      ]
+    }
+  ],
+  "discussion": [
+    {
+      "narration": "ハムスターがスマホの画面をテーブルの真ん中に置く。"
+    },
+    {
+      "speaker": "hamster",
+      "text": "ねえ、トランプ大統領って1年で2万件以上も株の売り買いをしてたんだって。わたしなんか月1回の積み立てでドキドキしてるのに。",
+      "kind": "question",
+      "expression": "surprised",
+      "sourceIds": ["s4"]
+    },
+    {
+      "speaker": "otter",
+      "text": "それ、そもそも大丈夫なの？ 関税とか決める本人が株を売り買いするって、インサイダー取引みたいに聞こえるんだけど。",
+      "kind": "question",
+      "expression": "confused"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "まず事実を分けよう。大統領が株を持ったり売買したりすることを禁じる法律は、アメリカにはないんだ。利益相反を禁じる連邦法も、大統領と副大統領は対象外になっている。",
+      "kind": "fact",
+      "expression": "serious",
+      "sourceIds": ["s2"]
+    },
+    {
+      "speaker": "munchkin",
+      "text": "ただ、報告の義務はある。2012年のSTOCK法で、大統領も取引から45日以内には報告書を出さなきゃいけない。2万件という数字も、その報告書から分かったものだよ。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["s1", "s4"]
+    },
+    {
+      "divider": "本人が売買しているの？"
+    },
+    {
+      "speaker": "otter",
+      "text": "じゃあ、大統領が自分で「この株買って！」って指示してるの？",
+      "kind": "question",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "トランプ氏側は、外部の金融機関が判断の全権を持っていて、ほとんど自動で運用していると説明してる。ホワイトハウスも「大統領は個別の取引を指示できない」と言っているね。CNBCも、本人が指示したり、政府の決定を事前に知って取引したりした証拠は見つからなかったと報じている。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["s4"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "そこは大事なポイントだね。「たくさん取引している」ことと「内部情報で儲けた」ことは別の話。後者を示す証拠がない以上、疑惑を事実のように語るのは避けたい。",
+      "kind": "agree",
+      "expression": "serious"
+    },
+    {
+      "speaker": "hamster",
+      "text": "でも、値上がりして得をするのは結局大統領本人なんでしょ？ 運用を人に任せてても、「自分の持ってる株が下がる政策はやりにくいかも」って思っちゃいそう。",
+      "kind": "rebuttal",
+      "expression": "confused",
+      "sourceIds": ["s4"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "まさにそれが「利益相反」の考え方なんだ。実際に悪いことをしたかどうかとは別に、「疑われる状態」を作らないこと自体が信頼につながる、という発想だね。だから、本人が中身を知らない形で資産を預ける「ブラインドトラスト」を使う方法がよく議論されるんだ。",
+      "kind": "idea",
+      "expression": "thinking",
+      "sourceIds": ["s6"]
+    },
+    {
+      "divider": "議会は何をしているの？"
+    },
+    {
+      "speaker": "otter",
+      "text": "議員の株取引を禁止する法律って、アメリカで話題になってたよね？",
+      "kind": "question",
+      "expression": "normal"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "下院が今年7月に可決した法案は、議員が在任中に個別株を「買う」ことを禁じるもの。でも大統領と副大統領は対象外なんだ。しかも、もともと持っている株は7日前に公表すれば売れる。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["s5"]
+    },
+    {
+      "speaker": "hamster",
+      "text": "え、いちばん取引してる人が対象外なの？ それはちょっとモヤっとする……。",
+      "kind": "rebuttal",
+      "expression": "surprised"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "大統領も含めて取引を禁じる超党派の法案もあるし、上院の委員会では大統領にも株の売却を求める法案が通ったこともある。ただ、大統領への適用は次の任期からという内容で、トランプ大統領は提案した議員をSNSで批判した。どれも成立のめどは立っていないよ。",
+      "kind": "fact",
+      "expression": "serious",
+      "sourceIds": ["s6", "s7"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "大統領に制限をかける法律を、その大統領が署名して成立させる必要がある、というのも難しいところだね。憲法上の権限との関係を指摘する声もあって、議会が大統領をどこまで縛れるかは、法律論としても議論が分かれているんだ。",
+      "kind": "fact",
+      "expression": "thinking"
+    },
+    {
+      "divider": "日本だとどうなの？"
+    },
+    {
+      "speaker": "otter",
+      "text": "ちなみに、日本の総理大臣や大臣はどうなってるの？",
+      "kind": "question",
+      "expression": "normal"
+    },
+    {
+      "speaker": "penguin",
+      "text": "日本は閣議決定の「大臣規範」で、在任中は株などの取引を自粛して、就任時に持っている株は信託銀行などに預けることになってる。法律じゃないから罰則はないけど、「在任中は売買しない」のが原則なんだ。",
+      "kind": "fact",
+      "expression": "normal",
+      "sourceIds": ["s8"]
+    },
+    {
+      "speaker": "hamster",
+      "text": "罰則がないのはゆるい気もするけど、少なくとも「売り買いしない」がルールなんだね。アメリカは逆に、売り買いは自由だけど全部報告させる、って感じ？",
+      "kind": "question",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "munchkin",
+      "text": "大まかにはそうだね。アメリカは「公開して、有権者に判断してもらう」仕組みに重心がある。どっちが優れているというより、何で信頼を保つかの考え方が違うんだ。",
+      "kind": "agree",
+      "expression": "normal",
+      "sourceIds": ["s1", "s8"]
+    },
+    {
+      "speaker": "penguin",
+      "text": "一方で、資産を全部手放すよう求めると、お金持ちや事業をしている人が政治の道を選びにくくなる、という反論もある。ルールを厳しくすれば解決、とも言い切れないね。",
+      "kind": "rebuttal",
+      "expression": "thinking"
+    },
+    {
+      "speaker": "otter",
+      "text": "まとめると、大統領の株取引は今のアメリカの法律では禁止されていなくて、報告の義務があるだけ。不正の証拠は出ていないけど、「疑われる状態」をどう防ぐかで議論が続いている。日本の大臣は在任中の取引を自粛するルール。どこまで縛るべきかは、まだ答えが出ていない問題なんだね。",
+      "kind": "summary",
+      "expression": "happy"
+    }
+  ],
+  "summary": {
+    "points": [
+      "アメリカの大統領が株式を保有・売買することを禁じる法律はない。利益相反を禁じる連邦法（18 U.S.C. 208）も大統領・副大統領を対象外としている",
+      "STOCK法により、大統領も株式などの取引を遅くとも45日以内に報告する義務がある",
+      "トランプ大統領の口座では2025年に2万1,000件超の取引が行われた。本人側は外部の金融機関が運用していると説明している",
+      "本人が取引を指示した、内部情報を使ったという証拠は報じられていない",
+      "下院が2026年7月に可決した議員の株取引制限法案は大統領を対象にしていない。大統領も含める法案は成立のめどが立っていない",
+      "日本では、大臣規範（閣議決定）で在任中の株式等の取引を自粛し、保有株を信託することになっている"
+    ],
+    "argumentsFor": [
+      "運用を他人に任せていても、値上がりの利益は本人に入る。関税や規制など市場を動かす決定をする立場の人は、取引を禁じるか資産を手放すべきだ",
+      "議員だけを制限して大統領を対象外にするのは、ルールとして一貫しない",
+      "不正の有無とは別に、「疑われる状態」をなくすことが政治への信頼につながる"
+    ],
+    "argumentsAgainst": [
+      "取引はすべて報告・公開されており、有権者や報道が監視できる。公開の仕組みで十分だという考え方もある",
+      "外部の専門家が運用しているなら、本人の判断が取引に入り込む余地は小さい",
+      "資産の売却を義務づけると、事業経験のある人が政治の道を選びにくくなる",
+      "議会が法律で大統領をどこまで縛れるかは、憲法上の論点もあり慎重な検討が必要だ"
+    ],
+    "affectedParties": [
+      {
+        "who": "アメリカの有権者",
+        "impact": "大統領の判断が私的な利益に左右されていないかを、開示情報から確かめる必要がある"
+      },
+      {
+        "who": "株式市場の投資家",
+        "impact": "政策の発表と株価の動きが重なるたびに、公正さへの疑問が生じうる"
+      },
+      {
+        "who": "アメリカの議員",
+        "impact": "自分たちの株取引を制限する法案で、大統領を含めるかどうかの判断を迫られている"
+      }
+    ],
+    "knownFacts": [
+      {
+        "text": "STOCK法（2012年）は、大統領・副大統領を含む政府高官に、株式などの取引を通知から30日以内、遅くとも取引から45日以内に報告するよう義務づけている",
+        "sourceIds": ["s1"]
+      },
+      {
+        "text": "合衆国法典第18編202条(c)により、利益相反を禁じる208条は大統領と副大統領に適用されない",
+        "sourceIds": ["s2"]
+      },
+      {
+        "text": "トランプ大統領は2025年に2万1,000件超の取引を行い、8つの投資口座に少なくとも8億5,800万ドルの資産がある",
+        "asOf": "2026-09-09",
+        "sourceIds": ["s4"]
+      },
+      {
+        "text": "2026年1〜3月には3,600件超、合計2億2,000万〜7億5,000万ドルの取引が報告された",
+        "asOf": "2026-05-15",
+        "sourceIds": ["s3"]
+      },
+      {
+        "text": "下院は2026年7月22日、議員の個別株購入を禁じるStop Insider Trading Actを232対198で可決した。大統領・副大統領は対象外",
+        "asOf": "2026-07-22",
+        "sourceIds": ["s5"]
+      },
+      {
+        "text": "上院国土安全保障・政府問題委員会は2025年7月、大統領・副大統領の次の任期から資産売却を求めるHONEST Actを8対7で可決した",
+        "asOf": "2025-07-30",
+        "sourceIds": ["s7"]
+      }
+    ],
+    "openQuestions": [
+      "大統領を含めて株取引を制限する法律は成立するのか",
+      "成立した場合、議会が大統領の資産をどこまで制限できるのか（憲法上の論点）",
+      "外部に運用を任せる仕組みは、利益相反の疑いを防ぐのに十分なのか"
+    ]
+  },
+  "takeaways": [
+    "「たくさん取引している」ことと「内部情報で不正をした」ことは分けて考える",
+    "アメリカは「報告・公開」、日本の大臣は「在任中の取引自粛と信託」と、信頼を保つための考え方が違う",
+    "議員の株取引禁止法案が大統領を対象にしているかどうかは、法案ごとに確かめる"
+  ],
+  "furtherQuestions": [
+    "政治のトップが株を持ち続けることは、どこまでなら許されると思いますか？",
+    "日本の大臣規範に罰則がないことを、どう考えますか？"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Stop Trading on Congressional Knowledge Act of 2012（Public Law 112-105）",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-112publ105/html/PLAW-112publ105.htm",
+      "publisher": "米国政府出版局（govinfo）",
+      "publishedAt": "2012-04-04",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s2",
+      "title": "18 U.S. Code § 202 - Definitions",
+      "url": "https://www.law.cornell.edu/uscode/text/18/202",
+      "publisher": "コーネル大学 Legal Information Institute",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s3",
+      "title": "Trump discloses stock trades revealing massive gains in 2026 with bets on Big Tech",
+      "url": "https://www.euronews.com/business/2026/05/15/trump-discloses-stock-trades-revealing-massive-gains-in-2026-with-bets-on-big-tech",
+      "publisher": "Euronews",
+      "publishedAt": "2026-05-15",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s4",
+      "title": "Republicans to tout congressional stock-trading ban at midterm convention as Trump trades",
+      "url": "https://www.cnbc.com/2026/09/09/trump-republicans-congress-stock-trading-ban-midterm-convention.html",
+      "publisher": "CNBC",
+      "publishedAt": "2026-09-09",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s5",
+      "title": "The Republican-controlled House just passed a stock trading bill — that exempts Trump's 3,600 Q1 trades",
+      "url": "https://fortune.com/2026/07/23/house-stock-trading-ban-trump-exemption-vote/",
+      "publisher": "Fortune（AP通信配信）",
+      "publishedAt": "2026-07-23",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s6",
+      "title": "Trump Pushing Stock-Trading Ban That Doesn't Ban Stock Trading",
+      "url": "https://time.com/7382542/trump-congress-stock-trading-ban-republicans/",
+      "publisher": "TIME",
+      "publishedAt": "2026-03-09",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s7",
+      "title": "Hawley joins Democrats to advance stock trading ban in committee",
+      "url": "https://www.cbsnews.com/news/hawley-democrats-vote-stock-trading-ban-committee",
+      "publisher": "CBS News",
+      "publishedAt": "2025-07-30",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "s8",
+      "title": "国務大臣、副大臣及び大臣政務官規範",
+      "url": "https://www.cas.go.jp/jp/siryou/pdf/kihan.pdf",
+      "publisher": "内閣官房",
+      "publishedAt": "2001-01-06",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "related": ["political-funding", "politicians-industry-groups"],
+  "editorial": {
+    "aiGenerated": true,
+    "notes": "下書き（2026-11-26作成）。要確認：(1) s8 内閣官房PDFは取得時404。条文（第1(3) 株式等の取引自粛・信託）は衆議院質問主意書（https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a155025.htm）の引用で確認。現行URLと2026年1月改正後の条文を確認して差し替え (2) s7 CBSの記事本文は未取得。8対7・次の任期から適用は検索結果と上院委員会資料（https://www.hsgac.senate.gov/wp-content/uploads/Committee-Passed-Member-Trading-Ban-Bill-Text.pdf）で要確認。タイトル・日付も要確認 (3) 上院でのStop Insider Trading Act採決（2026年9月30日に53対47で不成立との報道あり）は一次情報未確認のため本文に入れていない (4) Bloombergの「17か月で約2万9,000件」は取得できず未使用 (5) ペンギンの憲法上の論点・資産売却義務への反論は一般論。具体的な学説・公的資料を出典にするなら追記 (6) Euronewsの「息子2人が資産を運用」は同社の記述でホワイトハウスの説明ではないため使っていない"
+  }
+}
