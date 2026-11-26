@@ -133,6 +133,24 @@ export const resolveImage = (src?: string): string | null => {
   return fs.existsSync(path.join(PUBLIC_DIR, src)) ? src : null
 }
 
+/** public 配下の PNG 画像のサイズ（PNG 以外・存在しない場合は undefined） */
+export const pngSizeOf = (
+  src?: string
+): { width: number; height: number } | undefined => {
+  const file = src && resolveImage(src) && path.join(PUBLIC_DIR, src)
+  if (!file) return undefined
+  const buf = Buffer.alloc(24)
+  const fd = fs.openSync(file, "r")
+  try {
+    fs.readSync(fd, buf, 0, 24, 0)
+  } finally {
+    fs.closeSync(fd)
+  }
+  // シグネチャ (8byte) の後の IHDR チャンクに幅・高さが入る
+  if (buf.toString("ascii", 12, 16) !== "IHDR") return undefined
+  return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) }
+}
+
 export const toCardData = (t: Topic): TopicCardData => ({
   id: t.id,
   title: t.title,
@@ -161,6 +179,8 @@ export const toCardData = (t: Topic): TopicCardData => ({
 })
 
 export const topicPath = (id: string) => `/topics/${id}/`
+/** ビルド時に生成する記事の OGP 画像（app/topics/[id]/og.png/route.tsx） */
+export const topicOgImagePath = (id: string) => `/topics/${id}/og.png`
 export const categoryPath = (id: string) => `/categories/${id}/`
 
 /** キャラクターが登場する記事（表示対象のみ・新しい順） */

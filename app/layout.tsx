@@ -3,7 +3,7 @@ import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics"
 import { SiteFooter } from "@/components/layout/SiteFooter"
 import { SiteHeader } from "@/components/layout/SiteHeader"
 import { JsonLd } from "@/components/ui/primitives"
-import { pageMetadata } from "@/lib/seo"
+import { pageMetadata, publisherJsonLd } from "@/lib/seo"
 import { showDrafts, site } from "@/lib/site"
 import "./global.css"
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/feed.xml" },
   },
   title: {
-    default: `${site.name}（ロント）｜${site.tagline}`,
+    default: `${site.name}（${site.alternateName}）｜${site.tagline}`,
     template: `%s | ${site.name}`,
   },
   applicationName: site.name,
@@ -62,14 +62,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: site.name,
+          alternateName: site.alternateName,
           url: site.url,
           description: site.description,
           inLanguage: "ja",
-          publisher: {
-            "@type": "Organization",
-            name: site.publisher.name,
-            url: site.publisher.url,
-          },
+          publisher: publisherJsonLd,
         }}
       />
     </body>

@@ -3,15 +3,16 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { TopicGrid } from "@/components/topic/TopicCard"
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs"
-import { Container, PageHeader } from "@/components/ui/primitives"
+import { Container, JsonLd, PageHeader } from "@/components/ui/primitives"
 import {
   categories,
   categoryPath,
   getCategory,
   getTopicsByCategory,
   toCardData,
+  topicPath,
 } from "@/lib/content"
-import { pageMetadata } from "@/lib/seo"
+import { collectionJsonLd, pageMetadata } from "@/lib/seo"
 
 export const dynamicParams = false
 export const generateStaticParams = () => categories.map((c) => ({ id: c.id }))
@@ -64,6 +65,14 @@ const CategoryPage = async ({ params }: Props) => {
           </p>
         )}
       </div>
+      <JsonLd
+        data={collectionJsonLd({
+          name: `${category.name}の記事一覧`,
+          description: category.description,
+          path: categoryPath(category.id),
+          items: topics.map((t) => ({ name: t.title, path: topicPath(t.id) })),
+        })}
+      />
     </Container>
   )
 }

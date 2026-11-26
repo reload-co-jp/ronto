@@ -34,7 +34,7 @@ interface ElectionFeature {
 const features = (electionsJson as { features: ElectionFeature[] }).features
 
 const description =
-  "選挙の前に知っておきたい争点を、立場の違いが分かるように整理する特集ページです。"
+  "選挙の前に知っておきたい争点を、立場の違いが分かるように整理する特集ページです。投票に行かないと何が起こるのかなど、選挙をテーマにした記事もまとめています。"
 
 export const metadata = pageMetadata({
   title: "選挙・特集",

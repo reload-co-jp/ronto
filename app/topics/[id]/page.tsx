@@ -32,10 +32,11 @@ import {
   readingTimeOf,
   resolveImage,
   toCardData,
+  topicOgImagePath,
   topicPath,
 } from "@/lib/content"
 import { formatDate } from "@/lib/format"
-import { pageMetadata } from "@/lib/seo"
+import { pageMetadata, publisherJsonLd } from "@/lib/seo"
 import { absoluteUrl, site } from "@/lib/site"
 import { Topic } from "@/lib/types"
 
@@ -56,7 +57,7 @@ export const generateMetadata = async ({
     title: topic.title,
     description: topic.description,
     path: topicPath(topic.id),
-    image: resolveImage(topic.thumbnail),
+    image: resolveImage(topic.thumbnail) ?? topicOgImagePath(topic.id),
     type: "article",
     publishedTime: topic.publishedAt,
     modifiedTime: topic.updatedAt ?? topic.publishedAt,
@@ -477,7 +478,7 @@ const TopicPage = async ({ params }: Props) => {
           "@type": "Article",
           headline: topic.title,
           description: topic.description,
-          image: [absoluteUrl(thumbnail ?? site.ogImage)],
+          image: [absoluteUrl(thumbnail ?? topicOgImagePath(topic.id))],
           datePublished: topic.publishedAt,
           dateModified: topic.updatedAt ?? topic.publishedAt,
           inLanguage: "ja",
@@ -490,11 +491,8 @@ const TopicPage = async ({ params }: Props) => {
             name: `${site.name}編集部`,
             url: site.url,
           },
-          publisher: {
-            "@type": "Organization",
-            name: site.publisher.name,
-            url: site.publisher.url,
-          },
+          publisher: publisherJsonLd,
+          isAccessibleForFree: true,
           citation: topic.sources.map((s) => ({
             "@type": "CreativeWork",
             name: s.title,
