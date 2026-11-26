@@ -32,7 +32,6 @@ const TopicsPage = () => {
           types={articleTypes}
         />
       </div>
-      {/* 一覧は「もっと見る」で段階表示するため、全記事は構造化データで示す */}
       <JsonLd
         data={collectionJsonLd({
           name: "トピック一覧",

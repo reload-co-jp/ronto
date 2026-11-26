@@ -179,6 +179,8 @@ export const toCardData = (t: Topic): TopicCardData => ({
 })
 
 export const topicPath = (id: string) => `/topics/${id}/`
+/** ビルド時に生成する記事の OGP 画像（app/topics/[id]/og.png/route.tsx） */
+export const topicOgImagePath = (id: string) => `/topics/${id}/og.png`
 export const categoryPath = (id: string) => `/categories/${id}/`
 
 /** キャラクターが登場する記事（表示対象のみ・新しい順） */

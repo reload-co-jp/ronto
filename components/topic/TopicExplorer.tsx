@@ -162,7 +162,7 @@ export const TopicExplorer = ({
           条件に合う記事はまだありません。ほかの条件もお試しください。
         </p>
       ) : (
-        <TopicGrid topics={filtered.slice(0, limit)} />
+        <TopicGrid topics={filtered} visibleCount={limit} />
       )}
       {filtered.length > limit && (
         <button

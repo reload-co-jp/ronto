@@ -32,6 +32,7 @@ import {
   readingTimeOf,
   resolveImage,
   toCardData,
+  topicOgImagePath,
   topicPath,
 } from "@/lib/content"
 import { formatDate } from "@/lib/format"
@@ -56,7 +57,7 @@ export const generateMetadata = async ({
     title: topic.title,
     description: topic.description,
     path: topicPath(topic.id),
-    image: resolveImage(topic.thumbnail),
+    image: resolveImage(topic.thumbnail) ?? topicOgImagePath(topic.id),
     type: "article",
     publishedTime: topic.publishedAt,
     modifiedTime: topic.updatedAt ?? topic.publishedAt,
@@ -477,7 +478,7 @@ const TopicPage = async ({ params }: Props) => {
           "@type": "Article",
           headline: topic.title,
           description: topic.description,
-          image: [absoluteUrl(thumbnail ?? site.ogImage)],
+          image: [absoluteUrl(thumbnail ?? topicOgImagePath(topic.id))],
           datePublished: topic.publishedAt,
           dateModified: topic.updatedAt ?? topic.publishedAt,
           inLanguage: "ja",

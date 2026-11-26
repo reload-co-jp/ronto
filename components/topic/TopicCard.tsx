@@ -227,14 +227,20 @@ export const TopicCard = ({
 export const TopicGrid = ({
   topics,
   columns = 3,
+  visibleCount,
 }: {
   topics: TopicCardData[]
   columns?: 2 | 3
+  /**
+   * 表示する件数。超えた分も HTML には出力し hidden で隠す
+   * （段階表示しつつ、検索エンジンが全記事へのリンクをたどれるようにする）
+   */
+  visibleCount?: number
 }) => (
   <ul className={`TopicGrid TopicGrid--${columns}`}>
     <TopicCardStyles />
-    {topics.map((t) => (
-      <li key={t.id}>
+    {topics.map((t, i) => (
+      <li key={t.id} hidden={visibleCount !== undefined && i >= visibleCount}>
         <TopicCard topic={t} />
       </li>
     ))}

@@ -4,7 +4,7 @@ import { Prose } from "@/components/ui/Prose"
 import { pageMetadata } from "@/lib/seo"
 import { site } from "@/lib/site"
 
-const description = `${site.name}における利用者情報の取り扱いについて定めたプライバシーポリシーです。`
+const description = `${site.name}における利用者情報の取り扱いについて定めたプライバシーポリシーです。取得する情報と利用目的、外部サービスの利用、第三者提供、お問い合わせ先を説明します。`
 
 export const metadata = pageMetadata({
   title: "プライバシーポリシー",
